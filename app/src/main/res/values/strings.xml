@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Wordy</string>
+    <string name="user_name">Username</string>
+    <string name="date_format">dd/mm/yyyy</string>
+    <string name="phone_number">Number</string>
+    <string name="email">Email</string>
+    <string name="suffix">\@gmail.com</string>
+    <string name="password">Password</string>
+</resources>

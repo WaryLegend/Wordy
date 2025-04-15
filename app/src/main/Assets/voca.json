@@ -1,0 +1,864 @@
+{
+    "vocabulary": [
+        {
+            "id": 1,
+            "name": "Gia đình (Family)",
+            "words": [
+                {
+                    "wordnumber": 1,
+                    "word": "mother",
+                    "meaning": "mẹ",
+                    "type": "noun",
+                    "pronunciation": "/ˈmʌð.ɚ/",
+                    "example": "My mother cooks delicious food."
+                },
+                {
+                    "wordnumber": 2,
+                    "word": "father",
+                    "meaning": "bố",
+                    "type": "noun",
+                    "pronunciation": "/ˈfɑː.ðɚ/",
+                    "example": "My father works in a factory."
+                },
+                {
+                    "wordnumber": 3,
+                    "word": "sister",
+                    "meaning": "chị/em gái",
+                    "type": "noun",
+                    "pronunciation": "/ˈsɪs.tɚ/",
+                    "example": "My sister is very smart."
+                },
+                {
+                    "wordnumber": 4,
+                    "word": "brother",
+                    "meaning": "anh/em trai",
+                    "type": "noun",
+                    "pronunciation": "/ˈbrʌð.ɚ/",
+                    "example": "I play games with my brother."
+                },
+                {
+                    "wordnumber": 5,
+                    "word": "grandmother",
+                    "meaning": "bà",
+                    "type": "noun",
+                    "pronunciation": "/ˈɡræn.mʌð.ɚ/",
+                    "example": "My grandmother tells great stories."
+                },
+                {
+                    "wordnumber": 6,
+                    "word": "grandfather",
+                    "meaning": "ông",
+                    "type": "noun",
+                    "pronunciation": "/ˈɡræn.fɑː.ðɚ/",
+                    "example": "My grandfather is very kind."
+                },
+                {
+                    "wordnumber": 7,
+                    "word": "uncle",
+                    "meaning": "chú/bác",
+                    "type": "noun",
+                    "pronunciation": "/ˈʌŋ.kəl/",
+                    "example": "My uncle lives in the city."
+                },
+                {
+                    "wordnumber": 8,
+                    "word": "aunt",
+                    "meaning": "cô/dì",
+                    "type": "noun",
+                    "pronunciation": "/ænt/",
+                    "example": "My aunt gave me a gift."
+                },
+                {
+                    "wordnumber": 9,
+                    "word": "cousin",
+                    "meaning": "anh chị em họ",
+                    "type": "noun",
+                    "pronunciation": "/ˈkʌz.ən/",
+                    "example": "My cousin is my best friend."
+                },
+                {
+                    "wordnumber": 10,
+                    "word": "friend",
+                    "meaning": "bạn",
+                    "type": "noun",
+                    "pronunciation": "/frend/",
+                    "example": "She is my best friend."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Học tập (Education)",
+            "words": [
+                {
+                    "wordnumber": 1,
+                    "word": "school",
+                    "meaning": "trường học",
+                    "type": "noun",
+                    "pronunciation": "/skuːl/",
+                    "example": "He goes to school every day."
+                },
+                {
+                    "wordnumber": 2,
+                    "word": "teacher",
+                    "meaning": "giáo viên",
+                    "type": "noun",
+                    "pronunciation": "/ˈtiː.tʃɚ/",
+                    "example": "Our teacher is very kind."
+                },
+                {
+                    "wordnumber": 3,
+                    "word": "student",
+                    "meaning": "học sinh",
+                    "type": "noun",
+                    "pronunciation": "/ˈstuː.dnt/",
+                    "example": "The student studies hard."
+                },
+                {
+                    "wordnumber": 4,
+                    "word": "book",
+                    "meaning": "sách",
+                    "type": "noun",
+                    "pronunciation": "/bʊk/",
+                    "example": "I read a book every week."
+                },
+                {
+                    "wordnumber": 5,
+                    "word": "pen",
+                    "meaning": "bút",
+                    "type": "noun",
+                    "pronunciation": "/pen/",
+                    "example": "I write with a pen."
+                },
+                {
+                    "wordnumber": 6,
+                    "word": "learn",
+                    "meaning": "học",
+                    "type": "verb",
+                    "pronunciation": "/lɝːn/",
+                    "example": "I want to learn English."
+                },
+                {
+                    "wordnumber": 7,
+                    "word": "write",
+                    "meaning": "viết",
+                    "type": "verb",
+                    "pronunciation": "/raɪt/",
+                    "example": "She writes a letter."
+                },
+                {
+                    "wordnumber": 8,
+                    "word": "read",
+                    "meaning": "đọc",
+                    "type": "verb",
+                    "pronunciation": "/riːd/",
+                    "example": "He reads a story."
+                },
+                {
+                    "wordnumber": 9,
+                    "word": "class",
+                    "meaning": "lớp học",
+                    "type": "noun",
+                    "pronunciation": "/klæs/",
+                    "example": "The class starts at 8 AM."
+                },
+                {
+                    "wordnumber": 10,
+                    "word": "homework",
+                    "meaning": "bài tập về nhà",
+                    "type": "noun",
+                    "pronunciation": "/ˈhoʊm.wɝːk/",
+                    "example": "I do my homework every night."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Hoạt động hàng ngày (Daily Activities)",
+            "words": [
+                {
+                    "wordnumber": 1,
+                    "word": "eat",
+                    "meaning": "ăn",
+                    "type": "verb",
+                    "pronunciation": "/iːt/",
+                    "example": "We eat dinner at 7 PM."
+                },
+                {
+                    "wordnumber": 2,
+                    "word": "drink",
+                    "meaning": "uống",
+                    "type": "verb",
+                    "pronunciation": "/drɪŋk/",
+                    "example": "He drinks water every morning."
+                },
+                {
+                    "wordnumber": 3,
+                    "word": "sleep",
+                    "meaning": "ngủ",
+                    "type": "verb",
+                    "pronunciation": "/sliːp/",
+                    "example": "I sleep at 10 PM."
+                },
+                {
+                    "wordnumber": 4,
+                    "word": "wake",
+                    "meaning": "thức dậy",
+                    "type": "verb",
+                    "pronunciation": "/weɪk/",
+                    "example": "She wakes up early."
+                },
+                {
+                    "wordnumber": 5,
+                    "word": "work",
+                    "meaning": "làm việc",
+                    "type": "verb",
+                    "pronunciation": "/wɝːk/",
+                    "example": "He works in an office."
+                },
+                {
+                    "wordnumber": 6,
+                    "word": "play",
+                    "meaning": "chơi",
+                    "type": "verb",
+                    "pronunciation": "/pleɪ/",
+                    "example": "The children play in the park."
+                },
+                {
+                    "wordnumber": 7,
+                    "word": "walk",
+                    "meaning": "đi bộ",
+                    "type": "verb",
+                    "pronunciation": "/wɔːk/",
+                    "example": "I walk to school."
+                },
+                {
+                    "wordnumber": 8,
+                    "word": "talk",
+                    "meaning": "nói chuyện",
+                    "type": "verb",
+                    "pronunciation": "/tɔːk/",
+                    "example": "We talk every night."
+                },
+                {
+                    "wordnumber": 9,
+                    "word": "watch",
+                    "meaning": "xem",
+                    "type": "verb",
+                    "pronunciation": "/wɑːtʃ/",
+                    "example": "They watch TV together."
+                },
+                {
+                    "wordnumber": 10,
+                    "word": "rest",
+                    "meaning": "nghỉ ngơi",
+                    "type": "verb",
+                    "pronunciation": "/rest/",
+                    "example": "I rest after work."
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Thức ăn (Food)",
+            "words": [
+                {
+                    "wordnumber": 1,
+                    "word": "apple",
+                    "meaning": "táo",
+                    "type": "noun",
+                    "pronunciation": "/ˈæp.əl/",
+                    "example": "She ate an apple."
+                },
+                {
+                    "wordnumber": 2,
+                    "word": "bread",
+                    "meaning": "bánh mì",
+                    "type": "noun",
+                    "pronunciation": "/bred/",
+                    "example": "I like fresh bread."
+                },
+                {
+                    "wordnumber": 3,
+                    "word": "water",
+                    "meaning": "nước",
+                    "type": "noun",
+                    "pronunciation": "/ˈwɔː.tɚ/",
+                    "example": "He drinks water."
+                },
+                {
+                    "wordnumber": 4,
+                    "word": "rice",
+                    "meaning": "cơm",
+                    "type": "noun",
+                    "pronunciation": "/raɪs/",
+                    "example": "We eat rice every day."
+                },
+                {
+                    "wordnumber": 5,
+                    "word": "chicken",
+                    "meaning": "gà",
+                    "type": "noun",
+                    "pronunciation": "/ˈtʃɪk.ɪn/",
+                    "example": "She cooks chicken for dinner."
+                },
+                {
+                    "wordnumber": 6,
+                    "word": "fish",
+                    "meaning": "cá",
+                    "type": "noun",
+                    "pronunciation": "/fɪʃ/",
+                    "example": "I like grilled fish."
+                },
+                {
+                    "wordnumber": 7,
+                    "word": "milk",
+                    "meaning": "sữa",
+                    "type": "noun",
+                    "pronunciation": "/mɪlk/",
+                    "example": "The baby drinks milk."
+                },
+                {
+                    "wordnumber": 8,
+                    "word": "egg",
+                    "meaning": "trứng",
+                    "type": "noun",
+                    "pronunciation": "/eɡ/",
+                    "example": "He eats an egg for breakfast."
+                },
+                {
+                    "wordnumber": 9,
+                    "word": "cake",
+                    "meaning": "bánh ngọt",
+                    "type": "noun",
+                    "pronunciation": "/keɪk/",
+                    "example": "This cake is delicious."
+                },
+                {
+                    "wordnumber": 10,
+                    "word": "soup",
+                    "meaning": "súp",
+                    "type": "noun",
+                    "pronunciation": "/suːp/",
+                    "example": "She makes hot soup."
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Động vật (Animals)",
+            "words": [
+                {
+                    "wordnumber": 1,
+                    "word": "cat",
+                    "meaning": "mèo",
+                    "type": "noun",
+                    "pronunciation": "/kæt/",
+                    "example": "The cat is sleeping."
+                },
+                {
+                    "wordnumber": 2,
+                    "word": "dog",
+                    "meaning": "chó",
+                    "type": "noun",
+                    "pronunciation": "/dɔːɡ/",
+                    "example": "The dog barks loudly."
+                },
+                {
+                    "wordnumber": 3,
+                    "word": "bird",
+                    "meaning": "chim",
+                    "type": "noun",
+                    "pronunciation": "/bɝːd/",
+                    "example": "The bird flies high."
+                },
+                {
+                    "wordnumber": 4,
+                    "word": "fish",
+                    "meaning": "cá",
+                    "type": "noun",
+                    "pronunciation": "/fɪʃ/",
+                    "example": "The fish swims in the tank."
+                },
+                {
+                    "wordnumber": 5,
+                    "word": "horse",
+                    "meaning": "ngựa",
+                    "type": "noun",
+                    "pronunciation": "/hɔːrs/",
+                    "example": "The horse runs fast."
+                },
+                {
+                    "wordnumber": 6,
+                    "word": "cow",
+                    "meaning": "bò",
+                    "type": "noun",
+                    "pronunciation": "/kaʊ/",
+                    "example": "The cow gives milk."
+                },
+                {
+                    "wordnumber": 7,
+                    "word": "pig",
+                    "meaning": "lợn",
+                    "type": "noun",
+                    "pronunciation": "/pɪɡ/",
+                    "example": "The pig is in the farm."
+                },
+                {
+                    "wordnumber": 8,
+                    "word": "chicken",
+                    "meaning": "gà",
+                    "type": "noun",
+                    "pronunciation": "/ˈtʃɪk.ɪn/",
+                    "example": "The chicken lays eggs."
+                },
+                {
+                    "wordnumber": 9,
+                    "word": "elephant",
+                    "meaning": "voi",
+                    "type": "noun",
+                    "pronunciation": "/ˈel.ə.fənt/",
+                    "example": "The elephant is big."
+                },
+                {
+                    "wordnumber": 10,
+                    "word": "tiger",
+                    "meaning": "hổ",
+                    "type": "noun",
+                    "pronunciation": "/ˈtaɪ.ɡɚ/",
+                    "example": "The tiger is strong."
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Tính từ (Adjectives)",
+            "words": [
+                {
+                    "wordnumber": 1,
+                    "word": "happy",
+                    "meaning": "vui vẻ",
+                    "type": "adjective",
+                    "pronunciation": "/ˈhæp.i/",
+                    "example": "I feel happy today."
+                },
+                {
+                    "wordnumber": 2,
+                    "word": "sad",
+                    "meaning": "buồn",
+                    "type": "adjective",
+                    "pronunciation": "/sæd/",
+                    "example": "She looks sad."
+                },
+                {
+                    "wordnumber": 3,
+                    "word": "big",
+                    "meaning": "lớn",
+                    "type": "adjective",
+                    "pronunciation": "/bɪɡ/",
+                    "example": "This is a big house."
+                },
+                {
+                    "wordnumber": 4,
+                    "word": "small",
+                    "meaning": "nhỏ",
+                    "type": "adjective",
+                    "pronunciation": "/smɔːl/",
+                    "example": "This is a small dog."
+                },
+                {
+                    "wordnumber": 5,
+                    "word": "beautiful",
+                    "meaning": "đẹp",
+                    "type": "adjective",
+                    "pronunciation": "/ˈbjuː.tɪ.fəl/",
+                    "example": "This flower is beautiful."
+                },
+                {
+                    "wordnumber": 6,
+                    "word": "new",
+                    "meaning": "mới",
+                    "type": "adjective",
+                    "pronunciation": "/nuː/",
+                    "example": "This is my new phone."
+                },
+                {
+                    "wordnumber": 7,
+                    "word": "old",
+                    "meaning": "cũ",
+                    "type": "adjective",
+                    "pronunciation": "/oʊld/",
+                    "example": "This book is old."
+                },
+                {
+                    "wordnumber": 8,
+                    "word": "fast",
+                    "meaning": "nhanh",
+                    "type": "adjective",
+                    "pronunciation": "/fæst/",
+                    "example": "The car is fast."
+                },
+                {
+                    "wordnumber": 9,
+                    "word": "slow",
+                    "meaning": "chậm",
+                    "type": "adjective",
+                    "pronunciation": "/sloʊ/",
+                    "example": "The turtle is slow."
+                },
+                {
+                    "wordnumber": 10,
+                    "word": "young",
+                    "meaning": "trẻ",
+                    "type": "adjective",
+                    "pronunciation": "/jʌŋ/",
+                    "example": "He is a young boy."
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Du lịch (Travel)",
+            "words": [
+                {
+                    "wordnumber": 1,
+                    "word": "travel",
+                    "meaning": "du lịch",
+                    "type": "verb",
+                    "pronunciation": "/ˈtræv.əl/",
+                    "example": "I love to travel."
+                },
+                {
+                    "wordnumber": 2,
+                    "word": "plane",
+                    "meaning": "máy bay",
+                    "type": "noun",
+                    "pronunciation": "/pleɪn/",
+                    "example": "The plane flies high."
+                },
+                {
+                    "wordnumber": 3,
+                    "word": "train",
+                    "meaning": "tàu hỏa",
+                    "type": "noun",
+                    "pronunciation": "/treɪn/",
+                    "example": "We take the train to the city."
+                },
+                {
+                    "wordnumber": 4,
+                    "word": "car",
+                    "meaning": "xe hơi",
+                    "type": "noun",
+                    "pronunciation": "/kɑːr/",
+                    "example": "He drives a car."
+                },
+                {
+                    "wordnumber": 5,
+                    "word": "hotel",
+                    "meaning": "khách sạn",
+                    "type": "noun",
+                    "pronunciation": "/hoʊˈtel/",
+                    "example": "We stay in a hotel."
+                },
+                {
+                    "wordnumber": 6,
+                    "word": "map",
+                    "meaning": "bản đồ",
+                    "type": "noun",
+                    "pronunciation": "/mæp/",
+                    "example": "I use a map to find the way."
+                },
+                {
+                    "wordnumber": 7,
+                    "word": "ticket",
+                    "meaning": "vé",
+                    "type": "noun",
+                    "pronunciation": "/ˈtɪk.ɪt/",
+                    "example": "She buys a train ticket."
+                },
+                {
+                    "wordnumber": 8,
+                    "word": "beach",
+                    "meaning": "bãi biển",
+                    "type": "noun",
+                    "pronunciation": "/biːtʃ/",
+                    "example": "The beach is beautiful."
+                },
+                {
+                    "wordnumber": 9,
+                    "word": "city",
+                    "meaning": "thành phố",
+                    "type": "noun",
+                    "pronunciation": "/ˈsɪt.i/",
+                    "example": "This city is big."
+                },
+                {
+                    "wordnumber": 10,
+                    "word": "mountain",
+                    "meaning": "núi",
+                    "type": "noun",
+                    "pronunciation": "/ˈmaʊn.tən/",
+                    "example": "The mountain is high."
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Thời tiết (Weather)",
+            "words": [
+                {
+                    "wordnumber": 1,
+                    "word": "sun",
+                    "meaning": "mặt trời",
+                    "type": "noun",
+                    "pronunciation": "/sʌn/",
+                    "example": "The sun is shining."
+                },
+                {
+                    "wordnumber": 2,
+                    "word": "rain",
+                    "meaning": "mưa",
+                    "type": "noun",
+                    "pronunciation": "/reɪn/",
+                    "example": "It’s raining outside."
+                },
+                {
+                    "wordnumber": 3,
+                    "word": "cloud",
+                    "meaning": "mây",
+                    "type": "noun",
+                    "pronunciation": "/klaʊd/",
+                    "example": "The sky is full of clouds."
+                },
+                {
+                    "wordnumber": 4,
+                    "word": "wind",
+                    "meaning": "gió",
+                    "type": "noun",
+                    "pronunciation": "/wɪnd/",
+                    "example": "The wind is strong today."
+                },
+                {
+                    "wordnumber": 5,
+                    "word": "snow",
+                    "meaning": "tuyết",
+                    "type": "noun",
+                    "pronunciation": "/snoʊ/",
+                    "example": "It snows in winter."
+                },
+                {
+                    "wordnumber": 6,
+                    "word": "hot",
+                    "meaning": "nóng",
+                    "type": "adjective",
+                    "pronunciation": "/hɑːt/",
+                    "example": "The weather is hot."
+                },
+                {
+                    "wordnumber": 7,
+                    "word": "cold",
+                    "meaning": "lạnh",
+                    "type": "adjective",
+                    "pronunciation": "/koʊld/",
+                    "example": "It’s very cold today."
+                },
+                {
+                    "wordnumber": 8,
+                    "word": "warm",
+                    "meaning": "ấm",
+                    "type": "adjective",
+                    "pronunciation": "/wɔːrm/",
+                    "example": "The room is warm."
+                },
+                {
+                    "wordnumber": 9,
+                    "word": "sunny",
+                    "meaning": "nắng",
+                    "type": "adjective",
+                    "pronunciation": "/ˈsʌn.i/",
+                    "example": "It’s a sunny day."
+                },
+                {
+                    "wordnumber": 10,
+                    "word": "rainy",
+                    "meaning": "mưa",
+                    "type": "adjective",
+                    "pronunciation": "/ˈreɪ.ni/",
+                    "example": "It’s a rainy afternoon."
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Màu sắc (Colors)",
+            "words": [
+                {
+                    "wordnumber": 1,
+                    "word": "red",
+                    "meaning": "đỏ",
+                    "type": "adjective",
+                    "pronunciation": "/red/",
+                    "example": "The apple is red."
+                },
+                {
+                    "wordnumber": 2,
+                    "word": "blue",
+                    "meaning": "xanh dương",
+                    "type": "adjective",
+                    "pronunciation": "/bluː/",
+                    "example": "The sky is blue."
+                },
+                {
+                    "wordnumber": 3,
+                    "word": "green",
+                    "meaning": "xanh lá",
+                    "type": "adjective",
+                    "pronunciation": "/ɡriːn/",
+                    "example": "The grass is green."
+                },
+                {
+                    "wordnumber": 4,
+                    "word": "yellow",
+                    "meaning": "vàng",
+                    "type": "adjective",
+                    "pronunciation": "/ˈjel.oʊ/",
+                    "example": "The sun is yellow."
+                },
+                {
+                    "wordnumber": 5,
+                    "word": "black",
+                    "meaning": "đen",
+                    "type": "adjective",
+                    "pronunciation": "/blæk/",
+                    "example": "The cat is black."
+                },
+                {
+                    "wordnumber": 6,
+                    "word": "white",
+                    "meaning": "trắng",
+                    "type": "adjective",
+                    "pronunciation": "/waɪt/",
+                    "example": "The snow is white."
+                },
+                {
+                    "wordnumber": 7,
+                    "word": "pink",
+                    "meaning": "hồng",
+                    "type": "adjective",
+                    "pronunciation": "/pɪŋk/",
+                    "example": "Her dress is pink."
+                },
+                {
+                    "wordnumber": 8,
+                    "word": "orange",
+                    "meaning": "cam",
+                    "type": "adjective",
+                    "pronunciation": "/ˈɔːr.ɪndʒ/",
+                    "example": "The orange is orange."
+                },
+                {
+                    "wordnumber": 9,
+                    "word": "purple",
+                    "meaning": "tím",
+                    "type": "adjective",
+                    "pronunciation": "/ˈpɝː.pəl/",
+                    "example": "The flower is purple."
+                },
+                {
+                    "wordnumber": 10,
+                    "word": "brown",
+                    "meaning": "nâu",
+                    "type": "adjective",
+                    "pronunciation": "/braʊn/",
+                    "example": "The dog is brown."
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Công việc (Jobs)",
+            "words": [
+                {
+                    "wordnumber": 1,
+                    "word": "teacher",
+                    "meaning": "giáo viên",
+                    "type": "noun",
+                    "pronunciation": "/ˈtiː.tʃɚ/",
+                    "example": "She is a teacher."
+                },
+                {
+                    "wordnumber": 2,
+                    "word": "doctor",
+                    "meaning": "bác sĩ",
+                    "type": "noun",
+                    "pronunciation": "/ˈdɑːk.tɚ/",
+                    "example": "The doctor helps sick people."
+                },
+                {
+                    "wordnumber": 3,
+                    "word": "nurse",
+                    "meaning": "y tá",
+                    "type": "noun",
+                    "pronunciation": "/nɝːs/",
+                    "example": "The nurse works in a hospital."
+                },
+                {
+                    "wordnumber": 4,
+                    "word": "engineer",
+                    "meaning": "kỹ sư",
+                    "type": "noun",
+                    "pronunciation": "/ˌen.dʒɪˈnɪr/",
+                    "example": "He is an engineer."
+                },
+                {
+                    "wordnumber": 5,
+                    "word": "farmer",
+                    "meaning": "nông dân",
+                    "type": "noun",
+                    "pronunciation": "/ˈfɑːr.mɚ/",
+                    "example": "The farmer grows rice."
+                },
+                {
+                    "wordnumber": 6,
+                    "word": "driver",
+                    "meaning": "tài xế",
+                    "type": "noun",
+                    "pronunciation": "/ˈdraɪ.vɚ/",
+                    "example": "The driver drives a bus."
+                },
+                {
+                    "wordnumber": 7,
+                    "word": "cook",
+                    "meaning": "đầu bếp",
+                    "type": "noun",
+                    "pronunciation": "/kʊk/",
+                    "example": "The cook makes delicious food."
+                },
+                {
+                    "wordnumber": 8,
+                    "word": "student",
+                    "meaning": "học sinh",
+                    "type": "noun",
+                    "pronunciation": "/ˈstuː.dnt/",
+                    "example": "The student studies at school."
+                },
+                {
+                    "wordnumber": 9,
+                    "word": "police",
+                    "meaning": "cảnh sát",
+                    "type": "noun",
+                    "pronunciation": "/pəˈliːs/",
+                    "example": "The police protect the city."
+                },
+                {
+                    "wordnumber": 10,
+                    "word": "worker",
+                    "meaning": "công nhân",
+                    "type": "noun",
+                    "pronunciation": "/ˈwɝː.kɚ/",
+                    "example": "The worker builds houses."
+                }
+            ]
+        }
+    ]
+}
