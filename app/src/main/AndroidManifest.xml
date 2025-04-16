@@ -24,6 +24,7 @@
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.SignupActivity" />
         <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.ProfileActivity"/>
         <activity android:name=".activity.TopicActivity" />
         <activity android:name=".activity.TopicWordActivity" />
         <activity android:name=".activity.DictionaryActivity" />

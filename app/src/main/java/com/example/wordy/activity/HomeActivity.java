@@ -21,10 +21,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class HomeActivity extends AppCompatActivity {
-    private MaterialCardView btnProfile,btnDictionary,btnTopic;
+    private MaterialCardView btnProfile, btnDictionary, btnTopic;
 
     private TextView username;
-    private FirebaseAuth mAuth;
     private FirebaseFirestore db;
     private PrefsHelper prefs;
 
@@ -35,7 +34,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
         prefs = new PrefsHelper(this);
 
@@ -64,6 +62,9 @@ public class HomeActivity extends AppCompatActivity {
             return;
         }
 
+        btnProfile = findViewById(R.id.btnProfile);
+        btnProfile.setOnClickListener(v -> startActivity(new Intent(this, ProfileActivity.class)));
+
         btnTopic = findViewById(R.id.btnTopic);
         btnTopic.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, TopicActivity.class);
@@ -74,5 +75,9 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(HomeActivity.this, DictionaryActivity.class);
             startActivity(intent);
         });
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 }
