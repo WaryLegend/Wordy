@@ -29,7 +29,7 @@ public class TopicWordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.words_layout);
+        setContentView(R.layout.topic_items_layout);
 
         // Initialize views
         btnReturn = findViewById(R.id.btnReturn);
