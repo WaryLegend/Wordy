@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <!-- Option A -->
+
         <Button
             android:id="@+id/optionA"
             style="?attr/materialButtonOutlinedStyle"
@@ -23,7 +23,6 @@
             android:textColor="@color/navy_blue"
             app:strokeColor="@color/navy_blue"/>
 
-        <!-- Option B -->
         <Button
             android:id="@+id/optionB"
             style="?attr/materialButtonOutlinedStyle"
@@ -35,13 +34,23 @@
             android:textColor="@color/navy_blue"
             app:strokeColor="@color/navy_blue"/>
 
-        <!-- Option C -->
         <Button
             android:id="@+id/optionC"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Option C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/navy_blue"
+            app:strokeColor="@color/navy_blue"/>
+
+        <Button
+            android:id="@+id/optionD"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option D"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/navy_blue"

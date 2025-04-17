@@ -89,6 +89,7 @@ public class TopicWordActivity extends AppCompatActivity {
         Button optionA = bottomSheetView.findViewById(R.id.optionA);
         Button optionB = bottomSheetView.findViewById(R.id.optionB);
         Button optionC = bottomSheetView.findViewById(R.id.optionC);
+        Button optionD = bottomSheetView.findViewById(R.id.optionD);
         Button cancelButton = bottomSheetView.findViewById(R.id.cancelButton);
 
         // Set click listeners
@@ -102,6 +103,10 @@ public class TopicWordActivity extends AppCompatActivity {
         });
         optionC.setOnClickListener(v -> {
             Toast.makeText(this, "Selected Option C", Toast.LENGTH_SHORT).show();
+            bottomSheetDialog.dismiss();
+        });
+        optionD.setOnClickListener(v -> {
+            Toast.makeText(this, "Selected Option D", Toast.LENGTH_SHORT).show();
             bottomSheetDialog.dismiss();
         });
 

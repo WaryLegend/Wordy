@@ -1,7 +1,13 @@
 package com.example.wordy.activity;
 
+import static androidx.core.content.ContentProviderCompat.requireContext;
+
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -56,12 +62,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         btnReturn.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
 
-        btnLogout.setOnClickListener(v -> {
-            FirebaseAuth.getInstance().signOut();
-            new PrefsHelper(this).clear();
-            startActivity(new Intent(ProfileActivity.this, LoginActivity.class));
-            finish();
-        });
+        btnLogout.setOnClickListener(v -> showLogoutConfirmation());
 
         btnSave.setOnClickListener(v -> {
             User updatedUser = new User(
@@ -89,6 +90,33 @@ public class ProfileActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void showLogoutConfirmation() {
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("Xác Nhận Đăng Xuất")
+                .setMessage("Bạn có chắc chắn muốn đăng xuất không?")
+                .setPositiveButton("Có", (d, which) -> {
+                    // User clicked "Yes"
+                    performLogout();
+                })
+                .setNegativeButton("Hủy", (d, which) -> {
+                    //- do nothing, hủy yêu cầu
+                })
+                .setCancelable(true) // Allow dismissal by tapping outside
+                .show();
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(getResources().getColor(android.R.color.black));
+    }
+
+    private void performLogout() {
+        new PrefsHelper(this).clear();
+
+        // Delay finish to show toast
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+        }, 300);
     }
 
     @Override

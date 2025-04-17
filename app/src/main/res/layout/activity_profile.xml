@@ -138,7 +138,10 @@
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Logout"
+                android:text="Log out"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                android:textStyle="bold"
                 android:layout_marginTop="12dp"
                 android:backgroundTint="@android:color/holo_red_dark"
                 android:textColor="@android:color/white" />
