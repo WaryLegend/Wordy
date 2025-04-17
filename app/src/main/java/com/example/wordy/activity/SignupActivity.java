@@ -29,7 +29,6 @@ import java.util.Locale;
 public class SignupActivity extends AppCompatActivity {
     private TextInputLayout usernameLayout, phoneLayout, birthdayLayout, emailLayout, passwordLayout;
     private EditText usernameInput, phoneInput, birthdayInput, emailInput, passwordInput;
-    private Button btnLoginText, btnSignup;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
     private PrefsHelper prefs;
@@ -56,20 +55,21 @@ public class SignupActivity extends AppCompatActivity {
         emailInput = findViewById(R.id.emailInput);
         passwordInput = findViewById(R.id.passwordInput);
 
-        btnSignup = findViewById(R.id.signup_button);
-        btnLoginText = findViewById(R.id.login_text);
+        Button btnSignup = findViewById(R.id.signup_button);
+        Button btnLoginText = findViewById(R.id.login_text);
 
         // Sự kiện click vào trường ngày sinh
         birthdayInput.setOnClickListener(v -> {
             // Lấy ngày hiện tại trong birthdayInput (nếu có chọn trước đó)
             String currentDateString = birthdayInput.getText().toString().trim();
-            Long selectedDateMillis;
+            long selectedDateMillis;
 
             if (!currentDateString.isEmpty()) {
                 // Parse ngày đã chọn trước đó
                 SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
                 try {
                     Date selectedDate = dateFormat.parse(currentDateString);
+                    assert selectedDate != null;
                     selectedDateMillis = selectedDate.getTime();
                 } catch (ParseException e) {
                     selectedDateMillis = MaterialDatePicker.todayInUtcMilliseconds(); // Mặc định hôm nay nếu parse lỗi
