@@ -23,12 +23,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="5dp"
                 android:layout_marginBottom="10dp"
+                android:text="👤 Account Info"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
                 android:paddingStart="20dp"
                 android:paddingEnd="10dp">
                 <TextView
@@ -47,13 +55,20 @@
                     android:paddingEnd="0dp"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
+                <Button
+                    android:id="@+id/name_editor"
+                    style="?attr/materialIconButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_edit_24px"
+                    app:iconTint="@color/navy_blue" />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:padding="5dp"
-                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
                 android:paddingStart="20dp"
                 android:paddingEnd="10dp">
                 <TextView
@@ -72,13 +87,20 @@
                     android:paddingEnd="0dp"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
+                <Button
+                    android:id="@+id/email_editor"
+                    style="?attr/materialIconButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_edit_24px"
+                    app:iconTint="@color/navy_blue" />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:padding="5dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
                 android:paddingStart="20dp"
                 android:paddingEnd="10dp">
                 <TextView
@@ -97,13 +119,20 @@
                     android:paddingEnd="0dp"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
+                <Button
+                    android:id="@+id/phone_editor"
+                    style="?attr/materialIconButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_edit_24px"
+                    app:iconTint="@color/navy_blue"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:padding="5dp"
-                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
                 android:paddingStart="20dp"
                 android:paddingEnd="10dp">
                 <TextView
@@ -123,31 +152,32 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
             </LinearLayout>
-
-            <Button
-                android:id="@+id/btnSave"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Save"
-                android:visibility="gone"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="#3c47d5"
-                android:textColor="@android:color/white" />
-
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="🏅 Achievement"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
             <Button
                 android:id="@+id/btnLogout"
-                android:layout_width="match_parent"
+                style="?attr/materialIconButtonOutlinedStyle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Log out"
-                android:layout_gravity="center"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:text=" Log out"
+                android:paddingHorizontal="15dp"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@android:color/holo_red_dark"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/holo_red_dark"
+                app:icon="@drawable/ic_logout_24px"
+                app:iconTint="@android:color/holo_red_dark"
+                app:iconSize="22sp"
+                app:strokeColor="@android:color/holo_red_dark" />
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
