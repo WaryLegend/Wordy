@@ -1,0 +1,770 @@
+{
+  "categories": [
+    {
+      "name": "Vocabulary - Family",
+      "questions": [
+        {
+          "question": "What do you call your father's or mother's younger sister?",
+          "word": "aunt",
+          "options": ["Aunt", "Sister", "Cousin", "Friend"],
+          "correctAnswer": "Aunt",
+          "explanation": "The sister of your parent is called an 'Aunt'."
+        },
+        {
+          "question": "What do you call the son of your uncle or aunt?",
+          "word": "cousin",
+          "options": ["Cousin", "Brother", "Nephew", "Friend"],
+          "correctAnswer": "Cousin",
+          "explanation": "The child of your aunt or uncle is your 'Cousin'."
+        },
+        {
+          "question": "What do you call your father's father?",
+          "word": "grandfather",
+          "options": ["Grandfather", "Father", "Uncle", "Brother"],
+          "correctAnswer": "Grandfather",
+          "explanation": "Your father's father is your 'Grandfather'."
+        },
+        {
+          "question": "What do you call your mother's mother?",
+          "word": "grandmother",
+          "options": ["Grandmother", "Mother", "Aunt", "Sister"],
+          "correctAnswer": "Grandmother",
+          "explanation": "Your mother's mother is your 'Grandmother'."
+        },
+        {
+          "question": "What do you call your male sibling?",
+          "word": "brother",
+          "options": ["Brother", "Uncle", "Father", "Cousin"],
+          "correctAnswer": "Brother",
+          "explanation": "A male sibling is your 'Brother'."
+        },
+        {
+          "question": "What do you call your female sibling?",
+          "word": "sister",
+          "options": ["Sister", "Aunt", "Cousin", "Mother"],
+          "correctAnswer": "Sister",
+          "explanation": "A female sibling is your 'Sister'."
+        },
+        {
+          "question": "What do you call your mother's brother?",
+          "word": "uncle",
+          "options": ["Uncle", "Father", "Cousin", "Brother"],
+          "correctAnswer": "Uncle",
+          "explanation": "Your mother's brother is your 'Uncle'."
+        },
+        {
+          "question": "What do you call your parent's daughter?",
+          "word": "sister",
+          "options": ["Sister", "Aunt", "Mother", "Friend"],
+          "correctAnswer": "Sister",
+          "explanation": "Your parent's daughter is your 'Sister'."
+        },
+        {
+          "question": "What do you call your father's wife?",
+          "word": "mother",
+          "options": ["Mother", "Aunt", "Sister", "Friend"],
+          "correctAnswer": "Mother",
+          "explanation": "Your father's wife is your 'Mother'."
+        },
+        {
+          "question": "What do you call someone you like and spend time with, but who is not a family member?",
+          "word": "friend",
+          "options": ["Friend", "Cousin", "Sister", "Uncle"],
+          "correctAnswer": "Friend",
+          "explanation": "A 'Friend' is someone close to you but not related by family."
+        }
+      ]
+    }
+  ,
+    {
+      "name": "Vocabulary - Education",
+      "questions": [
+        {
+          "question": "Where does he go every day?",
+          "options": [
+            "Office",
+            "School",
+            "Market",
+            "Home"
+          ],
+          "correctAnswer": "School",
+          "explanation": "The sentence is 'He goes to school every day.'"
+        },
+        {
+          "question": "Who is kind according to the sentence?",
+          "options": [
+            "Student",
+            "Book",
+            "Teacher",
+            "Class"
+          ],
+          "correctAnswer": "Teacher",
+          "explanation": "The sentence is 'Our teacher is very kind.'"
+        },
+        {
+          "question": "Who studies hard?",
+          "options": [
+            "Student",
+            "Teacher",
+            "Friend",
+            "Pen"
+          ],
+          "correctAnswer": "Student",
+          "explanation": "The student studies hard."
+        },
+        {
+          "question": "What do you read every week?",
+          "options": [
+            "Pen",
+            "Book",
+            "Notebook",
+            "Story"
+          ],
+          "correctAnswer": "Book",
+          "explanation": "The example: 'I read a book every week.'"
+        },
+        {
+          "question": "What do you write with?",
+          "options": [
+            "Pencil",
+            "Brush",
+            "Pen",
+            "Chalk"
+          ],
+          "correctAnswer": "Pen",
+          "explanation": "The sentence: 'I write with a pen.'"
+        },
+        {
+          "question": "What do you want to learn?",
+          "options": [
+            "Math",
+            "Science",
+            "English",
+            "History"
+          ],
+          "correctAnswer": "English",
+          "explanation": "The example is 'I want to learn English.'"
+        },
+        {
+          "question": "What does she write?",
+          "options": [
+            "Book",
+            "Letter",
+            "Word",
+            "Homework"
+          ],
+          "correctAnswer": "Letter",
+          "explanation": "The sentence is 'She writes a letter.'"
+        },
+        {
+          "question": "What does he read?",
+          "options": [
+            "Book",
+            "Story",
+            "Word",
+            "Page"
+          ],
+          "correctAnswer": "Story",
+          "explanation": "He reads a story."
+        },
+        {
+          "question": "When does class start?",
+          "options": [
+            "8 AM",
+            "9 AM",
+            "7 AM",
+            "10 AM"
+          ],
+          "correctAnswer": "8 AM",
+          "explanation": "The class starts at 8 AM."
+        },
+        {
+          "question": "What do you do every night?",
+          "options": [
+            "Sleep",
+            "Study",
+            "Homework",
+            "Eat"
+          ],
+          "correctAnswer": "Homework",
+          "explanation": "The sentence is 'I do my homework every night.'"
+        }
+      ]
+    },
+    {
+      "name": "Vocabulary - Adjectives",
+      "questions": [
+        {
+          "question": "Which word means 'very big'?",
+          "options": [
+            "Tiny",
+            "Huge",
+            "Narrow",
+            "Short"
+          ],
+          "correctAnswer": "Huge",
+          "explanation": "'Huge' means very big. The other words describe something small, narrow, or short."
+        },
+        {
+          "question": "What is the opposite of 'happy'?",
+          "options": [
+            "Glad",
+            "Excited",
+            "Sad",
+            "Joyful"
+          ],
+          "correctAnswer": "Sad",
+          "explanation": "'Sad' is the opposite of 'happy'. The other words show positive feelings."
+        },
+        {
+          "question": "Which adjective describes a fast car?",
+          "options": [
+            "Slow",
+            "Quick",
+            "Calm",
+            "Old"
+          ],
+          "correctAnswer": "Quick",
+          "explanation": "'Quick' describes something fast. A fast car is quick."
+        },
+        {
+          "question": "What does 'friendly' mean?",
+          "options": [
+            "Kind and nice",
+            "Angry",
+            "Bored",
+            "Mean"
+          ],
+          "correctAnswer": "Kind and nice",
+          "explanation": "'Friendly' means kind and nice. It is used to describe someone who is nice to others."
+        },
+        {
+          "question": "Which word describes something very small?",
+          "options": [
+            "Tiny",
+            "Thick",
+            "Tall",
+            "Wide"
+          ],
+          "correctAnswer": "Tiny",
+          "explanation": "'Tiny' means very small. The other words describe size but not smallness."
+        },
+        {
+          "question": "What is the opposite of 'hot'?",
+          "options": [
+            "Warm",
+            "Cold",
+            "Cool",
+            "Dry"
+          ],
+          "correctAnswer": "Cold",
+          "explanation": "'Cold' is the opposite of 'hot'."
+        },
+        {
+          "question": "Which word best describes a difficult test?",
+          "options": [
+            "Easy",
+            "Hard",
+            "Fun",
+            "Slow"
+          ],
+          "correctAnswer": "Hard",
+          "explanation": "'Hard' means difficult. The other words do not show difficulty."
+        },
+        {
+          "question": "Which adjective fits 'a scary movie'?",
+          "options": [
+            "Funny",
+            "Frightening",
+            "Lovely",
+            "Boring"
+          ],
+          "correctAnswer": "Frightening",
+          "explanation": "'Frightening' describes something scary, like a scary movie."
+        },
+        {
+          "question": "What is the opposite of 'clean'?",
+          "options": [
+            "Dirty",
+            "Tidy",
+            "Clear",
+            "Bright"
+          ],
+          "correctAnswer": "Dirty",
+          "explanation": "'Dirty' is the opposite of 'clean'."
+        },
+        {
+          "question": "Which word means 'not heavy'?",
+          "options": [
+            "Light",
+            "Strong",
+            "Loud",
+            "Short"
+          ],
+          "correctAnswer": "Light",
+          "explanation": "'Light' means not heavy."
+        }
+      ]
+    },
+    {
+      "name": "Vocabulary - Travel",
+      "questions": [
+        {
+          "question": "Which word means a place to stay when traveling?",
+          "options": [
+            "Hotel",
+            "Taxi",
+            "Airport",
+            "Suitcase"
+          ],
+          "correctAnswer": "Hotel",
+          "explanation": "'Hotel' is a place to stay while traveling."
+        },
+        {
+          "question": "What do you use to carry clothes?",
+          "options": [
+            "Backpack",
+            "Map",
+            "Ticket",
+            "Key"
+          ],
+          "correctAnswer": "Backpack",
+          "explanation": "'Backpack' is used to carry clothes when traveling."
+        },
+        {
+          "question": "Where do airplanes take off?",
+          "options": [
+            "Harbor",
+            "Airport",
+            "Station",
+            "Terminal"
+          ],
+          "correctAnswer": "Airport",
+          "explanation": "'Airport' is where airplanes take off and land."
+        },
+        {
+          "question": "What do you need to board a plane?",
+          "options": [
+            "Ticket",
+            "Menu",
+            "Guidebook",
+            "Brochure"
+          ],
+          "correctAnswer": "Ticket",
+          "explanation": "'Ticket' is needed to board a plane."
+        },
+        {
+          "question": "What do you call someone who visits a place?",
+          "options": [
+            "Driver",
+            "Tourist",
+            "Pilot",
+            "Waiter"
+          ],
+          "correctAnswer": "Tourist",
+          "explanation": "'Tourist' is a person who visits a place."
+        },
+        {
+          "question": "Which transport goes on water?",
+          "options": [
+            "Bus",
+            "Plane",
+            "Boat",
+            "Train"
+          ],
+          "correctAnswer": "Boat",
+          "explanation": "'Boat' is a transport that goes on water."
+        },
+        {
+          "question": "What is a 'passport' used for?",
+          "options": [
+            "Identifying a person",
+            "Paying bills",
+            "Booking a hotel",
+            "Guiding tourists"
+          ],
+          "correctAnswer": "Identifying a person",
+          "explanation": "'Passport' is used to identify a person, especially when traveling."
+        },
+        {
+          "question": "Where can you buy travel tickets?",
+          "options": [
+            "Restaurant",
+            "Ticket office",
+            "Library",
+            "Museum"
+          ],
+          "correctAnswer": "Ticket office",
+          "explanation": "'Ticket office' is where you can buy travel tickets."
+        },
+        {
+          "question": "What is a guided trip called?",
+          "options": [
+            "Tour",
+            "Race",
+            "Drive",
+            "Game"
+          ],
+          "correctAnswer": "Tour",
+          "explanation": "'Tour' is a guided trip."
+        },
+        {
+          "question": "What do you read to learn about a city?",
+          "options": [
+            "Dictionary",
+            "Map",
+            "Textbook",
+            "Novel"
+          ],
+          "correctAnswer": "Map",
+          "explanation": "'Map' helps you learn about a place or find directions."
+        }
+      ]
+    },
+    {
+      "name": "Vocabulary - Weather",
+      "questions": [
+        {
+          "question": "What is falling from the sky when it rains?",
+          "options": [
+            "Dust",
+            "Water",
+            "Snow",
+            "Leaves"
+          ],
+          "correctAnswer": "Water",
+          "explanation": "'Water' falls from the sky when it rains."
+        },
+        {
+          "question": "Which word describes frozen rain?",
+          "options": [
+            "Hail",
+            "Wind",
+            "Storm",
+            "Fog"
+          ],
+          "correctAnswer": "Hail",
+          "explanation": "'Hail' is frozen rain."
+        },
+        {
+          "question": "What weather is opposite of sunny?",
+          "options": [
+            "Cloudy",
+            "Hot",
+            "Clear",
+            "Dry"
+          ],
+          "correctAnswer": "Cloudy",
+          "explanation": "'Cloudy' is the opposite of sunny."
+        },
+        {
+          "question": "What do you call a loud storm with lightning?",
+          "options": [
+            "Hurricane",
+            "Thunderstorm",
+            "Drizzle",
+            "Mist"
+          ],
+          "correctAnswer": "Thunderstorm",
+          "explanation": "'Thunderstorm' is a loud storm with lightning."
+        },
+        {
+          "question": "Which word means light rain?",
+          "options": [
+            "Drizzle",
+            "Snow",
+            "Storm",
+            "Hurricane"
+          ],
+          "correctAnswer": "Drizzle",
+          "explanation": "'Drizzle' is light rain."
+        },
+        {
+          "question": "What is the white frozen form of rain?",
+          "options": [
+            "Snow",
+            "Hail",
+            "Fog",
+            "Mist"
+          ],
+          "correctAnswer": "Snow",
+          "explanation": "'Snow' is frozen white rain."
+        },
+        {
+          "question": "Which weather word means very strong wind?",
+          "options": [
+            "Breeze",
+            "Gale",
+            "Fog",
+            "Rain"
+          ],
+          "correctAnswer": "Gale",
+          "explanation": "'Gale' means very strong wind."
+        },
+        {
+          "question": "Which word describes warm and moist air?",
+          "options": [
+            "Humid",
+            "Dry",
+            "Cool",
+            "Cold"
+          ],
+          "correctAnswer": "Humid",
+          "explanation": "'Humid' describes warm and moist air."
+        },
+        {
+          "question": "What do you use to stay dry in the rain?",
+          "options": [
+            "Hat",
+            "Umbrella",
+            "Coat",
+            "Glasses"
+          ],
+          "correctAnswer": "Umbrella",
+          "explanation": "'Umbrella' is used to stay dry in the rain."
+        },
+        {
+          "question": "Which word describes no clouds and bright sunshine?",
+          "options": [
+            "Clear",
+            "Stormy",
+            "Foggy",
+            "Snowy"
+          ],
+          "correctAnswer": "Clear",
+          "explanation": "'Clear' means no clouds and bright sunshine."
+        }
+      ]
+    },
+    {
+      "name": "Vocabulary - Colors",
+      "questions": [
+        {
+          "question": "What color do you get when mixing red and yellow?",
+          "options": [
+            "Green",
+            "Orange",
+            "Purple",
+            "Brown"
+          ],
+          "correctAnswer": "Orange",
+          "explanation": "'Orange' is the color from mixing red and yellow."
+        },
+        {
+          "question": "What color is the sky on a clear day?",
+          "options": [
+            "Blue",
+            "Gray",
+            "White",
+            "Pink"
+          ],
+          "correctAnswer": "Blue",
+          "explanation": "'Blue' is the color of the sky on a clear day."
+        },
+        {
+          "question": "What is the color of grass?",
+          "options": [
+            "Yellow",
+            "Blue",
+            "Green",
+            "Red"
+          ],
+          "correctAnswer": "Green",
+          "explanation": "'Green' is the color of grass."
+        },
+        {
+          "question": "What color do you get when you mix red and blue?",
+          "options": [
+            "Green",
+            "Orange",
+            "Purple",
+            "Pink"
+          ],
+          "correctAnswer": "Purple",
+          "explanation": "'Purple' is made by mixing red and blue."
+        },
+        {
+          "question": "Which color is often used to stop in traffic lights?",
+          "options": [
+            "Yellow",
+            "Green",
+            "Blue",
+            "Red"
+          ],
+          "correctAnswer": "Red",
+          "explanation": "'Red' is used in traffic lights to mean stop."
+        },
+        {
+          "question": "What is the color of lemons?",
+          "options": [
+            "Green",
+            "Orange",
+            "Yellow",
+            "Brown"
+          ],
+          "correctAnswer": "Yellow",
+          "explanation": "'Yellow' is the color of lemons and bananas."
+        },
+        {
+          "question": "Which color is made by mixing all other colors of light?",
+          "options": [
+            "Black",
+            "Gray",
+            "White",
+            "Purple"
+          ],
+          "correctAnswer": "White",
+          "explanation": "'White' is made by mixing all colors of light."
+        },
+        {
+          "question": "Which color is associated with sadness?",
+          "options": [
+            "Red",
+            "Green",
+            "Blue",
+            "Pink"
+          ],
+          "correctAnswer": "Blue",
+          "explanation": "'Blue' is the color of the sky on a clear day."
+        },
+        {
+          "question": "What color are strawberries?",
+          "options": [
+            "Red",
+            "Blue",
+            "Yellow",
+            "Purple"
+          ],
+          "correctAnswer": "Red",
+          "explanation": "'Red' is used in traffic lights to mean stop."
+        },
+        {
+          "question": "What color is a banana?",
+          "options": [
+            "Green",
+            "Yellow",
+            "Blue",
+            "White"
+          ],
+          "correctAnswer": "Yellow",
+          "explanation": "'Yellow' is the color of lemons and bananas."
+        }
+      ]
+    },
+    {
+      "name": "Vocabulary - Jobs",
+      "questions": [
+        {
+          "question": "Who teaches students in school?",
+          "options": [
+            "Doctor",
+            "Farmer",
+            "Teacher",
+            "Pilot"
+          ],
+          "correctAnswer": "Teacher",
+          "explanation": "'Teacher' teaches students in school."
+        },
+        {
+          "question": "Who takes care of sick people?",
+          "options": [
+            "Driver",
+            "Doctor",
+            "Chef",
+            "Artist"
+          ],
+          "correctAnswer": "Doctor",
+          "explanation": "'Doctor' takes care of sick people."
+        },
+        {
+          "question": "Who flies airplanes?",
+          "options": [
+            "Pilot",
+            "Mechanic",
+            "Driver",
+            "Engineer"
+          ],
+          "correctAnswer": "Pilot",
+          "explanation": "'Pilot' flies airplanes."
+        },
+        {
+          "question": "Who serves food in a restaurant?",
+          "options": [
+            "Cook",
+            "Waiter",
+            "Dentist",
+            "Cashier"
+          ],
+          "correctAnswer": "Waiter",
+          "explanation": "'Waiter' serves food in a restaurant."
+        },
+        {
+          "question": "Who works on a farm?",
+          "options": [
+            "Farmer",
+            "Lawyer",
+            "Nurse",
+            "Painter"
+          ],
+          "correctAnswer": "Farmer",
+          "explanation": "'Farmer' works on a farm."
+        },
+        {
+          "question": "Who builds houses and buildings?",
+          "options": [
+            "Baker",
+            "Builder",
+            "Tailor",
+            "Chef"
+          ],
+          "correctAnswer": "Builder",
+          "explanation": "'Builder' builds houses and buildings."
+        },
+        {
+          "question": "Who helps people in legal matters?",
+          "options": [
+            "Lawyer",
+            "Artist",
+            "Plumber",
+            "Cashier"
+          ],
+          "correctAnswer": "Lawyer",
+          "explanation": "'Lawyer' helps people with legal matters."
+        },
+        {
+          "question": "Who cuts and styles hair?",
+          "options": [
+            "Hairdresser",
+            "Chef",
+            "Pilot",
+            "Dentist"
+          ],
+          "correctAnswer": "Hairdresser",
+          "explanation": "'Hairdresser' cuts and styles hair."
+        },
+        {
+          "question": "Who cooks in a restaurant?",
+          "options": [
+            "Waiter",
+            "Chef",
+            "Driver",
+            "Nurse"
+          ],
+          "correctAnswer": "Chef",
+          "explanation": "'Chef' cooks food in a restaurant."
+        },
+        {
+          "question": "Who designs buildings?",
+          "options": [
+            "Architect",
+            "Artist",
+            "Engineer",
+            "Teacher"
+          ],
+          "correctAnswer": "Architect",
+          "explanation": "'Architect' designs buildings."
+        }
+      ]
+    }
+  ]
+}

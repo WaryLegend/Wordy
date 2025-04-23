@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_app_background">
+
+    <!-- Layout chính -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnReturn"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Go back"
+            app:icon="@drawable/ic_arrow_back"
+            app:iconSize="30dp"
+            app:iconTint="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/questionCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnReturn"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tvQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Câu hỏi"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:paddingBottom="12dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/optionA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        />
+                    <RadioButton android:id="@+id/optionB" style="@style/QuizOptionStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"/>
+                    <RadioButton android:id="@+id/optionC" style="@style/QuizOptionStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black" />
+                    <RadioButton android:id="@+id/optionD" style="@style/QuizOptionStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionCard"
+            android:layout_marginTop="16dp"
+            android:text="Check"
+            android:backgroundTint="@color/navy_blue"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button_bg" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnCheck"
+            android:layout_marginTop="12dp"
+            android:text="Next"
+            android:visibility="gone"
+            android:backgroundTint="@color/navy_blue"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button_bg" />
+    </RelativeLayout>
+
+    <include layout="@layout/popup_feedback" />
+</FrameLayout>

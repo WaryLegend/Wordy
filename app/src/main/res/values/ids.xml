@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageTopic" type="id" />
+    <item name="textTopicName" type="id" />
+    <item name="buttonLearnWords" type="id" />
+    <item name="popupFeedback" type="id" />
+</resources>
