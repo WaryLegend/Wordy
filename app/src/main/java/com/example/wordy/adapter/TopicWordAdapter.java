@@ -14,19 +14,19 @@ import com.example.wordy.model.Word;
 
 import java.util.List;
 
-public class WordAdapter extends RecyclerView.Adapter<WordAdapter.WordViewHolder> {
+public class TopicWordAdapter extends RecyclerView.Adapter<TopicWordAdapter.WordViewHolder> {
 
     private Context context;
     private List<Word> wordList;
 
-    public WordAdapter(Context context, List<Word> wordList) {
+    public TopicWordAdapter(Context context, List<Word> wordList) {
         this.context = context;
         this.wordList = wordList;
     }
 
     @Override
     public WordViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.word_card_layout, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.topic_word_card_layout, parent, false);
         return new WordViewHolder(view);
     }
 

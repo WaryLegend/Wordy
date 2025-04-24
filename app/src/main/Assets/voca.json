@@ -3,6 +3,7 @@
         {
             "id": 1,
             "name": "Gia đình (Family)",
+            "img":  "family",
             "words": [
                 {
                     "wordnumber": 1,
@@ -89,6 +90,7 @@
         {
             "id": 2,
             "name": "Học tập (Education)",
+            "img": "study",
             "words": [
                 {
                     "wordnumber": 1,
@@ -174,7 +176,8 @@
         },
         {
             "id": 3,
-            "name": "Hoạt động hàng ngày (Daily Activities)",
+            "name": "Hoạt động (Activities)",
+            "img": "dailyroutine",
             "words": [
                 {
                     "wordnumber": 1,
@@ -261,6 +264,7 @@
         {
             "id": 4,
             "name": "Thức ăn (Food)",
+            "img": "food",
             "words": [
                 {
                     "wordnumber": 1,
@@ -347,6 +351,7 @@
         {
             "id": 5,
             "name": "Động vật (Animals)",
+            "img": "animals",
             "words": [
                 {
                     "wordnumber": 1,
@@ -433,6 +438,7 @@
         {
             "id": 6,
             "name": "Tính từ (Adjectives)",
+            "img": "emotion",
             "words": [
                 {
                     "wordnumber": 1,
@@ -519,6 +525,7 @@
         {
             "id": 7,
             "name": "Du lịch (Travel)",
+            "img": "travel",
             "words": [
                 {
                     "wordnumber": 1,
@@ -605,6 +612,7 @@
         {
             "id": 8,
             "name": "Thời tiết (Weather)",
+            "img": "weather",
             "words": [
                 {
                     "wordnumber": 1,
@@ -691,6 +699,7 @@
         {
             "id": 9,
             "name": "Màu sắc (Colors)",
+            "img": "colors",
             "words": [
                 {
                     "wordnumber": 1,
@@ -777,6 +786,7 @@
         {
             "id": 10,
             "name": "Công việc (Jobs)",
+            "img": "jobs",
             "words": [
                 {
                     "wordnumber": 1,
