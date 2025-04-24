@@ -3,11 +3,12 @@
         {
             "id": 1,
             "name": "Gia đình (Family)",
+            "img":  "family",
             "words": [
                 {
                     "wordnumber": 1,
                     "word": "mother",
-                    "meaning": "mẹ",
+                    "meaning": "mẹ/má",
                     "type": "noun",
                     "pronunciation": "/ˈmʌð.ɚ/",
                     "example": "My mother cooks delicious food."
@@ -15,7 +16,7 @@
                 {
                     "wordnumber": 2,
                     "word": "father",
-                    "meaning": "bố",
+                    "meaning": "bố/ba",
                     "type": "noun",
                     "pronunciation": "/ˈfɑː.ðɚ/",
                     "example": "My father works in a factory."
@@ -39,7 +40,7 @@
                 {
                     "wordnumber": 5,
                     "word": "grandmother",
-                    "meaning": "bà",
+                    "meaning": "bà nội/ngoại",
                     "type": "noun",
                     "pronunciation": "/ˈɡræn.mʌð.ɚ/",
                     "example": "My grandmother tells great stories."
@@ -47,7 +48,7 @@
                 {
                     "wordnumber": 6,
                     "word": "grandfather",
-                    "meaning": "ông",
+                    "meaning": "ông nội/ngoại",
                     "type": "noun",
                     "pronunciation": "/ˈɡræn.fɑː.ðɚ/",
                     "example": "My grandfather is very kind."
@@ -89,6 +90,7 @@
         {
             "id": 2,
             "name": "Học tập (Education)",
+            "img": "study",
             "words": [
                 {
                     "wordnumber": 1,
@@ -109,7 +111,7 @@
                 {
                     "wordnumber": 3,
                     "word": "student",
-                    "meaning": "học sinh",
+                    "meaning": "học sinh, sinh viên",
                     "type": "noun",
                     "pronunciation": "/ˈstuː.dnt/",
                     "example": "The student studies hard."
@@ -117,7 +119,7 @@
                 {
                     "wordnumber": 4,
                     "word": "book",
-                    "meaning": "sách",
+                    "meaning": "sách, vở",
                     "type": "noun",
                     "pronunciation": "/bʊk/",
                     "example": "I read a book every week."
@@ -125,7 +127,7 @@
                 {
                     "wordnumber": 5,
                     "word": "pen",
-                    "meaning": "bút",
+                    "meaning": "cái bút, bút mực",
                     "type": "noun",
                     "pronunciation": "/pen/",
                     "example": "I write with a pen."
@@ -174,7 +176,8 @@
         },
         {
             "id": 3,
-            "name": "Hoạt động hàng ngày (Daily Activities)",
+            "name": "Hoạt động (Activities)",
+            "img": "dailyroutine",
             "words": [
                 {
                     "wordnumber": 1,
@@ -261,11 +264,12 @@
         {
             "id": 4,
             "name": "Thức ăn (Food)",
+            "img": "food",
             "words": [
                 {
                     "wordnumber": 1,
                     "word": "apple",
-                    "meaning": "táo",
+                    "meaning": "quả táo",
                     "type": "noun",
                     "pronunciation": "/ˈæp.əl/",
                     "example": "She ate an apple."
@@ -305,7 +309,7 @@
                 {
                     "wordnumber": 6,
                     "word": "fish",
-                    "meaning": "cá",
+                    "meaning": "con cá",
                     "type": "noun",
                     "pronunciation": "/fɪʃ/",
                     "example": "I like grilled fish."
@@ -321,7 +325,7 @@
                 {
                     "wordnumber": 8,
                     "word": "egg",
-                    "meaning": "trứng",
+                    "meaning": "quả trứng",
                     "type": "noun",
                     "pronunciation": "/eɡ/",
                     "example": "He eats an egg for breakfast."
@@ -329,7 +333,7 @@
                 {
                     "wordnumber": 9,
                     "word": "cake",
-                    "meaning": "bánh ngọt",
+                    "meaning": "bánh ngọt, bánh kem",
                     "type": "noun",
                     "pronunciation": "/keɪk/",
                     "example": "This cake is delicious."
@@ -337,7 +341,7 @@
                 {
                     "wordnumber": 10,
                     "word": "soup",
-                    "meaning": "súp",
+                    "meaning": "súp, canh",
                     "type": "noun",
                     "pronunciation": "/suːp/",
                     "example": "She makes hot soup."
@@ -347,11 +351,12 @@
         {
             "id": 5,
             "name": "Động vật (Animals)",
+            "img": "animals",
             "words": [
                 {
                     "wordnumber": 1,
                     "word": "cat",
-                    "meaning": "mèo",
+                    "meaning": "con mèo",
                     "type": "noun",
                     "pronunciation": "/kæt/",
                     "example": "The cat is sleeping."
@@ -359,7 +364,7 @@
                 {
                     "wordnumber": 2,
                     "word": "dog",
-                    "meaning": "chó",
+                    "meaning": "con chó",
                     "type": "noun",
                     "pronunciation": "/dɔːɡ/",
                     "example": "The dog barks loudly."
@@ -367,7 +372,7 @@
                 {
                     "wordnumber": 3,
                     "word": "bird",
-                    "meaning": "chim",
+                    "meaning": "con chim",
                     "type": "noun",
                     "pronunciation": "/bɝːd/",
                     "example": "The bird flies high."
@@ -375,7 +380,7 @@
                 {
                     "wordnumber": 4,
                     "word": "fish",
-                    "meaning": "cá",
+                    "meaning": "con cá",
                     "type": "noun",
                     "pronunciation": "/fɪʃ/",
                     "example": "The fish swims in the tank."
@@ -383,7 +388,7 @@
                 {
                     "wordnumber": 5,
                     "word": "horse",
-                    "meaning": "ngựa",
+                    "meaning": "con ngựa",
                     "type": "noun",
                     "pronunciation": "/hɔːrs/",
                     "example": "The horse runs fast."
@@ -391,7 +396,7 @@
                 {
                     "wordnumber": 6,
                     "word": "cow",
-                    "meaning": "bò",
+                    "meaning": "con bò",
                     "type": "noun",
                     "pronunciation": "/kaʊ/",
                     "example": "The cow gives milk."
@@ -399,7 +404,7 @@
                 {
                     "wordnumber": 7,
                     "word": "pig",
-                    "meaning": "lợn",
+                    "meaning": "con lợn",
                     "type": "noun",
                     "pronunciation": "/pɪɡ/",
                     "example": "The pig is in the farm."
@@ -407,7 +412,7 @@
                 {
                     "wordnumber": 8,
                     "word": "chicken",
-                    "meaning": "gà",
+                    "meaning": "con gà",
                     "type": "noun",
                     "pronunciation": "/ˈtʃɪk.ɪn/",
                     "example": "The chicken lays eggs."
@@ -415,7 +420,7 @@
                 {
                     "wordnumber": 9,
                     "word": "elephant",
-                    "meaning": "voi",
+                    "meaning": "con voi",
                     "type": "noun",
                     "pronunciation": "/ˈel.ə.fənt/",
                     "example": "The elephant is big."
@@ -423,7 +428,7 @@
                 {
                     "wordnumber": 10,
                     "word": "tiger",
-                    "meaning": "hổ",
+                    "meaning": "con hổ",
                     "type": "noun",
                     "pronunciation": "/ˈtaɪ.ɡɚ/",
                     "example": "The tiger is strong."
@@ -433,6 +438,7 @@
         {
             "id": 6,
             "name": "Tính từ (Adjectives)",
+            "img": "emotion",
             "words": [
                 {
                     "wordnumber": 1,
@@ -453,7 +459,7 @@
                 {
                     "wordnumber": 3,
                     "word": "big",
-                    "meaning": "lớn",
+                    "meaning": "to/lớn",
                     "type": "adjective",
                     "pronunciation": "/bɪɡ/",
                     "example": "This is a big house."
@@ -461,7 +467,7 @@
                 {
                     "wordnumber": 4,
                     "word": "small",
-                    "meaning": "nhỏ",
+                    "meaning": "nhỏ/bé",
                     "type": "adjective",
                     "pronunciation": "/smɔːl/",
                     "example": "This is a small dog."
@@ -509,7 +515,7 @@
                 {
                     "wordnumber": 10,
                     "word": "young",
-                    "meaning": "trẻ",
+                    "meaning": "trẻ/thiếu niên",
                     "type": "adjective",
                     "pronunciation": "/jʌŋ/",
                     "example": "He is a young boy."
@@ -519,11 +525,12 @@
         {
             "id": 7,
             "name": "Du lịch (Travel)",
+            "img": "travel",
             "words": [
                 {
                     "wordnumber": 1,
                     "word": "travel",
-                    "meaning": "du lịch",
+                    "meaning": "du lịch/đi xa",
                     "type": "verb",
                     "pronunciation": "/ˈtræv.əl/",
                     "example": "I love to travel."
@@ -605,6 +612,7 @@
         {
             "id": 8,
             "name": "Thời tiết (Weather)",
+            "img": "weather",
             "words": [
                 {
                     "wordnumber": 1,
@@ -691,6 +699,7 @@
         {
             "id": 9,
             "name": "Màu sắc (Colors)",
+            "img": "colors",
             "words": [
                 {
                     "wordnumber": 1,
@@ -777,6 +786,7 @@
         {
             "id": 10,
             "name": "Công việc (Jobs)",
+            "img": "jobs",
             "words": [
                 {
                     "wordnumber": 1,

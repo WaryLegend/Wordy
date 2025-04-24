@@ -21,11 +21,11 @@ import com.example.wordy.model.Phonetic;
 import java.util.List;
 
 
-public class WordDictionalAdapter extends RecyclerView.Adapter<WordDictionalAdapter.WordViewHolder> {
+public class DictionaryAdapter extends RecyclerView.Adapter<DictionaryAdapter.WordViewHolder> {
 
     private final List<DictionaryResponse> wordList;
     private Context context;
-    public WordDictionalAdapter(Context context, List<DictionaryResponse> wordList) {
+    public DictionaryAdapter(Context context, List<DictionaryResponse> wordList) {
         this.context = context;
         this.wordList = wordList;
     }
@@ -33,7 +33,7 @@ public class WordDictionalAdapter extends RecyclerView.Adapter<WordDictionalAdap
     @NonNull
     @Override
     public WordViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_word, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.dictionary_item, parent, false);
         return new WordViewHolder(view);
     }
 
@@ -48,9 +48,8 @@ public class WordDictionalAdapter extends RecyclerView.Adapter<WordDictionalAdap
             String definition = item.meanings.get(0).definitions.get(0).definition;
             holder.definitionText.setText(definition);
         } else {
-            holder.definitionText.setText("No definition found");
+            holder.definitionText.setText("/No definition found/");
         }
-
 
         holder.itemView.setOnClickListener(v -> {
 

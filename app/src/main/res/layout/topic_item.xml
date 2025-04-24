@@ -6,7 +6,7 @@
     android:backgroundTint="#AEBCFF"
     android:layout_marginVertical="8dp"
     android:padding="10dp"
-    app:cardCornerRadius="25dp"
+    app:cardCornerRadius="20dp"
     app:cardElevation="4dp">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,25 +16,30 @@
         android:layout_marginHorizontal="8dp">
 
         <!-- Ảnh đại diện chủ đề -->
-        <ImageView
-            android:id="@+id/imageTopic"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:scaleType="centerCrop"
-            android:layout_alignParentStart="true"
-            android:background="@drawable/circle_shadow"
-            android:contentDescription="Topic Image"
-            android:src="@drawable/ic_launcher_foreground" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp">
+            <ImageView
+                android:id="@+id/imageTopic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentStart="true"
+                android:contentDescription="Topic Image"
+                android:src="@drawable/ic_launcher_foreground" />
+        </androidx.cardview.widget.CardView>
 
         <!-- Tên chủ đề -->
         <TextView
             android:id="@+id/textTopicName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/imageTopic"
+            android:layout_alignTop="@id/image_container"
             android:layout_marginStart="16dp"
             android:layout_toStartOf="@+id/buttonLearnWords"
-            android:layout_toEndOf="@id/imageTopic"
+            android:layout_toEndOf="@id/image_container"
             android:text="Topic Name"
             android:textColor="@color/navy_blue"
             android:textSize="18sp"
@@ -49,7 +54,7 @@
             android:textColor="@android:color/white"
             android:textSize="15sp"
             android:backgroundTint="@color/navy_blue"
-            android:layout_alignBottom="@id/imageTopic"
+            android:layout_alignBottom="@id/image_container"
             android:layout_alignParentEnd="true"
             android:paddingHorizontal="12dp"
             android:paddingVertical="6dp" />

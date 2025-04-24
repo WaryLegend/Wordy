@@ -43,6 +43,7 @@ public class TopicActivity extends AppCompatActivity {
         View headerLayout = findViewById(R.id.header);
         TextView headerTitle = headerLayout.findViewById(R.id.header_title);
         headerTitle.setText("Topic");
+
         // bỏ cái icon bên phải (don't mind here)
         Button rm = headerLayout.findViewById(R.id.btnIconRight);
         rm.setVisibility(View.GONE);

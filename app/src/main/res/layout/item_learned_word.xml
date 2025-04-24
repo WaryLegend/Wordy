@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:padding="12dp"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/tvWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Word"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Topic"
+            android:textSize="14sp"
+            android:textColor="#555555" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learned Date"
+            android:textSize="14sp"
+            android:textColor="#777777" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

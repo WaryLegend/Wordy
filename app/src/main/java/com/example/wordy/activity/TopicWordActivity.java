@@ -1,18 +1,18 @@
 package com.example.wordy.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wordy.R;
-import com.example.wordy.adapter.WordAdapter;
+import com.example.wordy.adapter.TopicWordAdapter;
 import com.example.wordy.model.Word;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
@@ -25,20 +25,18 @@ import java.util.List;
 import java.util.Objects;
 
 public class TopicWordActivity extends AppCompatActivity {
-
-    private RecyclerView recyclerView;
-    private WordAdapter wordAdapter;
     private List<Word> wordList;
-    private Button btnReturn;
+    private String topicName;
+    private String topicId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.topic_items_layout);
+        setContentView(R.layout.topic_item_layout);
 
         // Initialize views
-        btnReturn = findViewById(R.id.btnReturn);
-        recyclerView = findViewById(R.id.recyclerViewWords);
+        Button btnReturn = findViewById(R.id.btnReturn);
+        RecyclerView recyclerView = findViewById(R.id.recyclerViewWords);
 
         // Set up header title
         View headerLayout = findViewById(R.id.header);
@@ -47,12 +45,15 @@ public class TopicWordActivity extends AppCompatActivity {
         MaterialButton btnIconRight = headerLayout.findViewById(R.id.btnIconRight);
         btnIconRight.setIconResource(R.drawable.ic_controller_24px);
 
-        // Get topic name from Intent
-        String topicName = getIntent().getStringExtra("topicName");
+        // Get topic name, id from Intent
+        topicName = getIntent().getStringExtra("topicName");
+        topicId = getIntent().getStringExtra("topicId");
+
         if (topicName != null && !topicName.isEmpty()) {
             headerTitle.setText(topicName);
         } else {
-            headerTitle.setText("Words"); // Fallback
+            topicName = "Words";
+            headerTitle.setText(topicName);
         }
 
         // Set up back button
@@ -73,8 +74,8 @@ public class TopicWordActivity extends AppCompatActivity {
         }
 
         // Initialize adapter
-        wordAdapter = new WordAdapter(this, wordList);
-        recyclerView.setAdapter(wordAdapter);
+        TopicWordAdapter topicWordAdapter = new TopicWordAdapter(this, wordList);
+        recyclerView.setAdapter(topicWordAdapter);
     }
 
     private void showBottomSheetMenu() {
@@ -87,26 +88,37 @@ public class TopicWordActivity extends AppCompatActivity {
 
         // Find buttons
         Button optionA = bottomSheetView.findViewById(R.id.optionA);
+        optionA.setText("Flash Card");
         Button optionB = bottomSheetView.findViewById(R.id.optionB);
+        optionB.setText("Quiz Game");
         Button optionC = bottomSheetView.findViewById(R.id.optionC);
         Button optionD = bottomSheetView.findViewById(R.id.optionD);
         Button cancelButton = bottomSheetView.findViewById(R.id.cancelButton);
 
         // Set click listeners
         optionA.setOnClickListener(v -> {
-            Toast.makeText(this, "Selected Option A", Toast.LENGTH_SHORT).show();
+            Intent flashcardIntent = new Intent(this, FlashcardActivity.class);
+            flashcardIntent.putExtra("topicId", topicId);
+            flashcardIntent.putExtra("topicName", topicName);
+
+            String wordsJson = new Gson().toJson(wordList);
+            flashcardIntent.putExtra("words", wordsJson);
+            startActivity(flashcardIntent);
             bottomSheetDialog.dismiss();
         });
         optionB.setOnClickListener(v -> {
-            Toast.makeText(this, "Selected Option B", Toast.LENGTH_SHORT).show();
+            Intent quizIntent = new Intent(this, QuizActivity.class);
+            quizIntent.putExtra("topicId", topicId);
+            quizIntent.putExtra("topicName", topicName);
+            startActivity(quizIntent);
             bottomSheetDialog.dismiss();
         });
         optionC.setOnClickListener(v -> {
-            Toast.makeText(this, "Selected Option C", Toast.LENGTH_SHORT).show();
+
             bottomSheetDialog.dismiss();
         });
         optionD.setOnClickListener(v -> {
-            Toast.makeText(this, "Selected Option D", Toast.LENGTH_SHORT).show();
+
             bottomSheetDialog.dismiss();
         });
 

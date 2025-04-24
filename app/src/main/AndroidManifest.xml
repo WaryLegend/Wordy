@@ -29,6 +29,9 @@
         <activity android:name=".activity.TopicWordActivity" />
         <activity android:name=".activity.DictionaryActivity" />
         <activity android:name=".activity.WordDetailActivity" />
+        <activity android:name=".activity.QuizActivity" />
+        <activity android:name=".activity.FlashcardActivity" />
+        <activity android:name=".activity.LearnedWordsActivity" />
 
     </application>
 

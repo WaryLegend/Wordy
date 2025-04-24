@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wordy.R;
-import com.example.wordy.adapter.WordDictionalAdapter;
+import com.example.wordy.adapter.DictionaryAdapter;
 import com.example.wordy.interfaces.DictionaryApi;
 import com.example.wordy.model.DictionaryResponse;
 import com.google.android.material.textfield.TextInputEditText;
@@ -32,7 +32,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class DictionaryActivity extends AppCompatActivity {
-    private WordDictionalAdapter adapter;
+    private DictionaryAdapter dictionaryAdapter;
     private RecyclerView recyclerView;
     private TextView hintText;
     private List<DictionaryResponse> wordList = new ArrayList<>();
@@ -60,8 +60,8 @@ public class DictionaryActivity extends AppCompatActivity {
 
         // Set up RecyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new WordDictionalAdapter(this, wordList);
-        recyclerView.setAdapter(adapter);
+        dictionaryAdapter = new DictionaryAdapter(this, wordList);
+        recyclerView.setAdapter(dictionaryAdapter);
 
         // Open TextInputLayout
         btnSearchIcon.setOnClickListener(v -> {
@@ -117,7 +117,7 @@ public class DictionaryActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null && !response.body().isEmpty()) {
                     wordList.clear();
                     wordList.add(response.body().get(0));
-                    adapter.notifyDataSetChanged();
+                    dictionaryAdapter.notifyDataSetChanged();
                     hintText.setVisibility(View.GONE);
                     recyclerView.setVisibility(View.VISIBLE);
                 } else {

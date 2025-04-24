@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="gone"
-                tools:listitem="@layout/item_word"
+                tools:listitem="@layout/dictionary_item"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
         </LinearLayout>

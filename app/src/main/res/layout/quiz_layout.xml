@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_app_background">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Layout chính -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        android:background="@drawable/top_rounded_shape"
+        android:backgroundTint="@color/vanilla"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/questionCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="12dp"
+                    android:text="Câu hỏi"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/optionA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/navy_blue"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black" />
+
+                    <RadioButton
+                        android:id="@+id/optionB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/navy_blue"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black" />
+
+                    <RadioButton
+                        android:id="@+id/optionC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/navy_blue"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black" />
+
+                    <RadioButton
+                        android:id="@+id/optionD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/navy_blue"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionCard"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/navy_blue"
+            android:text="Check"
+            android:textSize="20sp"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

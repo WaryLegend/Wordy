@@ -67,7 +67,7 @@
                 android:id="@+id/txtDefinition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textColor="#000"
                 android:layout_marginBottom="8dp"/>
 
@@ -76,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="Example:"
                 android:textStyle="italic"
+                android:textSize="18sp"
                 android:textColor="#888"
                 android:id="@+id/exampleLabel" />
 
