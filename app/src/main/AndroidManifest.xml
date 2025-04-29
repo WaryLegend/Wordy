@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
-
+<!--    thêm mới-->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
@@ -33,6 +35,13 @@
         <activity android:name=".activity.QuizActivity" />
         <activity android:name=".activity.FlashcardActivity" />
         <activity android:name=".activity.LearnedWordsActivity" />
+
+<!--        thêm mới-->
+        <activity android:name=".activity.SettingsActivity" />
+        <receiver android:name=".utils.ReminderBroadcast" />
+
+
+
     </application>
 
 </manifest>

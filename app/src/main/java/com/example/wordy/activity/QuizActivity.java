@@ -44,6 +44,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private String currentUserId;
     private String currentTopicId;
+    private String currentTopicName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +69,12 @@ public class QuizActivity extends AppCompatActivity {
         imgFeedback = findViewById(R.id.imgFeedback);
         tvFeedback = findViewById(R.id.tvFeedback);
         btnContinue = findViewById(R.id.btnContinue);
+        popupFeedback.setVisibility(View.GONE);
+        currentTopicName = getIntent().getStringExtra("topicName");
+        questions = loadQuestionsFromAsset();
 
 
+        Log.d("QUIZ_TOPIC", "Received topicName: " + currentTopicName);
 
 
         btnContinue.setOnClickListener(v -> {
@@ -79,7 +84,12 @@ public class QuizActivity extends AppCompatActivity {
 
         btnReturn.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
 
-        questions = loadQuestionsFromAsset();
+        if (questions == null || questions.isEmpty()) {
+            Toast.makeText(this, "Không tìm thấy câu hỏi cho chủ đề này", Toast.LENGTH_LONG).show();
+            finish();
+            return;
+        }
+
 
         if (questions != null && !questions.isEmpty()) {
             showQuestion(questions.get(currentIndex));
@@ -157,10 +167,20 @@ public class QuizActivity extends AppCompatActivity {
             JsonObject jsonObject = JsonParser.parseString(json).getAsJsonObject();
             Type listType = new TypeToken<List<QuizCategory>>(){}.getType();
             List<QuizCategory> categories = new Gson().fromJson(jsonObject.get("categories"), listType);
-            return categories.get(0).getQuestions();
+
+            for (QuizCategory category : categories) {
+                Log.d("DEBUG_TOPIC_MATCH", "Comparing: " + category.getName() + " vs " + currentTopicName);
+                if (category.getName().equalsIgnoreCase(currentTopicName)) {
+                    return category.getQuestions();
+                }
+            }
+            Log.e("QUIZ_ERROR", "No questions found for topic: " + currentTopicName);
+
+
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
         }
+        return null;
     }
+
 }

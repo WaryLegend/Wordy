@@ -12,6 +12,7 @@ import com.example.wordy.R;
 import com.example.wordy.TempPref.PrefsHelper;
 import com.example.wordy.model.Topic;
 import com.example.wordy.model.User;
+import com.example.wordy.utils.NotificationHelper;
 import com.google.android.material.card.MaterialCardView;
 import com.google.common.reflect.TypeToken;
 import com.google.firebase.firestore.CollectionReference;
@@ -35,7 +36,7 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private MaterialCardView btnProfile, btnDictionary, btnTopic;
+    private MaterialCardView btnProfile, btnDictionary, btnTopic,btnSetting;
     private TextView username, progressPercentage;
     private ProgressBar progressBar;
 
@@ -88,6 +89,9 @@ public class HomeActivity extends AppCompatActivity {
 
         btnDictionary = findViewById(R.id.btnDictionary);
         btnDictionary.setOnClickListener(v -> startActivity(new Intent(this, DictionaryActivity.class)));
+
+        btnSetting = findViewById(R.id.btnSetting);
+        btnSetting.setOnClickListener(v -> startActivity(new Intent(this, SettingsActivity.class)));
 
 
         findViewById(R.id.cardProgress).setOnClickListener(v -> {

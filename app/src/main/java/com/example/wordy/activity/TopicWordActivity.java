@@ -102,10 +102,12 @@ public class TopicWordActivity extends AppCompatActivity {
         optionA.setOnClickListener(v -> {
             Intent quizIntent = new Intent(this, QuizActivity.class);
             quizIntent.putExtra("topicId", topicId != null ? topicId : topicName.toLowerCase().replace(" ", "_"));
-            quizIntent.putExtra("topicName", topicName);
+            quizIntent.putExtra("topicName",  topicName);
             startActivity(quizIntent);
             bottomSheetDialog.dismiss();
         });
+
+
         optionB.setOnClickListener(v -> {
             Intent flashcardIntent = new Intent(this, FlashcardActivity.class);
             flashcardIntent.putExtra("topicId", topicId);

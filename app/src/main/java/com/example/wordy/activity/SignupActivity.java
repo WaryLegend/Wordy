@@ -3,6 +3,7 @@ package com.example.wordy.activity;
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -25,6 +26,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import android.app.TimePickerDialog;
+import android.widget.TimePicker;
+import android.view.LayoutInflater;
+import android.view.View;
 
 public class SignupActivity extends AppCompatActivity {
     private TextInputLayout usernameLayout, phoneLayout, birthdayLayout, emailLayout, passwordLayout;
@@ -214,10 +220,16 @@ public class SignupActivity extends AppCompatActivity {
                                         // Lưu trạng thái đăng nhập và userId
                                         prefs.setLoggedIn(true);
                                         prefs.setUserId(firebaseUser.getUid());
+//                                        thêm mới
+                                        SharedPreferences sharedPrefs = getSharedPreferences("WordyPrefs", MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = sharedPrefs.edit();
+                                        editor.putInt("notify_hour", 20);
+                                        editor.putInt("notify_minute", 0);
+                                        editor.putBoolean("notify_enabled", true);
+                                        editor.apply();
 
                                         Toast.makeText(SignupActivity.this, "Signup successful!", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(SignupActivity.this, HomeActivity.class));
-                                        finish();
+                                        showPickTimeBottomSheet();
                                     })
                                     .addOnFailureListener(e -> {
                                         Toast.makeText(SignupActivity.this, "Failed to save user data: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -228,6 +240,46 @@ public class SignupActivity extends AppCompatActivity {
                         Log.e(TAG, "Signup failed: " + task.getException().getMessage());
                     }
                 });
+    }
+    private void showPickTimeBottomSheet() {
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+        View sheetView = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_pick_time, null);
+        bottomSheetDialog.setContentView(sheetView);
+
+        Button btnPickTime = sheetView.findViewById(R.id.btnPickTime);
+        Button btnConfirmTime = sheetView.findViewById(R.id.btnConfirmTime);
+
+        final int[] selectedHour = {20}; // mặc định 20h
+        final int[] selectedMinute = {0}; // mặc định 0 phút
+
+        btnPickTime.setOnClickListener(v -> {
+            TimePickerDialog timePickerDialog = new TimePickerDialog(this, (TimePicker view, int hourOfDay, int minute) -> {
+                selectedHour[0] = hourOfDay;
+                selectedMinute[0] = minute;
+                btnPickTime.setText(String.format("Đã chọn: %02d:%02d", hourOfDay, minute));
+            }, selectedHour[0], selectedMinute[0], true);
+
+            timePickerDialog.show();
+        });
+
+        btnConfirmTime.setOnClickListener(v -> {
+            SharedPreferences prefs = getSharedPreferences("WordyPrefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt("notify_hour", selectedHour[0]);
+            editor.putInt("notify_minute", selectedMinute[0]);
+            editor.putBoolean("notify_enabled", true);
+            editor.apply();
+
+            bottomSheetDialog.dismiss();
+
+            // Sau khi chọn giờ -> vào Home
+            Intent intent = new Intent(SignupActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+        bottomSheetDialog.setCancelable(false);
+        bottomSheetDialog.show();
     }
 
     @Override

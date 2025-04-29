@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "name": "Vocabulary - Family",
+      "name": "Gia đình (Family)",
       "questions": [
         {
           "question": "What do you call your father's or mother's younger sister?",
@@ -77,7 +77,7 @@
     }
   ,
     {
-      "name": "Vocabulary - Education",
+      "name": "Học tập (Education)",
       "questions": [
         {
           "question": "Where does he go every day?",
@@ -192,7 +192,7 @@
       ]
     },
     {
-      "name": "Vocabulary - Adjectives",
+      "name": "Tính từ (Adjectives)",
       "questions": [
         {
           "question": "Which word means 'very big'?",
@@ -307,7 +307,7 @@
       ]
     },
     {
-      "name": "Vocabulary - Travel",
+      "name": "Du lịch (Travel)",
       "questions": [
         {
           "question": "Which word means a place to stay when traveling?",
@@ -422,7 +422,7 @@
       ]
     },
     {
-      "name": "Vocabulary - Weather",
+      "name": "Thời tiết (Weather)",
       "questions": [
         {
           "question": "What is falling from the sky when it rains?",
@@ -537,7 +537,7 @@
       ]
     },
     {
-      "name": "Vocabulary - Colors",
+      "name": "Màu sắc (Colors)",
       "questions": [
         {
           "question": "What color do you get when mixing red and yellow?",
@@ -652,7 +652,353 @@
       ]
     },
     {
-      "name": "Vocabulary - Jobs",
+      "name": "Hoạt động hàng ngày (Daily Activities)",
+      "questions": [
+        {
+          "question": "What do we usually do at 7 PM?",
+          "options": [
+            "Sleep",
+            "Play",
+            "Eat",
+            "Walk"
+          ],
+          "correctAnswer": "Eat",
+          "explanation": "The sentence is 'We eat dinner at 7 PM.'"
+        },
+        {
+          "question": "What does he drink every morning?",
+          "options": [
+            "Milk",
+            "Tea",
+            "Juice",
+            "Water"
+          ],
+          "correctAnswer": "Water",
+          "explanation": "The sentence is 'He drinks water every morning.'"
+        },
+        {
+          "question": "When do you sleep according to the sentence?",
+          "options": [
+            "At 9 PM",
+            "At 10 PM",
+            "At 8 PM",
+            "At 7 PM"
+          ],
+          "correctAnswer": "At 10 PM",
+          "explanation": "The sentence is 'I sleep at 10 PM.'"
+        },
+        {
+          "question": "What time does she wake up?",
+          "options": [
+            "Late",
+            "Early",
+            "At noon",
+            "At midnight"
+          ],
+          "correctAnswer": "Early",
+          "explanation": "The sentence is 'She wakes up early.'"
+        },
+        {
+          "question": "Where does he work?",
+          "options": [
+            "At home",
+            "In a hospital",
+            "In a school",
+            "In an office"
+          ],
+          "correctAnswer": "In an office",
+          "explanation": "The sentence is 'He works in an office.'"
+        },
+        {
+          "question": "Where do the children play?",
+          "options": [
+            "At home",
+            "In the park",
+            "In the school",
+            "On the street"
+          ],
+          "correctAnswer": "In the park",
+          "explanation": "The sentence is 'The children play in the park.'"
+        },
+        {
+          "question": "How do you go to school?",
+          "options": [
+            "By car",
+            "By bus",
+            "I walk",
+            "I run"
+          ],
+          "correctAnswer": "I walk",
+          "explanation": "The sentence is 'I walk to school.'"
+        },
+        {
+          "question": "When do we talk?",
+          "options": [
+            "Every morning",
+            "Every day",
+            "Every afternoon",
+            "Every night"
+          ],
+          "correctAnswer": "Every night",
+          "explanation": "The sentence is 'We talk every night.'"
+        },
+        {
+          "question": "What do they watch together?",
+          "options": [
+            "Movies",
+            "TV",
+            "Books",
+            "Games"
+          ],
+          "correctAnswer": "TV",
+          "explanation": "The sentence is 'They watch TV together.'"
+        },
+        {
+          "question": "What do you do after work?",
+          "options": [
+            "Work again",
+            "Eat",
+            "Rest",
+            "Walk"
+          ],
+          "correctAnswer": "Rest",
+          "explanation": "The sentence is 'I rest after work.'"
+        }
+      ]
+    },
+    {
+      "name": "Thức ăn (Food)",
+      "questions": [
+        {
+          "question": "What did she eat?",
+          "options": [
+            "Apple",
+            "Bread",
+            "Rice",
+            "Cake"
+          ],
+          "correctAnswer": "Apple",
+          "explanation": "The sentence is 'She ate an apple.'"
+        },
+        {
+          "question": "What kind of bread do I like?",
+          "options": [
+            "Old bread",
+            "Fresh bread",
+            "Sweet bread",
+            "Brown bread"
+          ],
+          "correctAnswer": "Fresh bread",
+          "explanation": "The sentence is 'I like fresh bread.'"
+        },
+        {
+          "question": "What does he drink?",
+          "options": [
+            "Milk",
+            "Juice",
+            "Water",
+            "Soda"
+          ],
+          "correctAnswer": "Water",
+          "explanation": "The sentence is 'He drinks water.'"
+        },
+        {
+          "question": "What do we eat every day?",
+          "options": [
+            "Fish",
+            "Bread",
+            "Rice",
+            "Chicken"
+          ],
+          "correctAnswer": "Rice",
+          "explanation": "The sentence is 'We eat rice every day.'"
+        },
+        {
+          "question": "What does she cook for dinner?",
+          "options": [
+            "Eggs",
+            "Soup",
+            "Chicken",
+            "Cake"
+          ],
+          "correctAnswer": "Chicken",
+          "explanation": "The sentence is 'She cooks chicken for dinner.'"
+        },
+        {
+          "question": "What kind of fish do I like?",
+          "options": [
+            "Grilled fish",
+            "Fried fish",
+            "Boiled fish",
+            "Raw fish"
+          ],
+          "correctAnswer": "Grilled fish",
+          "explanation": "The sentence is 'I like grilled fish.'"
+        },
+        {
+          "question": "What does the baby drink?",
+          "options": [
+            "Water",
+            "Juice",
+            "Soup",
+            "Milk"
+          ],
+          "correctAnswer": "Milk",
+          "explanation": "The sentence is 'The baby drinks milk.'"
+        },
+        {
+          "question": "What does he eat for breakfast?",
+          "options": [
+            "Egg",
+            "Cake",
+            "Rice",
+            "Chicken"
+          ],
+          "correctAnswer": "Egg",
+          "explanation": "The sentence is 'He eats an egg for breakfast.'"
+        },
+        {
+          "question": "What is described as delicious?",
+          "options": [
+            "Soup",
+            "Cake",
+            "Fish",
+            "Egg"
+          ],
+          "correctAnswer": "Cake",
+          "explanation": "The sentence is 'This cake is delicious.'"
+        },
+        {
+          "question": "What kind of soup does she make?",
+          "options": [
+            "Cold soup",
+            "Hot soup",
+            "Chicken soup",
+            "Vegetable soup"
+          ],
+          "correctAnswer": "Hot soup",
+          "explanation": "The sentence is 'She makes hot soup.'"
+        }
+      ]
+    },
+    {
+      "name": "Động vật (Animals)",
+      "questions": [
+        {
+          "question": "What is the cat doing?",
+          "options": [
+            "Running",
+            "Eating",
+            "Sleeping",
+            "Playing"
+          ],
+          "correctAnswer": "Sleeping",
+          "explanation": "The sentence is 'The cat is sleeping.'"
+        },
+        {
+          "question": "How does the dog bark?",
+          "options": [
+            "Softly",
+            "Quietly",
+            "Loudly",
+            "Slowly"
+          ],
+          "correctAnswer": "Loudly",
+          "explanation": "The sentence is 'The dog barks loudly.'"
+        },
+        {
+          "question": "Where does the fish swim?",
+          "options": [
+            "In the river",
+            "In the sea",
+            "In the pool",
+            "In the tank"
+          ],
+          "correctAnswer": "In the tank",
+          "explanation": "The sentence is 'The fish swims in the tank.'"
+        },
+        {
+          "question": "What does the bird do?",
+          "options": [
+            "Runs",
+            "Flies",
+            "Swims",
+            "Sleeps"
+          ],
+          "correctAnswer": "Flies",
+          "explanation": "The sentence is 'The bird flies high.'"
+        },
+        {
+          "question": "What animal runs fast?",
+          "options": [
+            "Cow",
+            "Chicken",
+            "Horse",
+            "Pig"
+          ],
+          "correctAnswer": "Horse",
+          "explanation": "The sentence is 'The horse runs fast.'"
+        },
+        {
+          "question": "What does the cow give?",
+          "options": [
+            "Eggs",
+            "Meat",
+            "Milk",
+            "Wool"
+          ],
+          "correctAnswer": "Milk",
+          "explanation": "The sentence is 'The cow gives milk.'"
+        },
+        {
+          "question": "Where is the pig?",
+          "options": [
+            "In the house",
+            "On the road",
+            "In the zoo",
+            "In the farm"
+          ],
+          "correctAnswer": "In the farm",
+          "explanation": "The sentence is 'The pig is in the farm.'"
+        },
+        {
+          "question": "What does the chicken lay?",
+          "options": [
+            "Milk",
+            "Eggs",
+            "Feathers",
+            "Food"
+          ],
+          "correctAnswer": "Eggs",
+          "explanation": "The sentence is 'The chicken lays eggs.'"
+        },
+        {
+          "question": "Which animal is big?",
+          "options": [
+            "Dog",
+            "Elephant",
+            "Pig",
+            "Cat"
+          ],
+          "correctAnswer": "Elephant",
+          "explanation": "The sentence is 'The elephant is big.'"
+        },
+        {
+          "question": "Which animal is strong?",
+          "options": [
+            "Tiger",
+            "Cat",
+            "Fish",
+            "Cow"
+          ],
+          "correctAnswer": "Tiger",
+          "explanation": "The sentence is 'The tiger is strong.'"
+        }
+      ]
+    },
+
+    {
+      "name": "Công việc (Jobs)",
       "questions": [
         {
           "question": "Who teaches students in school?",
