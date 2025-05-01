@@ -7,5 +7,4 @@ public class DictionaryResponse {
     public String phonetic;
     public List<Phonetic> phonetics;
     public List<Meaning> meanings;
-    public String origin;
 }
