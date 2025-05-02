@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class WordTracker {
 
-    public static void markWordAsLearned(String userId, String topicId, String word) {
-        if (userId == null || topicId == null || word == null) return;
+    public static void markWordAsLearned(String userId, String topicName, String word) {
+        if (userId == null || topicName == null || word == null) return;
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         Map<String, Object> data = new HashMap<>();
@@ -23,7 +23,7 @@ public class WordTracker {
 
         db.collection("learnedWords")
                 .document(userId)
-                .collection(topicId)
+                .collection(topicName)
                 .document(word)
                 .set(data);
     }

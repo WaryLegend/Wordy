@@ -1,0 +1,110 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_app_background">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/top_rounded_shape"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="205dp">
+
+        <!-- Timer -->
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Time: ?"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Score -->
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_timer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Score: 0"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/grid_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/tv_score">
+            <!-- Grid for English words -->
+            <LinearLayout
+                android:id="@+id/grid_english"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:useDefaultMargins="true">
+                <!-- Buttons will be added dynamically -->
+            </LinearLayout>
+            <!-- Grid for Vietnamese meanings -->
+            <LinearLayout
+                android:id="@+id/grid_vietnamese"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:useDefaultMargins="true">
+                <!-- Buttons will be added dynamically -->
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- start the timer or stop the timer-->
+        <Button
+            android:id="@+id/btn_start_pause"
+            style="?attr/materialIconButtonFilledStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/grid_container"
+            android:layout_centerHorizontal="true"
+            android:paddingHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:text="Start Game"
+            android:backgroundTint="@color/navy_blue"/>
+
+        <!-- Play Again Button (shown when game ends) -->
+        <Button
+            android:id="@+id/btn_play_again"
+            style="?attr/materialIconButtonFilledStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_score"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:text="Play Again"
+            android:visibility="gone"
+            app:icon="@drawable/ic_restart_24px"
+            app:iconSize="25sp"
+            android:backgroundTint="@color/navy_blue"/>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

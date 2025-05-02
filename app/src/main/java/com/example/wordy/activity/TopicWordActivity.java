@@ -6,28 +6,36 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wordy.R;
+import com.example.wordy.TempPref.PrefsHelper;
 import com.example.wordy.adapter.TopicWordAdapter;
 import com.example.wordy.model.Word;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 public class TopicWordActivity extends AppCompatActivity {
     private List<Word> wordList;
     private String topicName;
-    private String topicId;
+    private int topicId;
+    private TopicWordAdapter topicWordAdapter;
+    private Set<String> tempLearnedWords;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +55,7 @@ public class TopicWordActivity extends AppCompatActivity {
 
         // Get topic name, id from Intent
         topicName = getIntent().getStringExtra("topicName");
-        topicId = getIntent().getStringExtra("topicId");
+        topicId = getIntent().getIntExtra("topicId", -1);
 
         if (topicName != null && !topicName.isEmpty()) {
             headerTitle.setText(topicName);
@@ -73,9 +81,38 @@ public class TopicWordActivity extends AppCompatActivity {
             wordList = new ArrayList<>();
         }
 
+        db = FirebaseFirestore.getInstance();
+        tempLearnedWords = new HashSet<>();
+        loadLearnedWords();
+
         // Initialize adapter
-        TopicWordAdapter topicWordAdapter = new TopicWordAdapter(this, wordList);
+        topicWordAdapter = new TopicWordAdapter(this, wordList, tempLearnedWords);
         recyclerView.setAdapter(topicWordAdapter);
+    }
+
+    private void loadLearnedWords() {
+        PrefsHelper prefs = new PrefsHelper(this);
+        String userId = prefs.getUserId();
+        String formattedTopicName = topicName != null ? topicName.toLowerCase().replace(" ", "_") : null;
+
+        if (userId == null || formattedTopicName == null) {
+            Toast.makeText(this, "Error: Invalid user or topic", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        db.collection("learnedWords")
+                .document(userId)
+                .collection(formattedTopicName)
+                .get()
+                .addOnSuccessListener(querySnapshot -> {
+                    for (var doc : querySnapshot) {
+                        tempLearnedWords.add(doc.getId());
+                    }
+                    topicWordAdapter.notifyDataSetChanged();
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(this, "Failed to load learned words", Toast.LENGTH_SHORT).show();
+                });
     }
 
     private void showBottomSheetMenu() {
@@ -126,6 +163,14 @@ public class TopicWordActivity extends AppCompatActivity {
 
         // Show dialog
         bottomSheetDialog.show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Reload learned words to ensure updated state
+        tempLearnedWords.clear();
+        loadLearnedWords();
     }
 
     @Override

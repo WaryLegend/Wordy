@@ -28,7 +28,7 @@ import java.util.Locale;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class HomeActivity extends AppCompatActivity {
-    private MaterialCardView btnProfile, btnDictionary, btnTopic;
+    private MaterialCardView btnProfile, btnDictionary, btnTopic, btnMiniGame;
     private TextView username;
     private FirebaseFirestore db;
     private PrefsHelper prefs;
@@ -54,8 +54,9 @@ public class HomeActivity extends AppCompatActivity {
 
         // Set up buttons
         btnProfile = findViewById(R.id.btnProfile);
-        btnTopic = findViewById(R.id.btnTopic);
         btnDictionary = findViewById(R.id.btnDictionary);
+        btnTopic = findViewById(R.id.btnTopic);
+        btnMiniGame = findViewById(R.id.btnMiniGame);
 
         // Set up result launcher for ProfileActivity
         profileResultLauncher = registerForActivityResult(
@@ -79,15 +80,21 @@ public class HomeActivity extends AppCompatActivity {
             profileResultLauncher.launch(intent);
         });
 
+        btnDictionary.setOnClickListener(v -> {
+            Intent intent = new Intent(this, DictionaryActivity.class);
+            startActivity(intent);
+        });
+
         btnTopic.setOnClickListener(v -> {
             Intent intent = new Intent(this, TopicActivity.class);
             startActivity(intent);
         });
 
-        btnDictionary.setOnClickListener(v -> {
-            Intent intent = new Intent(this, DictionaryActivity.class);
+        btnMiniGame.setOnClickListener(v -> {
+            Intent intent = new Intent(this, MatchingGameActivity.class);
             startActivity(intent);
         });
+
     }
 
     private void loadUserData() {
@@ -149,7 +156,6 @@ public class HomeActivity extends AppCompatActivity {
             for (int i = 0; i < vocabularyArray.size(); i++) {
                 JsonObject topicObject = vocabularyArray.get(i).getAsJsonObject();
                 String topicName = topicObject.get("name").getAsString();
-
 
                 String topicId = topicName.toLowerCase().replace(" ", "_");
                 topicIds.add(topicId);

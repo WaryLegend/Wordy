@@ -4,6 +4,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -32,6 +34,7 @@
         <activity android:name=".activity.QuizActivity" />
         <activity android:name=".activity.FlashcardActivity" />
         <activity android:name=".activity.LearnedWordsActivity" />
+        <activity android:name=".activity.MatchingGameActivity" />
 
     </application>
 

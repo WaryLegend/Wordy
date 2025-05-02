@@ -6,7 +6,6 @@
             "img":  "family",
             "words": [
                 {
-                    "wordnumber": 1,
                     "word": "mother",
                     "meaning": "mẹ/má",
                     "type": "noun",
@@ -14,7 +13,6 @@
                     "example": "My mother cooks delicious food."
                 },
                 {
-                    "wordnumber": 2,
                     "word": "father",
                     "meaning": "bố/ba",
                     "type": "noun",
@@ -22,7 +20,6 @@
                     "example": "My father works in a factory."
                 },
                 {
-                    "wordnumber": 3,
                     "word": "sister",
                     "meaning": "chị/em gái",
                     "type": "noun",
@@ -30,7 +27,6 @@
                     "example": "My sister is very smart."
                 },
                 {
-                    "wordnumber": 4,
                     "word": "brother",
                     "meaning": "anh/em trai",
                     "type": "noun",
@@ -38,7 +34,6 @@
                     "example": "I play games with my brother."
                 },
                 {
-                    "wordnumber": 5,
                     "word": "grandmother",
                     "meaning": "bà nội/ngoại",
                     "type": "noun",
@@ -46,7 +41,6 @@
                     "example": "My grandmother tells great stories."
                 },
                 {
-                    "wordnumber": 6,
                     "word": "grandfather",
                     "meaning": "ông nội/ngoại",
                     "type": "noun",
@@ -54,7 +48,6 @@
                     "example": "My grandfather is very kind."
                 },
                 {
-                    "wordnumber": 7,
                     "word": "uncle",
                     "meaning": "chú/bác",
                     "type": "noun",
@@ -62,7 +55,6 @@
                     "example": "My uncle lives in the city."
                 },
                 {
-                    "wordnumber": 8,
                     "word": "aunt",
                     "meaning": "cô/dì",
                     "type": "noun",
@@ -70,7 +62,6 @@
                     "example": "My aunt gave me a gift."
                 },
                 {
-                    "wordnumber": 9,
                     "word": "cousin",
                     "meaning": "anh chị em họ",
                     "type": "noun",
@@ -78,7 +69,6 @@
                     "example": "My cousin is my best friend."
                 },
                 {
-                    "wordnumber": 10,
                     "word": "friend",
                     "meaning": "bạn",
                     "type": "noun",
@@ -93,7 +83,6 @@
             "img": "study",
             "words": [
                 {
-                    "wordnumber": 1,
                     "word": "school",
                     "meaning": "trường học",
                     "type": "noun",
@@ -101,7 +90,6 @@
                     "example": "He goes to school every day."
                 },
                 {
-                    "wordnumber": 2,
                     "word": "teacher",
                     "meaning": "giáo viên",
                     "type": "noun",
@@ -109,7 +97,6 @@
                     "example": "Our teacher is very kind."
                 },
                 {
-                    "wordnumber": 3,
                     "word": "student",
                     "meaning": "học sinh, sinh viên",
                     "type": "noun",
@@ -117,7 +104,6 @@
                     "example": "The student studies hard."
                 },
                 {
-                    "wordnumber": 4,
                     "word": "book",
                     "meaning": "sách, vở",
                     "type": "noun",
@@ -125,7 +111,6 @@
                     "example": "I read a book every week."
                 },
                 {
-                    "wordnumber": 5,
                     "word": "pen",
                     "meaning": "cái bút, bút mực",
                     "type": "noun",
@@ -133,7 +118,6 @@
                     "example": "I write with a pen."
                 },
                 {
-                    "wordnumber": 6,
                     "word": "learn",
                     "meaning": "học",
                     "type": "verb",
@@ -141,7 +125,6 @@
                     "example": "I want to learn English."
                 },
                 {
-                    "wordnumber": 7,
                     "word": "write",
                     "meaning": "viết",
                     "type": "verb",
@@ -149,7 +132,6 @@
                     "example": "She writes a letter."
                 },
                 {
-                    "wordnumber": 8,
                     "word": "read",
                     "meaning": "đọc",
                     "type": "verb",
@@ -157,7 +139,6 @@
                     "example": "He reads a story."
                 },
                 {
-                    "wordnumber": 9,
                     "word": "class",
                     "meaning": "lớp học",
                     "type": "noun",
@@ -165,7 +146,6 @@
                     "example": "The class starts at 8 AM."
                 },
                 {
-                    "wordnumber": 10,
                     "word": "homework",
                     "meaning": "bài tập về nhà",
                     "type": "noun",
@@ -180,7 +160,6 @@
             "img": "dailyroutine",
             "words": [
                 {
-                    "wordnumber": 1,
                     "word": "eat",
                     "meaning": "ăn",
                     "type": "verb",
@@ -188,7 +167,6 @@
                     "example": "We eat dinner at 7 PM."
                 },
                 {
-                    "wordnumber": 2,
                     "word": "drink",
                     "meaning": "uống",
                     "type": "verb",
@@ -196,7 +174,6 @@
                     "example": "He drinks water every morning."
                 },
                 {
-                    "wordnumber": 3,
                     "word": "sleep",
                     "meaning": "ngủ",
                     "type": "verb",
@@ -204,7 +181,6 @@
                     "example": "I sleep at 10 PM."
                 },
                 {
-                    "wordnumber": 4,
                     "word": "wake",
                     "meaning": "thức dậy",
                     "type": "verb",
@@ -212,7 +188,6 @@
                     "example": "She wakes up early."
                 },
                 {
-                    "wordnumber": 5,
                     "word": "work",
                     "meaning": "làm việc",
                     "type": "verb",
@@ -220,7 +195,6 @@
                     "example": "He works in an office."
                 },
                 {
-                    "wordnumber": 6,
                     "word": "play",
                     "meaning": "chơi",
                     "type": "verb",
@@ -228,7 +202,6 @@
                     "example": "The children play in the park."
                 },
                 {
-                    "wordnumber": 7,
                     "word": "walk",
                     "meaning": "đi bộ",
                     "type": "verb",
@@ -236,7 +209,6 @@
                     "example": "I walk to school."
                 },
                 {
-                    "wordnumber": 8,
                     "word": "talk",
                     "meaning": "nói chuyện",
                     "type": "verb",
@@ -244,7 +216,6 @@
                     "example": "We talk every night."
                 },
                 {
-                    "wordnumber": 9,
                     "word": "watch",
                     "meaning": "xem",
                     "type": "verb",
@@ -252,7 +223,6 @@
                     "example": "They watch TV together."
                 },
                 {
-                    "wordnumber": 10,
                     "word": "rest",
                     "meaning": "nghỉ ngơi",
                     "type": "verb",
@@ -267,7 +237,6 @@
             "img": "food",
             "words": [
                 {
-                    "wordnumber": 1,
                     "word": "apple",
                     "meaning": "quả táo",
                     "type": "noun",
@@ -275,7 +244,7 @@
                     "example": "She ate an apple."
                 },
                 {
-                    "wordnumber": 2,
+
                     "word": "bread",
                     "meaning": "bánh mì",
                     "type": "noun",
@@ -283,7 +252,7 @@
                     "example": "I like fresh bread."
                 },
                 {
-                    "wordnumber": 3,
+
                     "word": "water",
                     "meaning": "nước",
                     "type": "noun",
@@ -291,7 +260,7 @@
                     "example": "He drinks water."
                 },
                 {
-                    "wordnumber": 4,
+
                     "word": "rice",
                     "meaning": "cơm",
                     "type": "noun",
@@ -299,7 +268,7 @@
                     "example": "We eat rice every day."
                 },
                 {
-                    "wordnumber": 5,
+
                     "word": "chicken",
                     "meaning": "gà",
                     "type": "noun",
@@ -307,7 +276,7 @@
                     "example": "She cooks chicken for dinner."
                 },
                 {
-                    "wordnumber": 6,
+
                     "word": "fish",
                     "meaning": "con cá",
                     "type": "noun",
@@ -315,7 +284,7 @@
                     "example": "I like grilled fish."
                 },
                 {
-                    "wordnumber": 7,
+
                     "word": "milk",
                     "meaning": "sữa",
                     "type": "noun",
@@ -323,7 +292,7 @@
                     "example": "The baby drinks milk."
                 },
                 {
-                    "wordnumber": 8,
+
                     "word": "egg",
                     "meaning": "quả trứng",
                     "type": "noun",
@@ -331,7 +300,7 @@
                     "example": "He eats an egg for breakfast."
                 },
                 {
-                    "wordnumber": 9,
+
                     "word": "cake",
                     "meaning": "bánh ngọt, bánh kem",
                     "type": "noun",
@@ -339,7 +308,7 @@
                     "example": "This cake is delicious."
                 },
                 {
-                    "wordnumber": 10,
+
                     "word": "soup",
                     "meaning": "súp, canh",
                     "type": "noun",
@@ -354,7 +323,7 @@
             "img": "animals",
             "words": [
                 {
-                    "wordnumber": 1,
+
                     "word": "cat",
                     "meaning": "con mèo",
                     "type": "noun",
@@ -362,7 +331,7 @@
                     "example": "The cat is sleeping."
                 },
                 {
-                    "wordnumber": 2,
+
                     "word": "dog",
                     "meaning": "con chó",
                     "type": "noun",
@@ -370,7 +339,7 @@
                     "example": "The dog barks loudly."
                 },
                 {
-                    "wordnumber": 3,
+
                     "word": "bird",
                     "meaning": "con chim",
                     "type": "noun",
@@ -378,7 +347,7 @@
                     "example": "The bird flies high."
                 },
                 {
-                    "wordnumber": 4,
+
                     "word": "fish",
                     "meaning": "con cá",
                     "type": "noun",
@@ -386,7 +355,7 @@
                     "example": "The fish swims in the tank."
                 },
                 {
-                    "wordnumber": 5,
+
                     "word": "horse",
                     "meaning": "con ngựa",
                     "type": "noun",
@@ -394,7 +363,7 @@
                     "example": "The horse runs fast."
                 },
                 {
-                    "wordnumber": 6,
+
                     "word": "cow",
                     "meaning": "con bò",
                     "type": "noun",
@@ -402,7 +371,7 @@
                     "example": "The cow gives milk."
                 },
                 {
-                    "wordnumber": 7,
+
                     "word": "pig",
                     "meaning": "con lợn",
                     "type": "noun",
@@ -410,7 +379,7 @@
                     "example": "The pig is in the farm."
                 },
                 {
-                    "wordnumber": 8,
+
                     "word": "chicken",
                     "meaning": "con gà",
                     "type": "noun",
@@ -418,7 +387,7 @@
                     "example": "The chicken lays eggs."
                 },
                 {
-                    "wordnumber": 9,
+
                     "word": "elephant",
                     "meaning": "con voi",
                     "type": "noun",
@@ -426,7 +395,7 @@
                     "example": "The elephant is big."
                 },
                 {
-                    "wordnumber": 10,
+
                     "word": "tiger",
                     "meaning": "con hổ",
                     "type": "noun",
@@ -441,7 +410,7 @@
             "img": "emotion",
             "words": [
                 {
-                    "wordnumber": 1,
+
                     "word": "happy",
                     "meaning": "vui vẻ",
                     "type": "adjective",
@@ -449,7 +418,7 @@
                     "example": "I feel happy today."
                 },
                 {
-                    "wordnumber": 2,
+
                     "word": "sad",
                     "meaning": "buồn",
                     "type": "adjective",
@@ -457,7 +426,7 @@
                     "example": "She looks sad."
                 },
                 {
-                    "wordnumber": 3,
+
                     "word": "big",
                     "meaning": "to/lớn",
                     "type": "adjective",
@@ -465,7 +434,7 @@
                     "example": "This is a big house."
                 },
                 {
-                    "wordnumber": 4,
+
                     "word": "small",
                     "meaning": "nhỏ/bé",
                     "type": "adjective",
@@ -473,7 +442,7 @@
                     "example": "This is a small dog."
                 },
                 {
-                    "wordnumber": 5,
+
                     "word": "beautiful",
                     "meaning": "đẹp",
                     "type": "adjective",
@@ -481,7 +450,7 @@
                     "example": "This flower is beautiful."
                 },
                 {
-                    "wordnumber": 6,
+
                     "word": "new",
                     "meaning": "mới",
                     "type": "adjective",
@@ -489,7 +458,7 @@
                     "example": "This is my new phone."
                 },
                 {
-                    "wordnumber": 7,
+
                     "word": "old",
                     "meaning": "cũ",
                     "type": "adjective",
@@ -497,7 +466,7 @@
                     "example": "This book is old."
                 },
                 {
-                    "wordnumber": 8,
+
                     "word": "fast",
                     "meaning": "nhanh",
                     "type": "adjective",
@@ -505,7 +474,7 @@
                     "example": "The car is fast."
                 },
                 {
-                    "wordnumber": 9,
+
                     "word": "slow",
                     "meaning": "chậm",
                     "type": "adjective",
@@ -513,7 +482,7 @@
                     "example": "The turtle is slow."
                 },
                 {
-                    "wordnumber": 10,
+
                     "word": "young",
                     "meaning": "trẻ/thiếu niên",
                     "type": "adjective",
@@ -528,7 +497,7 @@
             "img": "travel",
             "words": [
                 {
-                    "wordnumber": 1,
+
                     "word": "travel",
                     "meaning": "du lịch/đi xa",
                     "type": "verb",
@@ -536,7 +505,7 @@
                     "example": "I love to travel."
                 },
                 {
-                    "wordnumber": 2,
+
                     "word": "plane",
                     "meaning": "máy bay",
                     "type": "noun",
@@ -544,7 +513,7 @@
                     "example": "The plane flies high."
                 },
                 {
-                    "wordnumber": 3,
+
                     "word": "train",
                     "meaning": "tàu hỏa",
                     "type": "noun",
@@ -552,7 +521,7 @@
                     "example": "We take the train to the city."
                 },
                 {
-                    "wordnumber": 4,
+
                     "word": "car",
                     "meaning": "xe hơi",
                     "type": "noun",
@@ -560,7 +529,7 @@
                     "example": "He drives a car."
                 },
                 {
-                    "wordnumber": 5,
+
                     "word": "hotel",
                     "meaning": "khách sạn",
                     "type": "noun",
@@ -568,7 +537,7 @@
                     "example": "We stay in a hotel."
                 },
                 {
-                    "wordnumber": 6,
+
                     "word": "map",
                     "meaning": "bản đồ",
                     "type": "noun",
@@ -576,7 +545,7 @@
                     "example": "I use a map to find the way."
                 },
                 {
-                    "wordnumber": 7,
+
                     "word": "ticket",
                     "meaning": "vé",
                     "type": "noun",
@@ -584,7 +553,7 @@
                     "example": "She buys a train ticket."
                 },
                 {
-                    "wordnumber": 8,
+
                     "word": "beach",
                     "meaning": "bãi biển",
                     "type": "noun",
@@ -592,7 +561,7 @@
                     "example": "The beach is beautiful."
                 },
                 {
-                    "wordnumber": 9,
+
                     "word": "city",
                     "meaning": "thành phố",
                     "type": "noun",
@@ -600,7 +569,7 @@
                     "example": "This city is big."
                 },
                 {
-                    "wordnumber": 10,
+
                     "word": "mountain",
                     "meaning": "núi",
                     "type": "noun",
@@ -615,7 +584,7 @@
             "img": "weather",
             "words": [
                 {
-                    "wordnumber": 1,
+
                     "word": "sun",
                     "meaning": "mặt trời",
                     "type": "noun",
@@ -623,7 +592,7 @@
                     "example": "The sun is shining."
                 },
                 {
-                    "wordnumber": 2,
+
                     "word": "rain",
                     "meaning": "mưa",
                     "type": "noun",
@@ -631,7 +600,7 @@
                     "example": "It’s raining outside."
                 },
                 {
-                    "wordnumber": 3,
+
                     "word": "cloud",
                     "meaning": "mây",
                     "type": "noun",
@@ -639,7 +608,7 @@
                     "example": "The sky is full of clouds."
                 },
                 {
-                    "wordnumber": 4,
+
                     "word": "wind",
                     "meaning": "gió",
                     "type": "noun",
@@ -647,7 +616,7 @@
                     "example": "The wind is strong today."
                 },
                 {
-                    "wordnumber": 5,
+
                     "word": "snow",
                     "meaning": "tuyết",
                     "type": "noun",
@@ -655,7 +624,7 @@
                     "example": "It snows in winter."
                 },
                 {
-                    "wordnumber": 6,
+
                     "word": "hot",
                     "meaning": "nóng",
                     "type": "adjective",
@@ -663,7 +632,7 @@
                     "example": "The weather is hot."
                 },
                 {
-                    "wordnumber": 7,
+
                     "word": "cold",
                     "meaning": "lạnh",
                     "type": "adjective",
@@ -671,7 +640,7 @@
                     "example": "It’s very cold today."
                 },
                 {
-                    "wordnumber": 8,
+
                     "word": "warm",
                     "meaning": "ấm",
                     "type": "adjective",
@@ -679,7 +648,7 @@
                     "example": "The room is warm."
                 },
                 {
-                    "wordnumber": 9,
+
                     "word": "sunny",
                     "meaning": "nắng",
                     "type": "adjective",
@@ -687,7 +656,7 @@
                     "example": "It’s a sunny day."
                 },
                 {
-                    "wordnumber": 10,
+
                     "word": "rainy",
                     "meaning": "mưa",
                     "type": "adjective",
@@ -702,7 +671,7 @@
             "img": "colors",
             "words": [
                 {
-                    "wordnumber": 1,
+
                     "word": "red",
                     "meaning": "đỏ",
                     "type": "adjective",
@@ -710,7 +679,7 @@
                     "example": "The apple is red."
                 },
                 {
-                    "wordnumber": 2,
+
                     "word": "blue",
                     "meaning": "xanh dương",
                     "type": "adjective",
@@ -718,7 +687,7 @@
                     "example": "The sky is blue."
                 },
                 {
-                    "wordnumber": 3,
+
                     "word": "green",
                     "meaning": "xanh lá",
                     "type": "adjective",
@@ -726,7 +695,7 @@
                     "example": "The grass is green."
                 },
                 {
-                    "wordnumber": 4,
+
                     "word": "yellow",
                     "meaning": "vàng",
                     "type": "adjective",
@@ -734,7 +703,7 @@
                     "example": "The sun is yellow."
                 },
                 {
-                    "wordnumber": 5,
+
                     "word": "black",
                     "meaning": "đen",
                     "type": "adjective",
@@ -742,7 +711,7 @@
                     "example": "The cat is black."
                 },
                 {
-                    "wordnumber": 6,
+
                     "word": "white",
                     "meaning": "trắng",
                     "type": "adjective",
@@ -750,7 +719,6 @@
                     "example": "The snow is white."
                 },
                 {
-                    "wordnumber": 7,
                     "word": "pink",
                     "meaning": "hồng",
                     "type": "adjective",
@@ -758,7 +726,6 @@
                     "example": "Her dress is pink."
                 },
                 {
-                    "wordnumber": 8,
                     "word": "orange",
                     "meaning": "cam",
                     "type": "adjective",
@@ -766,7 +733,6 @@
                     "example": "The orange is orange."
                 },
                 {
-                    "wordnumber": 9,
                     "word": "purple",
                     "meaning": "tím",
                     "type": "adjective",
@@ -774,7 +740,6 @@
                     "example": "The flower is purple."
                 },
                 {
-                    "wordnumber": 10,
                     "word": "brown",
                     "meaning": "nâu",
                     "type": "adjective",
@@ -789,7 +754,6 @@
             "img": "jobs",
             "words": [
                 {
-                    "wordnumber": 1,
                     "word": "teacher",
                     "meaning": "giáo viên",
                     "type": "noun",
@@ -797,7 +761,6 @@
                     "example": "She is a teacher."
                 },
                 {
-                    "wordnumber": 2,
                     "word": "doctor",
                     "meaning": "bác sĩ",
                     "type": "noun",
@@ -805,7 +768,6 @@
                     "example": "The doctor helps sick people."
                 },
                 {
-                    "wordnumber": 3,
                     "word": "nurse",
                     "meaning": "y tá",
                     "type": "noun",
@@ -813,7 +775,6 @@
                     "example": "The nurse works in a hospital."
                 },
                 {
-                    "wordnumber": 4,
                     "word": "engineer",
                     "meaning": "kỹ sư",
                     "type": "noun",
@@ -821,7 +782,6 @@
                     "example": "He is an engineer."
                 },
                 {
-                    "wordnumber": 5,
                     "word": "farmer",
                     "meaning": "nông dân",
                     "type": "noun",
@@ -829,7 +789,6 @@
                     "example": "The farmer grows rice."
                 },
                 {
-                    "wordnumber": 6,
                     "word": "driver",
                     "meaning": "tài xế",
                     "type": "noun",
@@ -837,7 +796,6 @@
                     "example": "The driver drives a bus."
                 },
                 {
-                    "wordnumber": 7,
                     "word": "cook",
                     "meaning": "đầu bếp",
                     "type": "noun",
@@ -845,7 +803,6 @@
                     "example": "The cook makes delicious food."
                 },
                 {
-                    "wordnumber": 8,
                     "word": "student",
                     "meaning": "học sinh",
                     "type": "noun",
@@ -853,7 +810,6 @@
                     "example": "The student studies at school."
                 },
                 {
-                    "wordnumber": 9,
                     "word": "police",
                     "meaning": "cảnh sát",
                     "type": "noun",
@@ -861,7 +817,6 @@
                     "example": "The police protect the city."
                 },
                 {
-                    "wordnumber": 10,
                     "word": "worker",
                     "meaning": "công nhân",
                     "type": "noun",

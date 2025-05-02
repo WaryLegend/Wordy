@@ -43,8 +43,9 @@ public class QuizActivity extends AppCompatActivity {
     private RadioButton optionA, optionB, optionC, optionD;
     private List<Question> questions;
     private int currentIndex = 0;
-    private String currentUserId, currentTopicId, currentTopicName;
-    private SharedPreferences prefs;
+    private String currentUserId, currentTopicName;
+    private int currentTopicId;
+    private SharedPreferences quiz_prefs;
     private Gson gson;
 
     @Override
@@ -52,16 +53,16 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        // Khởi tạo SharedPreferences và Gson
-        prefs = getSharedPreferences("QuizPrefs", MODE_PRIVATE);
+        // Khởi tạo SharedPreferences và Gson lưu tiến trình
+        quiz_prefs = getSharedPreferences("QuizPrefs", MODE_PRIVATE);
         gson = new Gson();
 
         currentUserId = new PrefsHelper(this).getUserId();
-        currentTopicId = getIntent().getStringExtra("topicId");
+        currentTopicId = getIntent().getIntExtra("topicId", -1);
         currentTopicName = getIntent().getStringExtra("topicName");
 
         // Khôi phục currentIndex từ SharedPreferences
-        currentIndex = prefs.getInt(currentTopicName + "_currentIndex", 0);
+        currentIndex = quiz_prefs.getInt(currentTopicName + "_currentIndex", 0);
 
         // Change title & right button
         View headerLayout = findViewById(R.id.header);
@@ -104,7 +105,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private List<Question> loadQuestions() {
         // Kiểm tra xem có danh sách câu hỏi đã lưu không
-        String savedQuestionsJson = prefs.getString(currentTopicName + "_questions", null);
+        String savedQuestionsJson = quiz_prefs.getString(currentTopicName + "_questions", null);
         if (savedQuestionsJson != null) {
             Type listType = new TypeToken<List<Question>>() {}.getType();
             return gson.fromJson(savedQuestionsJson, listType);
@@ -115,7 +116,7 @@ public class QuizActivity extends AppCompatActivity {
         if (loadedQuestions != null && !loadedQuestions.isEmpty()) {
             Collections.shuffle(loadedQuestions); // Xáo trộn danh sách câu hỏi
             // Lưu danh sách câu hỏi vào SharedPreferences
-            SharedPreferences.Editor editor = prefs.edit();
+            SharedPreferences.Editor editor = quiz_prefs.edit();
             editor.putString(currentTopicName + "_questions", gson.toJson(loadedQuestions));
             editor.apply();
         }
@@ -173,10 +174,10 @@ public class QuizActivity extends AppCompatActivity {
         boolean isCorrect = selectedText.equals(current.getCorrectAnswer());
 
         if (isCorrect) {
-            String learnedWord = current.getWord();
-            if (learnedWord != null && currentTopicId != null) {
-                WordTracker.markWordAsLearned(currentUserId, currentTopicId, learnedWord);
-            }
+//            String learnedWord = current.getWord();
+//            if (learnedWord != null && currentTopicId != -1) {
+//                WordTracker.markWordAsLearned(currentUserId, currentTopicName, learnedWord);
+//            }
             showFeedback(true, "Correct!", "Answer: " + current.getCorrectAnswer());
         } else {
             showFeedback(false, "Incorrect!", "Answer: " + current.getCorrectAnswer());
@@ -221,14 +222,14 @@ public class QuizActivity extends AppCompatActivity {
 
     // Lưu currentIndex vào SharedPreferences
     private void saveCurrentIndex() {
-        SharedPreferences.Editor editor = prefs.edit();
+        SharedPreferences.Editor editor = quiz_prefs.edit();
         editor.putInt(currentTopicName + "_currentIndex", currentIndex);
         editor.apply();
     }
 
     // Xóa trạng thái quiz (currentIndex và danh sách câu hỏi)
     private void clearQuizState() {
-        SharedPreferences.Editor editor = prefs.edit();
+        SharedPreferences.Editor editor = quiz_prefs.edit();
         editor.remove(currentTopicName + "_currentIndex");
         editor.remove(currentTopicName + "_questions");
         editor.apply();

@@ -39,7 +39,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
     }
 
     @Override
-    public void onBindViewHolder(TopicViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TopicViewHolder holder, int position) {
         Topic topic = topicList.get(position);
         if (topic == null) return;
 
@@ -63,12 +63,12 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
             holder.imageTopic.setImageResource(R.drawable.ic_launcher_foreground);
         }
 
-
         holder.buttonLearnWords.setOnClickListener(v -> {
             Intent intent = new Intent(context, TopicWordActivity.class);
             Gson gson = new Gson();
             String wordListJson = gson.toJson(topic.getWords() != null ? topic.getWords() : new ArrayList<>());
             intent.putExtra("words", wordListJson);
+            intent.putExtra("topicId", topic.getId());
             intent.putExtra("topicName", topic.getName());
             context.startActivity(intent);
         });

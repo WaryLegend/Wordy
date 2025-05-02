@@ -1,7 +1,6 @@
 package com.example.wordy.model;
 
 public class Word {
-    public int wordnumber;
     public String word;
     public String meaning;
     public String type;
@@ -11,12 +10,9 @@ public class Word {
     public Word() {
     }
 
-    public int getWordnumber() {
-        return wordnumber;
-    }
-
-    public void setWordnumber(int wordnumber) {
-        this.wordnumber = wordnumber;
+    public Word(String word, String meaning) {
+        this.word = word;
+        this.meaning = meaning;
     }
 
     public String getWord() {
