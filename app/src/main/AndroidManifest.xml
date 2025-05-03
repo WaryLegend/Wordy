@@ -37,6 +37,7 @@
         <activity android:name=".activity.MiniGameActivity"/>
         <activity android:name=".activity.MatchingGameActivity" />
         <activity android:name=".activity.WordScrambleActivity"/>
+        <activity android:name=".activity.MissingLetterActivity"/>
 
     </application>
 

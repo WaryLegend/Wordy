@@ -34,7 +34,7 @@
                 android:id="@+id/tv_timer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Time: ?"
+                android:text="Time: 60"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginEnd="16dp" />
@@ -47,53 +47,72 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/grid_container"
+        <!-- Vietnamese meaning -->
+        <TextView
+            android:id="@+id/tv_vietnamese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:text="Chào"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/time_score_container"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Word with missing letters -->
+        <TextView
+            android:id="@+id/tv_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:text="He__o"
+            android:layout_marginBottom="16dp"
+            android:layout_below="@+id/tv_vietnamese"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Feedback -->
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:layout_below="@+id/tv_word"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Letter options -->
+        <GridLayout
+            android:id="@+id/grid_letters"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/time_score_container">
-            <!-- Grid for English words -->
-            <LinearLayout
-                android:id="@+id/grid_english"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_marginEnd="5dp"
-                android:useDefaultMargins="true">
-                <!-- Buttons will be added dynamically -->
-            </LinearLayout>
-            <!-- Grid for Vietnamese meanings -->
-            <LinearLayout
-                android:id="@+id/grid_vietnamese"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:useDefaultMargins="true">
-                <!-- Buttons will be added dynamically -->
-            </LinearLayout>
-        </LinearLayout>
+            android:layout_below="@+id/tv_word"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="16dp"
+            android:columnCount="4"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true">
+            <!-- Buttons added dynamically -->
+        </GridLayout>
 
-        <!-- start the timer or stop the timer-->
+        <!-- Start the timer or stop the timer-->
         <Button
             android:id="@+id/btn_start_pause"
             style="?attr/materialIconButtonFilledStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/grid_container"
+            android:layout_below="@+id/grid_letters"
             android:layout_centerHorizontal="true"
             android:paddingHorizontal="20dp"
             android:layout_marginTop="16dp"
             android:textSize="20sp"
             android:text="Start Game"
-            android:backgroundTint="@color/navy_blue"/>
+            android:backgroundTint="@color/navy_blue" />
 
         <!-- Play Again Button (shown when game ends) -->
         <Button
@@ -101,7 +120,7 @@
             style="?attr/materialIconButtonFilledStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/time_score_container"
+            android:layout_below="@id/grid_letters"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
             android:textSize="20sp"
@@ -109,7 +128,8 @@
             android:visibility="gone"
             app:icon="@drawable/ic_restart_24px"
             app:iconSize="25sp"
-            android:backgroundTint="@color/navy_blue"/>
+            android:backgroundTint="@color/navy_blue" />
 
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

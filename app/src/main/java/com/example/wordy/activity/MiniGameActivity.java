@@ -37,10 +37,8 @@ public class MiniGameActivity extends AppCompatActivity {
         });
 
         btnMissingLetterGame.setOnClickListener(v -> {
-            // TODO: Implement MissingLetterGameActivity
-            Toast.makeText(this, "Missing Letter Game not yet implemented", Toast.LENGTH_SHORT).show();
-            // Intent intent = new Intent(this, MissingLetterGameActivity.class);
-            // startActivity(intent);
+            Intent intent = new Intent(this, MissingLetterActivity.class);
+            startActivity(intent);
         });
 
         btnTrueOrFalseGame.setOnClickListener(v -> {
