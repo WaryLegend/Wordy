@@ -72,7 +72,7 @@ public class MissingLetterActivity extends AppCompatActivity {
         }
 
         // Button listeners
-        btnPlayAgain.setOnClickListener(v -> startGame());
+        btnPlayAgain.setOnClickListener(v -> initializeGame());
         btnStartPause.setOnClickListener(v -> toggleGameState());
 
         initializeGame();
@@ -84,7 +84,7 @@ public class MissingLetterActivity extends AppCompatActivity {
         isGameEnded = false;
         isGameStarted = false;
         tvScore.setText("Score: 0");
-        tvTimer.setText("Time: 60");
+        tvTimer.setText("Time: "+ timeLeft/1000);
         tvFeedback.setVisibility(View.GONE);
         btnPlayAgain.setVisibility(View.GONE);
         btnStartPause.setVisibility(View.VISIBLE);
@@ -93,11 +93,6 @@ public class MissingLetterActivity extends AppCompatActivity {
         tvVietnamese.setVisibility(View.INVISIBLE);
         tvWord.setVisibility(View.INVISIBLE);
         nextWord();
-    }
-
-    private void startGame() {
-        initializeGame();
-        toggleGameState(); // Start the game immediately
     }
 
     private void toggleGameState() {

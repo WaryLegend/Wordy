@@ -57,8 +57,9 @@
             android:text="...Comming soon..."
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            android:textColor="@color/navy_blue"
-            app:strokeColor="@color/navy_blue"/>
+            android:textColor="@android:color/darker_gray"
+            android:enabled="false"
+            app:strokeColor="@android:color/darker_gray"/>
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
