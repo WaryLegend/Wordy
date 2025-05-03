@@ -42,7 +42,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textWord"/>
 
-        <!-- Actual Definition -->
+
         <TextView
             android:id="@+id/textDefinition"
             android:layout_width="0dp"
