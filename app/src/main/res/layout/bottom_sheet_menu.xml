@@ -54,9 +54,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusable="true"
-            android:text="Option D"
+            android:text="...Comming soon..."
             android:textSize="20sp"
-            android:textStyle="bold"
+            android:textStyle="bold|italic"
             android:textColor="@color/navy_blue"
             app:strokeColor="@color/navy_blue"/>
 

@@ -80,114 +80,114 @@
       "name": "Học tập (Education)",
       "questions": [
         {
-          "question": "Where does he go every day?",
+          "question": "What place do students visit to borrow books for their studies?",
           "options": [
-            "Office",
-            "School",
-            "Market",
-            "Home"
+            "Classroom",
+            "Library",
+            "Cafeteria",
+            "Gym"
           ],
-          "correctAnswer": "School",
-          "explanation": "The sentence is 'He goes to school every day.'"
+          "correctAnswer": "Library",
+          "explanation": "Students visit the library to borrow books for their studies. The word 'library' refers to a place where books and resources are available for reading and research."
         },
         {
-          "question": "Who is kind according to the sentence?",
+          "question": "Who helps students understand lessons by explaining new topics?",
           "options": [
-            "Student",
-            "Book",
+            "Librarian",
             "Teacher",
-            "Class"
+            "Janitor",
+            "Student"
           ],
           "correctAnswer": "Teacher",
-          "explanation": "The sentence is 'Our teacher is very kind.'"
+          "explanation": "A teacher helps students understand lessons by explaining new topics in the classroom. The word 'teacher' refers to a person who instructs and guides students in learning."
         },
         {
-          "question": "Who studies hard?",
+          "question": "What activity do students do to prepare for a test?",
           "options": [
-            "Student",
-            "Teacher",
-            "Friend",
-            "Pen"
-          ],
-          "correctAnswer": "Student",
-          "explanation": "The student studies hard."
-        },
-        {
-          "question": "What do you read every week?",
-          "options": [
-            "Pen",
-            "Book",
-            "Notebook",
-            "Story"
-          ],
-          "correctAnswer": "Book",
-          "explanation": "The example: 'I read a book every week.'"
-        },
-        {
-          "question": "What do you write with?",
-          "options": [
-            "Pencil",
-            "Brush",
-            "Pen",
-            "Chalk"
-          ],
-          "correctAnswer": "Pen",
-          "explanation": "The sentence: 'I write with a pen.'"
-        },
-        {
-          "question": "What do you want to learn?",
-          "options": [
-            "Math",
-            "Science",
-            "English",
-            "History"
-          ],
-          "correctAnswer": "English",
-          "explanation": "The example is 'I want to learn English.'"
-        },
-        {
-          "question": "What does she write?",
-          "options": [
-            "Book",
-            "Letter",
-            "Word",
-            "Homework"
-          ],
-          "correctAnswer": "Letter",
-          "explanation": "The sentence is 'She writes a letter.'"
-        },
-        {
-          "question": "What does he read?",
-          "options": [
-            "Book",
-            "Story",
-            "Word",
-            "Page"
-          ],
-          "correctAnswer": "Story",
-          "explanation": "He reads a story."
-        },
-        {
-          "question": "When does class start?",
-          "options": [
-            "8 AM",
-            "9 AM",
-            "7 AM",
-            "10 AM"
-          ],
-          "correctAnswer": "8 AM",
-          "explanation": "The class starts at 8 AM."
-        },
-        {
-          "question": "What do you do every night?",
-          "options": [
-            "Sleep",
+            "Play",
             "Study",
-            "Homework",
+            "Sleep",
             "Eat"
           ],
+          "correctAnswer": "Study",
+          "explanation": "Students study to prepare for a test, reviewing lessons and practicing problems. The word 'study' means to spend time learning or reviewing information."
+        },
+        {
+          "question": "What object do students use to write essays or take notes?",
+          "options": [
+            "Ruler",
+            "Notebook",
+            "Calculator",
+            "Globe"
+          ],
+          "correctAnswer": "Notebook",
+          "explanation": "Students use a notebook to write essays or take notes during lessons. The word 'notebook' refers to a book with blank pages for writing."
+        },
+        {
+          "question": "What tool helps students solve math problems involving numbers?",
+          "options": [
+            "Pencil",
+            "Eraser",
+            "Calculator",
+            "Compass"
+          ],
+          "correctAnswer": "Calculator",
+          "explanation": "A calculator helps students solve math problems involving numbers, such as addition or multiplication. The word 'calculator' refers to an electronic device for performing mathematical calculations."
+        },
+        {
+          "question": "Which subject involves learning about the past, such as historical events?",
+          "options": [
+            "Science",
+            "History",
+            "Art",
+            "Music"
+          ],
+          "correctAnswer": "History",
+          "explanation": "History involves learning about the past, including historical events and people. The word 'history' refers to the study of past events."
+        },
+        {
+          "question": "What do students submit to their teacher after completing a written assignment?",
+          "options": [
+            "Homework",
+            "Textbook",
+            "Backpack",
+            "Chalk"
+          ],
           "correctAnswer": "Homework",
-          "explanation": "The sentence is 'I do my homework every night.'"
+          "explanation": "Students submit homework to their teacher after completing a written assignment. The word 'homework' refers to tasks assigned by teachers to be completed outside of class."
+        },
+        {
+          "question": "What do students read to learn new information for a science class?",
+          "options": [
+            "Novel",
+            "Textbook",
+            "Diary",
+            "Magazine"
+          ],
+          "correctAnswer": "Textbook",
+          "explanation": "Students read a textbook to learn new information for a science class, as it contains organized lessons and facts. The word 'textbook' refers to a book used for studying a subject."
+        },
+        {
+          "question": "What is the name of the room where students attend lessons with a teacher?",
+          "options": [
+            "Kitchen",
+            "Classroom",
+            "Office",
+            "Lab"
+          ],
+          "correctAnswer": "Classroom",
+          "explanation": "A classroom is the room where students attend lessons with a teacher. The word 'classroom' refers to a space designed for teaching and learning."
+        },
+        {
+          "question": "What do students take to evaluate their understanding of a subject?",
+          "options": [
+            "Game",
+            "Test",
+            "Trip",
+            "Break"
+          ],
+          "correctAnswer": "Test",
+          "explanation": "Students take a test to evaluate their understanding of a subject, answering questions to show what they’ve learned. The word 'test' refers to an assessment of knowledge or skills."
         }
       ]
     },
@@ -655,114 +655,114 @@
       "name": "Hoạt động (Activities)",
       "questions": [
         {
-          "question": "What do we usually do at 7 PM?",
+          "question": "What do families do when they sit together for an evening meal?",
           "options": [
             "Sleep",
-            "Play",
             "Eat",
-            "Walk"
+            "Work",
+            "Play"
           ],
           "correctAnswer": "Eat",
-          "explanation": "The sentence is 'We eat dinner at 7 PM.'"
+          "explanation": "Families eat when they sit together for an evening meal, as in the example 'We eat dinner at 7 PM.' The word 'eat' refers to consuming food for nourishment or enjoyment."
         },
         {
-          "question": "What does he drink every morning?",
+          "question": "What do people do to quench their thirst in the morning?",
           "options": [
-            "Milk",
-            "Tea",
-            "Juice",
-            "Water"
+            "Talk",
+            "Drink",
+            "Walk",
+            "Rest"
           ],
-          "correctAnswer": "Water",
-          "explanation": "The sentence is 'He drinks water every morning.'"
+          "correctAnswer": "Drink",
+          "explanation": "People drink water or juice to quench their thirst, as in the example 'He drinks water every morning.' The word 'drink' refers to taking in a liquid, such as water or milk."
         },
         {
-          "question": "When do you sleep according to the sentence?",
+          "question": "What do students do at night to rest for school the next day?",
           "options": [
-            "At 9 PM",
-            "At 10 PM",
-            "At 8 PM",
-            "At 7 PM"
+            "Work",
+            "Play",
+            "Sleep",
+            "Eat"
           ],
-          "correctAnswer": "At 10 PM",
-          "explanation": "The sentence is 'I sleep at 10 PM.'"
+          "correctAnswer": "Sleep",
+          "explanation": "Students sleep at night to rest, as in the example 'I sleep at 10 PM.' The word 'sleep' refers to resting by closing eyes and becoming unconscious to recover energy."
         },
         {
-          "question": "What time does she wake up?",
+          "question": "What do people do in the morning to start their day?",
           "options": [
-            "Late",
-            "Early",
-            "At noon",
-            "At midnight"
+            "Wake",
+            "Watch",
+            "Work",
+            "Talk"
           ],
-          "correctAnswer": "Early",
-          "explanation": "The sentence is 'She wakes up early.'"
+          "correctAnswer": "Wake",
+          "explanation": "People wake in the morning to begin their day, as in the example 'She wakes up early.' The word 'wake' refers to stopping sleep and becoming alert."
         },
         {
-          "question": "Where does he work?",
+          "question": "What do employees do during the day to complete job tasks?",
           "options": [
-            "At home",
-            "In a hospital",
-            "In a school",
-            "In an office"
+            "Play",
+            "Work",
+            "Sleep",
+            "Drink"
           ],
-          "correctAnswer": "In an office",
-          "explanation": "The sentence is 'He works in an office.'"
+          "correctAnswer": "Work",
+          "explanation": "Employees work during the day to complete job tasks, as in the example 'He works in an office.' The word 'work' refers to performing tasks or duties, often for pay."
         },
         {
-          "question": "Where do the children play?",
+          "question": "What do children do for fun at a park or playground?",
           "options": [
-            "At home",
-            "In the park",
-            "In the school",
-            "On the street"
-          ],
-          "correctAnswer": "In the park",
-          "explanation": "The sentence is 'The children play in the park.'"
-        },
-        {
-          "question": "How do you go to school?",
-          "options": [
-            "By car",
-            "By bus",
-            "I walk",
-            "I run"
-          ],
-          "correctAnswer": "I walk",
-          "explanation": "The sentence is 'I walk to school.'"
-        },
-        {
-          "question": "When do we talk?",
-          "options": [
-            "Every morning",
-            "Every day",
-            "Every afternoon",
-            "Every night"
-          ],
-          "correctAnswer": "Every night",
-          "explanation": "The sentence is 'We talk every night.'"
-        },
-        {
-          "question": "What do they watch together?",
-          "options": [
-            "Movies",
-            "TV",
-            "Books",
-            "Games"
-          ],
-          "correctAnswer": "TV",
-          "explanation": "The sentence is 'They watch TV together.'"
-        },
-        {
-          "question": "What do you do after work?",
-          "options": [
-            "Work again",
             "Eat",
+            "Play",
             "Rest",
             "Walk"
           ],
+          "correctAnswer": "Play",
+          "explanation": "Children play for fun at a park, as in the example 'The children play in the park.' The word 'play' refers to engaging in recreational or fun activities."
+        },
+        {
+          "question": "How do some students get to school if they live close by?",
+          "options": [
+            "Talk",
+            "Walk",
+            "Watch",
+            "Work"
+          ],
+          "correctAnswer": "Walk",
+          "explanation": "Some students walk to school if they live close by, as in the example 'I walk to school.' The word 'walk' refers to moving on foot to reach a destination."
+        },
+        {
+          "question": "What do friends do to share stories or catch up in the evening?",
+          "options": [
+            "Work",
+            "Talk",
+            "Sleep",
+            "Eat"
+          ],
+          "correctAnswer": "Talk",
+          "explanation": "Friends talk to share stories or catch up, as in the example 'We talk every night.' The word 'talk' refers to having a conversation or exchanging ideas."
+        },
+        {
+          "question": "What do families do together to enjoy television programs?",
+          "options": [
+            "Walk",
+            "Watch",
+            "Play",
+            "Rest"
+          ],
+          "correctAnswer": "Watch",
+          "explanation": "Families watch television programs together, as in the example 'They watch TV together.' The word 'watch' refers to looking at something, like a show or movie."
+        },
+        {
+          "question": "What do people do after a long day to relax and recharge?",
+          "options": [
+            "Work",
+            "Eat",
+            "Rest",
+            "Talk"
+          ],
           "correctAnswer": "Rest",
-          "explanation": "The sentence is 'I rest after work.'"
+          "explanation": "People rest after a long day to relax, as in the example 'I rest after work.' The word 'rest' refers to relaxing or taking a break to recover energy."
         }
       ]
     },
@@ -770,114 +770,114 @@
       "name": "Thức ăn (Food)",
       "questions": [
         {
-          "question": "What did she eat?",
+          "question": "What fruit is commonly eaten as a portable snack by students?",
           "options": [
-            "Apple",
             "Bread",
+            "Apple",
             "Rice",
-            "Cake"
+            "Soup"
           ],
           "correctAnswer": "Apple",
-          "explanation": "The sentence is 'She ate an apple.'"
+          "explanation": "Students commonly eat an apple as a portable snack, as in the example 'She ate an apple.' The word 'apple' refers to a crisp, nutritious fruit that is easy to carry and eat."
         },
         {
-          "question": "What kind of bread do I like?",
-          "options": [
-            "Old bread",
-            "Fresh bread",
-            "Sweet bread",
-            "Brown bread"
-          ],
-          "correctAnswer": "Fresh bread",
-          "explanation": "The sentence is 'I like fresh bread.'"
-        },
-        {
-          "question": "What does he drink?",
-          "options": [
-            "Milk",
-            "Juice",
-            "Water",
-            "Soda"
-          ],
-          "correctAnswer": "Water",
-          "explanation": "The sentence is 'He drinks water.'"
-        },
-        {
-          "question": "What do we eat every day?",
+          "question": "What food is often toasted and spread with jam for breakfast?",
           "options": [
             "Fish",
             "Bread",
-            "Rice",
-            "Chicken"
+            "Milk",
+            "Cake"
           ],
-          "correctAnswer": "Rice",
-          "explanation": "The sentence is 'We eat rice every day.'"
+          "correctAnswer": "Bread",
+          "explanation": "Bread is often toasted and spread with jam for breakfast, as in the example 'I like fresh bread.' The word 'bread' refers to a baked food made from flour, commonly used in meals."
         },
         {
-          "question": "What does she cook for dinner?",
+          "question": "What liquid is most often consumed to stay hydrated during meals?",
           "options": [
-            "Eggs",
-            "Soup",
+            "Water",
+            "Egg",
             "Chicken",
+            "Rice"
+          ],
+          "correctAnswer": "Water",
+          "explanation": "Water is most often consumed to stay hydrated during meals, as in the example 'He drinks water.' The word 'water' refers to a clear liquid essential for health and hydration."
+        },
+        {
+          "question": "What food is a common base for many savory dishes in various cuisines?",
+          "options": [
+            "Soup",
+            "Rice",
+            "Bread",
+            "Milk"
+          ],
+          "correctAnswer": "Rice",
+          "explanation": "Rice is a common base for many savory dishes, such as stir-fries or curries, as in the example 'We eat rice every day.' The word 'rice' refers to a grain used widely in cooking."
+        },
+        {
+          "question": "What meat is commonly roasted or grilled for family gatherings?",
+          "options": [
+            "Apple",
+            "Chicken",
+            "Egg",
             "Cake"
           ],
           "correctAnswer": "Chicken",
-          "explanation": "The sentence is 'She cooks chicken for dinner.'"
+          "explanation": "Chicken is commonly roasted or grilled for family gatherings, as in the example 'She cooks chicken for dinner.' The word 'chicken' refers to a versatile poultry meat used in many dishes."
         },
         {
-          "question": "What kind of fish do I like?",
+          "question": "What food is often served baked or steamed for a healthy meal?",
           "options": [
-            "Grilled fish",
-            "Fried fish",
-            "Boiled fish",
-            "Raw fish"
+            "Fish",
+            "Bread",
+            "Milk",
+            "Soup"
           ],
-          "correctAnswer": "Grilled fish",
-          "explanation": "The sentence is 'I like grilled fish.'"
+          "correctAnswer": "Fish",
+          "explanation": "Fish is often served baked or steamed for a healthy meal, as in the example 'I like grilled fish.' The word 'fish' refers to a seafood item valued for its nutritional benefits."
         },
         {
-          "question": "What does the baby drink?",
+          "question": "What beverage is commonly given to young children for growth?",
           "options": [
             "Water",
-            "Juice",
-            "Soup",
-            "Milk"
+            "Milk",
+            "Rice",
+            "Apple"
           ],
           "correctAnswer": "Milk",
-          "explanation": "The sentence is 'The baby drinks milk.'"
+          "explanation": "Milk is commonly given to young children for growth, as in the example 'The baby drinks milk.' The word 'milk' refers to a nutrient-rich liquid important for developing bones and muscles."
         },
         {
-          "question": "What does he eat for breakfast?",
+          "question": "What food is often scrambled or poached for a quick breakfast?",
           "options": [
             "Egg",
             "Cake",
-            "Rice",
-            "Chicken"
+            "Fish",
+            "Bread"
           ],
           "correctAnswer": "Egg",
-          "explanation": "The sentence is 'He eats an egg for breakfast.'"
+          "explanation": "An egg is often scrambled or poached for a quick breakfast, as in the example 'He eats an egg for breakfast.' The word 'egg' refers to a versatile food produced by birds, widely used in cooking."
         },
         {
-          "question": "What is described as delicious?",
+          "question": "What sweet treat is typically enjoyed at birthday parties?",
           "options": [
             "Soup",
+            "Rice",
             "Cake",
-            "Fish",
-            "Egg"
+            "Chicken"
           ],
           "correctAnswer": "Cake",
-          "explanation": "The sentence is 'This cake is delicious.'"
+          "explanation": "Cake is typically enjoyed at birthday parties, as in the example 'This cake is delicious.' The word 'cake' refers to a sweet baked dessert, often decorated for celebrations."
         },
         {
-          "question": "What kind of soup does she make?",
+          "question": "What dish is often served hot to warm up on a cold day?",
           "options": [
-            "Cold soup",
-            "Hot soup",
-            "Chicken soup",
-            "Vegetable soup"
+            "Apple",
+            "Soup",
+            "Egg",
+            "Milk"
           ],
-          "correctAnswer": "Hot soup",
-          "explanation": "The sentence is 'She makes hot soup.'"
+          "correctAnswer": "Soup",
+          "explanation": "Soup is often served hot to warm up on a cold day, as in the example 'She makes hot soup.' The word 'soup' refers to a warm, liquid dish made from ingredients like vegetables or meat."
         }
       ]
     },
@@ -885,114 +885,114 @@
       "name": "Động vật (Animals)",
       "questions": [
         {
-          "question": "What is the cat doing?",
+          "question": "Which animal is commonly kept as a pet and often naps during the day?",
           "options": [
-            "Running",
-            "Eating",
-            "Sleeping",
-            "Playing"
-          ],
-          "correctAnswer": "Sleeping",
-          "explanation": "The sentence is 'The cat is sleeping.'"
-        },
-        {
-          "question": "How does the dog bark?",
-          "options": [
-            "Softly",
-            "Quietly",
-            "Loudly",
-            "Slowly"
-          ],
-          "correctAnswer": "Loudly",
-          "explanation": "The sentence is 'The dog barks loudly.'"
-        },
-        {
-          "question": "Where does the fish swim?",
-          "options": [
-            "In the river",
-            "In the sea",
-            "In the pool",
-            "In the tank"
-          ],
-          "correctAnswer": "In the tank",
-          "explanation": "The sentence is 'The fish swims in the tank.'"
-        },
-        {
-          "question": "What does the bird do?",
-          "options": [
-            "Runs",
-            "Flies",
-            "Swims",
-            "Sleeps"
-          ],
-          "correctAnswer": "Flies",
-          "explanation": "The sentence is 'The bird flies high.'"
-        },
-        {
-          "question": "What animal runs fast?",
-          "options": [
-            "Cow",
-            "Chicken",
+            "Dog",
+            "Cat",
             "Horse",
             "Pig"
           ],
-          "correctAnswer": "Horse",
-          "explanation": "The sentence is 'The horse runs fast.'"
+          "correctAnswer": "Cat",
+          "explanation": "A cat is commonly kept as a pet and often naps during the day, as in the example 'The cat is sleeping.' The word 'cat' refers to a small, domestic animal known for its independent nature and love of resting."
         },
         {
-          "question": "What does the cow give?",
+          "question": "Which animal is often trained to guard homes and barks to alert owners?",
           "options": [
-            "Eggs",
-            "Meat",
-            "Milk",
-            "Wool"
-          ],
-          "correctAnswer": "Milk",
-          "explanation": "The sentence is 'The cow gives milk.'"
-        },
-        {
-          "question": "Where is the pig?",
-          "options": [
-            "In the house",
-            "On the road",
-            "In the zoo",
-            "In the farm"
-          ],
-          "correctAnswer": "In the farm",
-          "explanation": "The sentence is 'The pig is in the farm.'"
-        },
-        {
-          "question": "What does the chicken lay?",
-          "options": [
-            "Milk",
-            "Eggs",
-            "Feathers",
-            "Food"
-          ],
-          "correctAnswer": "Eggs",
-          "explanation": "The sentence is 'The chicken lays eggs.'"
-        },
-        {
-          "question": "Which animal is big?",
-          "options": [
+            "Bird",
             "Dog",
-            "Elephant",
+            "Cow",
+            "Tiger"
+          ],
+          "correctAnswer": "Dog",
+          "explanation": "A dog is often trained to guard homes and barks to alert owners, as in the example 'The dog barks loudly.' The word 'dog' refers to a loyal, domestic animal frequently kept as a pet or protector."
+        },
+        {
+          "question": "Which animal is known for flying in the sky and building nests?",
+          "options": [
+            "Fish",
+            "Bird",
+            "Cat",
+            "Elephant"
+          ],
+          "correctAnswer": "Bird",
+          "explanation": "A bird is known for flying in the sky and building nests, as in the example 'The bird flies high.' The word 'bird' refers to a winged animal often associated with flight and singing."
+        },
+        {
+          "question": "Which animal is commonly kept in an aquarium for decoration?",
+          "options": [
+            "Horse",
+            "Fish",
+            "Dog",
+            "Chicken"
+          ],
+          "correctAnswer": "Fish",
+          "explanation": "A fish is commonly kept in an aquarium for decoration, as in the example 'The fish swims in the tank.' The word 'fish' refers to an aquatic animal often raised for its beauty or as a pet."
+        },
+        {
+          "question": "Which animal is often used for riding or racing in rural areas?",
+          "options": [
+            "Cow",
+            "Horse",
             "Pig",
             "Cat"
           ],
-          "correctAnswer": "Elephant",
-          "explanation": "The sentence is 'The elephant is big.'"
+          "correctAnswer": "Horse",
+          "explanation": "A horse is often used for riding or racing, as in the example 'The horse runs fast.' The word 'horse' refers to a large, strong animal commonly used for transportation or sport."
         },
         {
-          "question": "Which animal is strong?",
+          "question": "Which farm animal is raised to provide dairy products?",
           "options": [
-            "Tiger",
-            "Cat",
+            "Dog",
+            "Cow",
+            "Bird",
+            "Tiger"
+          ],
+          "correctAnswer": "Cow",
+          "explanation": "A cow is raised to provide dairy products, as in the example 'The cow gives milk.' The word 'cow' refers to a farm animal valued for its milk and meat."
+        },
+        {
+          "question": "Which animal is commonly raised on farms for meat production?",
+          "options": [
+            "Pig",
             "Fish",
+            "Horse",
+            "Cat"
+          ],
+          "correctAnswer": "Pig",
+          "explanation": "A pig is commonly raised on farms for meat production, as in the example 'The pig is in the farm.' The word 'pig' refers to a farm animal often bred for pork."
+        },
+        {
+          "question": "Which farm animal is kept for both eggs and meat?",
+          "options": [
+            "Chicken",
+            "Dog",
+            "Bird",
             "Cow"
           ],
+          "correctAnswer": "Chicken",
+          "explanation": "A chicken is kept for both eggs and meat, as in the example 'The chicken lays eggs.' The word 'chicken' refers to a domestic bird widely raised on farms."
+        },
+        {
+          "question": "Which animal is often seen in zoos and known for its large size?",
+          "options": [
+            "Cat",
+            "Elephant",
+            "Fish",
+            "Pig"
+          ],
+          "correctAnswer": "Elephant",
+          "explanation": "An elephant is often seen in zoos and known for its large size, as in the example 'The elephant is big.' The word 'elephant' refers to a massive, intelligent animal native to Africa and Asia."
+        },
+        {
+          "question": "Which wild animal is known for its strength and hunting skills?",
+          "options": [
+            "Horse",
+            "Tiger",
+            "Cow",
+            "Bird"
+          ],
           "correctAnswer": "Tiger",
-          "explanation": "The sentence is 'The tiger is strong.'"
+          "explanation": "A tiger is known for its strength and hunting skills, as in the example 'The tiger is strong.' The word 'tiger' refers to a powerful, wild cat found in forests and jungles."
         }
       ]
     },

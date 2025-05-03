@@ -91,7 +91,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         btnMiniGame.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MatchingGameActivity.class);
+            Intent intent = new Intent(this, MiniGameActivity.class);
             startActivity(intent);
         });
 

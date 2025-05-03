@@ -16,7 +16,7 @@ import java.util.List;
 
 public class JsonVocabularyLoader {
 
-    public static List<Word> loadWordsFromJson(Context context, String fileName) {
+    public static List<Word> loadWordsFromJson(Context context, String fileName, int topicId) {
         List<Word> words = new ArrayList<>();
         try {
             String jsonString = readJsonFromAssets(context, fileName);
@@ -24,13 +24,16 @@ public class JsonVocabularyLoader {
             JSONArray vocabularyArray = jsonObject.getJSONArray("vocabulary");
 
             for (int i = 0; i < vocabularyArray.length(); i++) {
-                JSONObject categoryObject = vocabularyArray.getJSONObject(i);
-                JSONArray wordsArray = categoryObject.getJSONArray("words");
-                for (int j = 0; j < wordsArray.length(); j++) {
-                    JSONObject wordObject = wordsArray.getJSONObject(j);
-                    String english = wordObject.getString("word");
-                    String vietnamese = wordObject.getString("meaning");
-                    words.add(new Word(english, vietnamese));
+                JSONObject topicObject = vocabularyArray.getJSONObject(i);
+                // Kiểm tra nếu topicId = -1 hoặc topicId khớp với id của topic
+                if (topicId == -1 || topicObject.getInt("id") == topicId) {
+                    JSONArray wordsArray = topicObject.getJSONArray("words");
+                    for (int j = 0; j < wordsArray.length(); j++) {
+                        JSONObject wordObject = wordsArray.getJSONObject(j);
+                        String english = wordObject.getString("word");
+                        String vietnamese = wordObject.getString("meaning");
+                        words.add(new Word(english, vietnamese));
+                    }
                 }
             }
         } catch (Exception e) {

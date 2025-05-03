@@ -26,7 +26,6 @@ public class MatchingGameActivity extends AppCompatActivity {
     private static final int POINTS_PER_MATCH = 10;
     private static final int BONUS_POINTS_PER_SECOND = 2;
     private static final int MAX_MATCHES = 10;
-    private static final int MARGIN_DP = 5;
     private static final int VIBRATION_DURATION = 200;
 
     private TextView tvTimer, tvScore;
@@ -58,7 +57,7 @@ public class MatchingGameActivity extends AppCompatActivity {
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         findViewById(R.id.btnReturn).setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
 
-        words = JsonVocabularyLoader.loadWordsFromJson(this, "voca.json");
+        words = JsonVocabularyLoader.loadWordsFromJson(this, "voca.json", -1);
         if (words.isEmpty()) {
             Toast.makeText(this, "Error: Could not load vocabulary!", Toast.LENGTH_LONG).show();
             finish();

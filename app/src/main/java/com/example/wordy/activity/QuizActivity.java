@@ -44,7 +44,6 @@ public class QuizActivity extends AppCompatActivity {
     private List<Question> questions;
     private int currentIndex = 0;
     private String currentUserId, currentTopicName;
-    private int currentTopicId;
     private SharedPreferences quiz_prefs;
     private Gson gson;
 
@@ -58,11 +57,11 @@ public class QuizActivity extends AppCompatActivity {
         gson = new Gson();
 
         currentUserId = new PrefsHelper(this).getUserId();
-        currentTopicId = getIntent().getIntExtra("topicId", -1);
         currentTopicName = getIntent().getStringExtra("topicName");
 
-        // Khôi phục currentIndex từ SharedPreferences
-        currentIndex = quiz_prefs.getInt(currentTopicName + "_currentIndex", 0);
+        // Khôi phục currentIndex từ SharedPreferences theo userId và topicName
+        String indexKey = currentUserId + "_" + currentTopicName + "_currentIndex";
+        currentIndex = quiz_prefs.getInt(indexKey, 0);
 
         // Change title & right button
         View headerLayout = findViewById(R.id.header);
@@ -104,8 +103,9 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private List<Question> loadQuestions() {
-        // Kiểm tra xem có danh sách câu hỏi đã lưu không
-        String savedQuestionsJson = quiz_prefs.getString(currentTopicName + "_questions", null);
+        // Kiểm tra xem có danh sách câu hỏi đã lưu không theo userId và topicName
+        String questionsKey = currentUserId + "_" + currentTopicName + "_questions";
+        String savedQuestionsJson = quiz_prefs.getString(questionsKey, null);
         if (savedQuestionsJson != null) {
             Type listType = new TypeToken<List<Question>>() {}.getType();
             return gson.fromJson(savedQuestionsJson, listType);
@@ -117,7 +117,7 @@ public class QuizActivity extends AppCompatActivity {
             Collections.shuffle(loadedQuestions); // Xáo trộn danh sách câu hỏi
             // Lưu danh sách câu hỏi vào SharedPreferences
             SharedPreferences.Editor editor = quiz_prefs.edit();
-            editor.putString(currentTopicName + "_questions", gson.toJson(loadedQuestions));
+            editor.putString(questionsKey, gson.toJson(loadedQuestions));
             editor.apply();
         }
         return loadedQuestions;
@@ -174,10 +174,6 @@ public class QuizActivity extends AppCompatActivity {
         boolean isCorrect = selectedText.equals(current.getCorrectAnswer());
 
         if (isCorrect) {
-//            String learnedWord = current.getWord();
-//            if (learnedWord != null && currentTopicId != -1) {
-//                WordTracker.markWordAsLearned(currentUserId, currentTopicName, learnedWord);
-//            }
             showFeedback(true, "Correct!", "Answer: " + current.getCorrectAnswer());
         } else {
             showFeedback(false, "Incorrect!", "Answer: " + current.getCorrectAnswer());
@@ -220,18 +216,21 @@ public class QuizActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    // Lưu currentIndex vào SharedPreferences
+    // Lưu currentIndex vào SharedPreferences theo userId và topicName
     private void saveCurrentIndex() {
         SharedPreferences.Editor editor = quiz_prefs.edit();
-        editor.putInt(currentTopicName + "_currentIndex", currentIndex);
+        String indexKey = currentUserId + "_" + currentTopicName + "_currentIndex";
+        editor.putInt(indexKey, currentIndex);
         editor.apply();
     }
 
-    // Xóa trạng thái quiz (currentIndex và danh sách câu hỏi)
+    // Xóa trạng thái quiz (currentIndex và danh sách câu hỏi) theo userId và topicName
     private void clearQuizState() {
         SharedPreferences.Editor editor = quiz_prefs.edit();
-        editor.remove(currentTopicName + "_currentIndex");
-        editor.remove(currentTopicName + "_questions");
+        String indexKey = currentUserId + "_" + currentTopicName + "_currentIndex";
+        String questionsKey = currentUserId + "_" + currentTopicName + "_questions";
+        editor.remove(indexKey);
+        editor.remove(questionsKey);
         editor.apply();
     }
 

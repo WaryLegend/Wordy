@@ -34,7 +34,9 @@
         <activity android:name=".activity.QuizActivity" />
         <activity android:name=".activity.FlashcardActivity" />
         <activity android:name=".activity.LearnedWordsActivity" />
+        <activity android:name=".activity.MiniGameActivity"/>
         <activity android:name=".activity.MatchingGameActivity" />
+        <activity android:name=".activity.WordScrambleActivity"/>
 
     </application>
 

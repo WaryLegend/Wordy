@@ -129,6 +129,7 @@ public class TopicWordActivity extends AppCompatActivity {
         Button optionB = bottomSheetView.findViewById(R.id.optionB);
         optionB.setText("Quiz Game");
         Button optionC = bottomSheetView.findViewById(R.id.optionC);
+        optionC.setText("Scramble Game");
         Button optionD = bottomSheetView.findViewById(R.id.optionD);
         Button cancelButton = bottomSheetView.findViewById(R.id.cancelButton);
 
@@ -151,7 +152,10 @@ public class TopicWordActivity extends AppCompatActivity {
             bottomSheetDialog.dismiss();
         });
         optionC.setOnClickListener(v -> {
-
+            Intent wordScrambleIntent = new Intent(this, WordScrambleActivity.class);
+            wordScrambleIntent.putExtra("topicId", topicId);
+            wordScrambleIntent.putExtra("topicName", topicName);
+            startActivity(wordScrambleIntent);
             bottomSheetDialog.dismiss();
         });
         optionD.setOnClickListener(v -> {

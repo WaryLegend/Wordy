@@ -194,13 +194,12 @@
                         android:text="Profile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
+                        android:textColor="@color/light_blue"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity=""
                         android:text="Manage your account and progress"
                         android:textColor="@android:color/white"
                         android:textSize="15sp" />
@@ -285,7 +284,7 @@
                         android:text="Topic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@android:color/white"
+                        android:textColor="#F2C2FF"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                     <TextView
@@ -319,7 +318,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_controller_24px"
-                    app:tint="#38F44D"
+                    app:tint="#2DEF3F"
                     android:layout_marginEnd="16dp" />
                 <LinearLayout
                     android:layout_width="0dp"
@@ -330,7 +329,7 @@
                         android:text="MiniGame"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@android:color/white"
+                        android:textColor="#2DEF3F"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                     <TextView
