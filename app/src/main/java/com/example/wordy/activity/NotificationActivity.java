@@ -8,37 +8,41 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wordy.R;
-import com.example.wordy.utils.NotificationHelper;
 import com.example.wordy.utils.ReminderBroadcast;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import java.util.Calendar;
+import java.util.Locale;
 
-public class SettingsActivity extends AppCompatActivity {
+public class NotificationActivity extends AppCompatActivity {
 
-    private Button btnPickTime;
     private TextView tvSelectedTime;
-    private Switch switchNotification;
-
+    private SwitchMaterial switchNotification;
     private SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_notification);
 
-        btnPickTime = findViewById(R.id.btnPickTime);
+        View headerLayout = findViewById(R.id.header);
+        headerLayout.findViewById(R.id.header_title).setVisibility(View.GONE);
+        headerLayout.findViewById(R.id.btnIconRight).setVisibility(View.GONE);
+
+
+        Button btnPickTime = findViewById(R.id.btnPickTime);
         tvSelectedTime = findViewById(R.id.tvSelectedTime);
         switchNotification = findViewById(R.id.switchNotification);
 
-        prefs = getSharedPreferences("WordyPrefs", MODE_PRIVATE);
+        prefs = getSharedPreferences("ReminderPrefs", MODE_PRIVATE);
 
         loadCurrentSettings();
 
@@ -59,7 +63,7 @@ public class SettingsActivity extends AppCompatActivity {
         int minute = prefs.getInt("notify_minute", 0);
         boolean notifyEnabled = prefs.getBoolean("notify_enabled", true);
 
-        tvSelectedTime.setText(String.format("Current Reminder Time: %02d:%02d", hour, minute));
+        tvSelectedTime.setText(String.format(Locale.getDefault(),"%02d:%02d", hour, minute));
         switchNotification.setChecked(notifyEnabled);
     }
 
@@ -73,7 +77,7 @@ public class SettingsActivity extends AppCompatActivity {
                     .putInt("notify_minute", selectedMinute)
                     .apply();
 
-            tvSelectedTime.setText(String.format("Current Reminder Time: %02d:%02d", selectedHour, selectedMinute));
+            tvSelectedTime.setText(String.format(Locale.getDefault(),"%02d:%02d", selectedHour, selectedMinute));
 
             if (switchNotification.isChecked()) {
                 scheduleDailyReminder(); // Cập nhật lịch mới

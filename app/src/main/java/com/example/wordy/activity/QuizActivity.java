@@ -90,7 +90,7 @@ public class QuizActivity extends AppCompatActivity {
         if (questions != null && !questions.isEmpty()) {
             // Đảm bảo currentIndex không vượt quá kích thước danh sách
             if (currentIndex >= questions.size()) {
-                currentIndex = 0;
+                currentIndex = 0;  // Reset nếu vượt quá
                 saveCurrentIndex();
             }
             showQuestion(questions.get(currentIndex));

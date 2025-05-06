@@ -9,11 +9,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wordy.R;
-import com.example.wordy.interfaces.JsonVocabularyLoader;
 import com.google.android.material.card.MaterialCardView;
 
 public class MiniGameActivity extends AppCompatActivity {
-    private MaterialCardView btnMatchingGame, btnMissingLetterGame, btnTrueOrFalseGame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +24,10 @@ public class MiniGameActivity extends AppCompatActivity {
         headerLayout.findViewById(R.id.btnIconRight).setVisibility(View.GONE);
 
         // Initialize buttons
-        btnMatchingGame = findViewById(R.id.btnMatchingGame);
-        btnMissingLetterGame = findViewById(R.id.btnMissingLetterGame);
-        btnTrueOrFalseGame = findViewById(R.id.btnTrueOrFalseGame);
+        MaterialCardView btnMatchingGame = findViewById(R.id.btnMatchingGame);
+        MaterialCardView btnMissingLetterGame = findViewById(R.id.btnMissingLetterGame);
+        MaterialCardView btnTrueOrFalseGame = findViewById(R.id.btnTrueOrFalseGame);
+        btnTrueOrFalseGame.setAlpha(0f);
 
         // Set up click listeners
         btnMatchingGame.setOnClickListener(v -> {
@@ -42,10 +41,7 @@ public class MiniGameActivity extends AppCompatActivity {
         });
 
         btnTrueOrFalseGame.setOnClickListener(v -> {
-            // TODO: Implement TrueOrFalseGameActivity
-            Toast.makeText(this, "True or False Game not yet implemented", Toast.LENGTH_SHORT).show();
-            // Intent intent = new Intent(this, TrueOrFalseGameActivity.class);
-            // startActivity(intent);
+//            Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show();
         });
 
         // Set up back button

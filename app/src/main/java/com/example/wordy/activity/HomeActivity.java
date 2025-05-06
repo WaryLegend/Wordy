@@ -2,6 +2,7 @@ package com.example.wordy.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,6 @@ import java.util.Locale;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class HomeActivity extends AppCompatActivity {
-    private MaterialCardView btnProfile, btnDictionary, btnTopic, btnMiniGame,btnSetting;
     private TextView username;
     private FirebaseFirestore db;
     private PrefsHelper prefs;
@@ -53,10 +53,11 @@ public class HomeActivity extends AppCompatActivity {
         loadUserData();
 
 
-        btnProfile = findViewById(R.id.btnProfile);
-        btnDictionary = findViewById(R.id.btnDictionary);
-        btnTopic = findViewById(R.id.btnTopic);
-        btnMiniGame = findViewById(R.id.btnMiniGame);
+        MaterialCardView btnProfile = findViewById(R.id.btnProfile);
+        MaterialCardView btnDictionary = findViewById(R.id.btnDictionary);
+        MaterialCardView btnTopic = findViewById(R.id.btnTopic);
+        MaterialCardView btnMiniGame = findViewById(R.id.btnMiniGame);
+        Button btnNotification = findViewById(R.id.btn_notification);
 
         profileResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -93,9 +94,11 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(this, MiniGameActivity.class);
             startActivity(intent);
         });
-        btnSetting = findViewById(R.id.btnSetting);
-        btnSetting.setOnClickListener(v -> startActivity(new Intent(this, SettingsActivity.class)));
 
+        btnNotification.setOnClickListener(v -> {
+            Intent intent = new Intent(this, NotificationActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void loadUserData() {

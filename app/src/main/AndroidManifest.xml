@@ -40,7 +40,7 @@
         <activity android:name=".activity.MatchingGameActivity" />
         <activity android:name=".activity.WordScrambleActivity"/>
         <activity android:name=".activity.MissingLetterActivity"/>
-        <activity android:name=".activity.SettingsActivity" />
+        <activity android:name=".activity.NotificationActivity" />
         <receiver android:name=".utils.ReminderBroadcast" />
     </application>
 
