@@ -2,19 +2,30 @@ package com.example.wordy.activity;
 
 import static android.content.ContentValues.TAG;
 
+import android.app.AlarmManager;
+import android.app.Dialog;
+import android.app.PendingIntent;
+import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TimePicker;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wordy.R;
 import com.example.wordy.TempPref.PrefsHelper;
 import com.example.wordy.model.User;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +34,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -216,8 +228,8 @@ public class SignupActivity extends AppCompatActivity {
                                         prefs.setUserId(firebaseUser.getUid());
 
                                         Toast.makeText(SignupActivity.this, "Signup successful!", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(SignupActivity.this, HomeActivity.class));
-                                        finish();
+                                        showPickTimeDialog();
+
                                     })
                                     .addOnFailureListener(e -> {
                                         Toast.makeText(SignupActivity.this, "Failed to save user data: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -229,6 +241,93 @@ public class SignupActivity extends AppCompatActivity {
                     }
                 });
     }
+    private void showPickTimeDialog() {
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.bottom_sheet_pick_time);
+
+        Button btnPickTime = dialog.findViewById(R.id.btnPickTime);
+        Button btnConfirmTime = dialog.findViewById(R.id.btnConfirmTime);
+
+        final int[] selectedHour = {20};
+        final int[] selectedMinute = {0};
+
+        btnPickTime.setOnClickListener(v -> {
+            TimePickerDialog timePickerDialog = new TimePickerDialog(this, (TimePicker view, int hourOfDay, int minute) -> {
+                selectedHour[0] = hourOfDay;
+                selectedMinute[0] = minute;
+                btnPickTime.setText(String.format("Selected: %02d:%02d", hourOfDay, minute));
+            }, selectedHour[0], selectedMinute[0], true);
+
+            timePickerDialog.show();
+        });
+
+        btnConfirmTime.setOnClickListener(v -> {
+            SharedPreferences prefs = getSharedPreferences("WordyPrefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt("notify_hour", selectedHour[0]);
+            editor.putInt("notify_minute", selectedMinute[0]);
+            editor.putBoolean("notify_enabled", true);
+            editor.apply();
+
+            scheduleDailyReminder();
+
+            dialog.dismiss();
+
+            finish();
+        });
+
+
+        dialog.setCancelable(false);
+        dialog.show();
+    }
+    private void scheduleDailyReminder() {
+        Intent intent = new Intent(this, com.example.wordy.utils.ReminderBroadcast.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
+
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+        if (alarmManager != null) {
+            SharedPreferences prefs = getSharedPreferences("WordyPrefs", MODE_PRIVATE);
+            int hour = prefs.getInt("notify_hour", 20);
+            int minute = prefs.getInt("notify_minute", 0);
+
+            Calendar calendar = Calendar.getInstance();
+            calendar.set(Calendar.HOUR_OF_DAY, hour);
+            calendar.set(Calendar.MINUTE, minute);
+            calendar.set(Calendar.SECOND, 0);
+
+            if (Calendar.getInstance().after(calendar)) {
+                calendar.add(Calendar.DAY_OF_YEAR, 1);
+            }
+
+            Log.d("NOTIFY", "Đặt lịch nhắc học mỗi ngày lúc " + hour + ":" + minute);
+
+            try {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    if (alarmManager.canScheduleExactAlarms()) {
+                        alarmManager.setExactAndAllowWhileIdle(
+                                AlarmManager.RTC_WAKEUP,
+                                calendar.getTimeInMillis(),
+                                pendingIntent
+                        );
+                    } else {
+                        Log.w("NOTIFY", "Không có quyền đặt lịch chính xác (SCHEDULE_EXACT_ALARM).");
+                    }
+                } else {
+                    alarmManager.setExactAndAllowWhileIdle(
+                            AlarmManager.RTC_WAKEUP,
+                            calendar.getTimeInMillis(),
+                            pendingIntent
+                    );
+                }
+
+            } catch (SecurityException e) {
+                Log.e("NOTIFY", "Không có quyền SCHEDULE_EXACT_ALARM", e);
+            }
+
+        }
+    }
+
 
     @Override
     public void onDestroy() {

@@ -28,7 +28,7 @@ import java.util.Locale;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class HomeActivity extends AppCompatActivity {
-    private MaterialCardView btnProfile, btnDictionary, btnTopic, btnMiniGame;
+    private MaterialCardView btnProfile, btnDictionary, btnTopic, btnMiniGame,btnSetting;
     private TextView username;
     private FirebaseFirestore db;
     private PrefsHelper prefs;
@@ -43,38 +43,37 @@ public class HomeActivity extends AppCompatActivity {
         prefs = new PrefsHelper(this);
         username = findViewById(R.id.username);
 
-        // Check if not logged in
+
         if (!prefs.isLoggedIn()) {
             startActivity(new Intent(this, LoginActivity.class));
             finish();
             return;
         }
-        // Load user data
+
         loadUserData();
 
-        // Set up buttons
+
         btnProfile = findViewById(R.id.btnProfile);
         btnDictionary = findViewById(R.id.btnDictionary);
         btnTopic = findViewById(R.id.btnTopic);
         btnMiniGame = findViewById(R.id.btnMiniGame);
 
-        // Set up result launcher for ProfileActivity
         profileResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
                         if (result.getData().getBooleanExtra("needs_refresh", false)) {
-                            loadUserData(); // Reload data if changes were made
+                            loadUserData();
                         }
                     }
                 }
         );
-        // Process bar listener
+
         findViewById(R.id.cardProgress).setOnClickListener(v -> {
             startActivity(new Intent(this, LearnedWordsActivity.class));
         });
 
-        // Button listeners
+
         btnProfile.setOnClickListener(v -> {
             Intent intent = new Intent(this, ProfileActivity.class);
             profileResultLauncher.launch(intent);
@@ -94,6 +93,8 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(this, MiniGameActivity.class);
             startActivity(intent);
         });
+        btnSetting = findViewById(R.id.btnSetting);
+        btnSetting.setOnClickListener(v -> startActivity(new Intent(this, SettingsActivity.class)));
 
     }
 
