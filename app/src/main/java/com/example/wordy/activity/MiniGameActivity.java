@@ -13,7 +13,7 @@ import com.example.wordy.interfaces.JsonVocabularyLoader;
 import com.google.android.material.card.MaterialCardView;
 
 public class MiniGameActivity extends AppCompatActivity {
-    private MaterialCardView btnMatchingGame, btnMissingLetterGame, btnTrueOrFalseGame;
+    private MaterialCardView btnMatchingGame, btnMissingLetterGame, btnTrueOrFalseGame,btnChainGame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class MiniGameActivity extends AppCompatActivity {
         btnMatchingGame = findViewById(R.id.btnMatchingGame);
         btnMissingLetterGame = findViewById(R.id.btnMissingLetterGame);
         btnTrueOrFalseGame = findViewById(R.id.btnTrueOrFalseGame);
-
+        btnChainGame = findViewById(R.id.btnChainGame);
         // Set up click listeners
         btnMatchingGame.setOnClickListener(v -> {
             Intent intent = new Intent(this, MatchingGameActivity.class);
@@ -41,13 +41,11 @@ public class MiniGameActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        btnTrueOrFalseGame.setOnClickListener(v -> {
-            // TODO: Implement TrueOrFalseGameActivity
-            Toast.makeText(this, "True or False Game not yet implemented", Toast.LENGTH_SHORT).show();
-            // Intent intent = new Intent(this, TrueOrFalseGameActivity.class);
-            // startActivity(intent);
-        });
 
+        btnChainGame.setOnClickListener(v -> {
+            Intent intent = new Intent(this, RoomActivity.class);
+            startActivity(intent);
+        });
         // Set up back button
         findViewById(R.id.btnReturn).setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
     }

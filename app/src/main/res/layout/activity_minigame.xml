@@ -96,9 +96,8 @@
                     android:textSize="15sp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/btnTrueOrFalseGame"
+            android:id="@+id/btnChainGame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -113,21 +112,30 @@
                 android:gravity="center_vertical"
                 android:padding="15dp">
                 <TextView
-                    android:text="True or False? 💡 "
+                    android:text="Word chain game"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFEB3B"
+                    android:textColor="#f7b9c4"
                     android:textSize="20sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:text="Is the meaning correct? Choose wisely!"
+                    android:text="It will be fun to play with friends"
                     android:textColor="@android:color/white"
                     android:textSize="15sp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnTrueOrFalseGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/navy_blue"
+            android:clickable="true"
+            android:focusable="true"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

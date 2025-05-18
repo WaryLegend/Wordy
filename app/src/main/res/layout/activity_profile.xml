@@ -161,6 +161,13 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
+            <LinearLayout
+                android:id="@+id/achievementsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp" />
+
             <Button
                 android:id="@+id/btnLogout"
                 style="?attr/materialIconButtonOutlinedStyle"

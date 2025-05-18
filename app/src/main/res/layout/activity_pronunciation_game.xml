@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_app_background"
+    android:padding="24dp">
+
+    <!-- Nút quay lại -->
+    <Button
+        android:id="@+id/btnReturn"
+        style="?attr/materialIconButtonStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Quay lại"
+        app:icon="@drawable/ic_arrow_back"
+        app:iconSize="24dp"
+        app:iconTint="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textWordToPronounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Say this word:"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/textTargetWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="father"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textWordToPronounce"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+    <!-- Nút nghe từ -->
+    <Button
+        android:id="@+id/btnPlaySound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔊 Listen"
+        android:layout_below="@id/btnStartListening"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnStartListening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎤 Speak Now"
+        android:layout_below="@id/textTargetWord"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+
+    <!-- Nút chuyển từ -->
+    <Button
+        android:id="@+id/btnNextWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="➡ Next Word"
+        android:layout_below="@id/btnPlaySound"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/btnNextWord"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"/>
+</RelativeLayout>

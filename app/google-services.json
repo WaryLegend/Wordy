@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "632434923112",
+    "firebase_url": "https://wordy-ef9cf-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "wordy-ef9cf",
     "storage_bucket": "wordy-ef9cf.firebasestorage.app"
   },

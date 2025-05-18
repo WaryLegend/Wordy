@@ -14,13 +14,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="12dp"
         android:background="@drawable/top_rounded_shape"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header">
 
-        <!-- time and score container-->
+        <!-- Time and Score Container -->
         <LinearLayout
             android:id="@+id/time_score_container"
             android:layout_width="match_parent"
@@ -29,7 +28,6 @@
             android:gravity="center"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true">
-            <!-- Timer -->
             <TextView
                 android:id="@+id/tv_timer"
                 android:layout_width="wrap_content"
@@ -38,7 +36,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginEnd="16dp" />
-            <!-- Score -->
             <TextView
                 android:id="@+id/tv_score"
                 android:layout_width="wrap_content"
@@ -47,55 +44,64 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/grid_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/time_score_container">
-            <!-- Grid for English words -->
-            <LinearLayout
-                android:id="@+id/grid_english"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_marginEnd="5dp"
-                android:useDefaultMargins="true">
-                <!-- Buttons will be added dynamically -->
-            </LinearLayout>
-            <!-- Grid for Vietnamese meanings -->
-            <LinearLayout
-                android:id="@+id/grid_vietnamese"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:useDefaultMargins="true">
-                <!-- Buttons will be added dynamically -->
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- start the timer or stop the timer-->
+        <!-- Start/Pause Button (Positioned at the bottom) -->
         <Button
             android:id="@+id/btn_start_pause"
             style="?attr/materialIconButtonFilledStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/grid_container"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:paddingHorizontal="20dp"
-            android:layout_marginTop="16dp"
             android:textSize="20sp"
             android:text="Start Game"
             android:backgroundTint="@color/navy_blue"/>
 
-        <!-- Play Again Button (shown when game ends) -->
+        <!-- NestedScrollView for Grid Container -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"
+            android:scrollbarSize="8dp"
+            android:layout_below="@id/time_score_container"
+            android:layout_above="@id/btn_start_pause"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:id="@+id/grid_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/grid_english"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:useDefaultMargins="true">
+                    <!-- Buttons added dynamically -->
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/grid_vietnamese"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:useDefaultMargins="true">
+                    <!-- Buttons added dynamically -->
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Play Again Button -->
         <Button
             android:id="@+id/btn_play_again"
             style="?attr/materialIconButtonFilledStyle"

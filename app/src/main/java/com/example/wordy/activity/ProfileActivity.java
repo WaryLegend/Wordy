@@ -10,6 +10,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Map;
+
 public class ProfileActivity extends AppCompatActivity {
 
     private TextView userName, email, phone, birthday;
@@ -33,7 +36,7 @@ public class ProfileActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DocumentReference userRef;
     private boolean dataChanged = false;
-
+    private LinearLayout achievementsContainer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +44,7 @@ public class ProfileActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
-        // Initialize views
+        // Khởi tạo các view
         userName = findViewById(R.id.username);
         email = findViewById(R.id.email);
         phone = findViewById(R.id.phoneNumber);
@@ -52,6 +55,9 @@ public class ProfileActivity extends AppCompatActivity {
         emailEditor = findViewById(R.id.email_editor);
         phoneEditor = findViewById(R.id.phone_editor);
 
+
+        achievementsContainer = findViewById(R.id.achievementsContainer);
+
         // Set up header
         View headerLayout = findViewById(R.id.header);
         TextView headerTitle = headerLayout.findViewById(R.id.header_title);
@@ -61,12 +67,13 @@ public class ProfileActivity extends AppCompatActivity {
             btnIconRight.setVisibility(View.GONE);
         }
 
-        // Load user data
         String userId = new PrefsHelper(this).getUserId();
         userRef = db.collection("users").document(userId);
         loadUserData();
 
-        // Set up button listeners
+        loadAchievements(userId);
+
+
         btnReturn.setOnClickListener(v -> {
             if (dataChanged) {
                 Intent resultIntent = new Intent();
@@ -80,11 +87,11 @@ public class ProfileActivity extends AppCompatActivity {
 
         btnLogout.setOnClickListener(v -> showLogoutConfirmation());
 
-        // Editor button listeners
         nameEditor.setOnClickListener(v -> showEditDialog("username", "Change Username", userName.getText().toString(), "textPersonName"));
         emailEditor.setOnClickListener(v -> showEditDialog("email", "Change Email", email.getText().toString(), "textEmailAddress"));
         phoneEditor.setOnClickListener(v -> showEditDialog("phone", "Change Phone Number", phone.getText().toString(), "phone"));
     }
+
 
     private void loadUserData() {
         userRef.get().addOnSuccessListener(snapshot -> {
@@ -101,6 +108,34 @@ public class ProfileActivity extends AppCompatActivity {
             Toast.makeText(this, "Failed to load user data", Toast.LENGTH_SHORT).show();
         });
     }
+    private void loadAchievements(String userId) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("users")
+                .document(userId)
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
+                        Map<String, Boolean> achievements = (Map<String, Boolean>) documentSnapshot.get("achievements");
+
+                        if (achievements != null) {
+                            addAchievementView("First Word Learned", achievements.getOrDefault("first_word", false));
+                            addAchievementView("Learned 10 Words", achievements.getOrDefault("learned_10_words", false));
+                            addAchievementView("Learned 25 Words", achievements.getOrDefault("learned_25_words", false));
+                            addAchievementView("Learned 50 Words", achievements.getOrDefault("learned_50_words", false));
+                            addAchievementView("Learned 100 Words", achievements.getOrDefault("learned_100_words", false));
+                        }
+                    }
+                });
+    }
+    private void addAchievementView(String title, boolean achieved) {
+        TextView textView = new TextView(this);
+        textView.setText(achieved ? "✅ " + title : "🔒 " + title);
+        textView.setTextSize(18f);
+        textView.setTextColor(achieved ? getColor(android.R.color.holo_green_dark) : getColor(android.R.color.darker_gray));
+        achievementsContainer.addView(textView);
+    }
+
 
     private void showEditDialog(String field, String title, String currentValue, String inputType) {
         Dialog dialog = new Dialog(this);

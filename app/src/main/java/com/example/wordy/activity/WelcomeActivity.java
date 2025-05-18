@@ -51,6 +51,7 @@ public class WelcomeActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+
     }
     @Override
     public void onDestroy() {

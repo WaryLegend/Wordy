@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_app_background"
+    android:padding="24dp">
+
+    <!-- Nút quay lại -->
+    <Button
+        android:id="@+id/btnReturn"
+        style="?attr/materialIconButtonStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Quay lại"
+        app:icon="@drawable/ic_arrow_back"
+        app:iconSize="24dp"
+        app:iconTint="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Tiêu đề câu hỏi -->
+    <TextView
+        android:id="@+id/textQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listen and type the word:"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+    <!-- Nút nghe -->
+    <Button
+        android:id="@+id/btnPlaySound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔊 Play Sound"
+        android:textSize="18sp"
+        android:layout_below="@id/textQuestion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext" />
+
+    <!-- Ô nhập câu trả lời -->
+    <EditText
+        android:id="@+id/editAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type your answer"
+        android:inputType="text"
+        android:textSize="18sp"
+        android:layout_below="@id/btnPlaySound"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@android:color/black"
+        android:textColorHint="#CCCCCC" />
+
+    <!-- Nút nộp bài -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Answer"
+        android:textSize="18sp"
+        android:layout_below="@id/editAnswer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_edittext" />
+
+</RelativeLayout>

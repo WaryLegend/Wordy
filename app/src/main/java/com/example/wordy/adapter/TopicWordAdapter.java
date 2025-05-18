@@ -2,6 +2,7 @@ package com.example.wordy.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,13 @@ import com.example.wordy.R;
 import com.example.wordy.activity.TopicWordActivity;
 import com.example.wordy.activity.WordDetailActivity;
 import com.example.wordy.model.Word;
+import com.example.wordy.utils.AchievementHelper;
 import com.example.wordy.utils.WordTracker;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.example.wordy.TempPref.PrefsHelper;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -31,6 +34,8 @@ public class TopicWordAdapter extends RecyclerView.Adapter<TopicWordAdapter.Word
     private final String topicName;
     private Set<String> learnedWords;
 
+
+
     public TopicWordAdapter(Context context, List<Word> wordList, Set<String> learnedWords) {
         this.context = context;
         this.wordList = wordList;
@@ -39,6 +44,7 @@ public class TopicWordAdapter extends RecyclerView.Adapter<TopicWordAdapter.Word
         this.userId = prefs.getUserId();
 
         this.topicName = ((TopicWordActivity) context).getIntent().getStringExtra("topicName");
+
     }
 
     @NonNull
@@ -46,6 +52,8 @@ public class TopicWordAdapter extends RecyclerView.Adapter<TopicWordAdapter.Word
     public WordViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.topic_word_card_layout, parent, false);
         return new WordViewHolder(view);
+
+
     }
 
     @Override
@@ -63,17 +71,26 @@ public class TopicWordAdapter extends RecyclerView.Adapter<TopicWordAdapter.Word
             holder.btnInfo.setIconTintResource(R.color.navy_blue);
         }
 
-        // Set click listener for btnInfo
         holder.btnInfo.setOnClickListener(v -> {
-            // Mark word as learned
+
             if (userId != null && topicName != null && !learnedWords.contains(word.getWord())) {
                 String name = topicName.toLowerCase().replace(" ", "_");
-                WordTracker.markWordAsLearned(userId, name, word.getWord());
-                learnedWords.add(word.getWord()); // Update local cache
-                notifyItemChanged(position); // Refresh this item
+                Log.d("DEBUG_TOPIC_ADAPTER", "User clicked learn: " + word.getWord());
+
+                List<String> allWords = new ArrayList<>();
+                for (Word w : wordList) {
+                    allWords.add(w.getWord());
+                }
+
+                WordTracker.markWordAsLearned(context, userId, name, word.getWord());
+
+                learnedWords.add(word.getWord());
+                notifyItemChanged(position);
+                AchievementHelper.checkAndUpdateWordAchievements(context);
             }
 
-            // Start WordDetailActivity
+
+            // Mở chi tiết
             Intent intent = new Intent(context, WordDetailActivity.class);
             intent.putExtra("word", word.getWord());
             intent.putExtra("phonetic", word.getPronunciation());
@@ -81,6 +98,13 @@ public class TopicWordAdapter extends RecyclerView.Adapter<TopicWordAdapter.Word
             intent.putExtra("example", word.getExample());
             context.startActivity(intent);
         });
+        holder.btnSpeaker.setOnClickListener(v -> {
+            if (context instanceof TopicWordActivity) {
+                ((TopicWordActivity) context).speak(word.getWord());
+            }
+        });
+
+
     }
 
     @Override
@@ -91,12 +115,13 @@ public class TopicWordAdapter extends RecyclerView.Adapter<TopicWordAdapter.Word
     public static class WordViewHolder extends RecyclerView.ViewHolder {
         TextView textWord, textDefinition;
         MaterialButton btnInfo;
-
+        MaterialButton btnSpeaker;
         public WordViewHolder(View itemView) {
             super(itemView);
             textWord = itemView.findViewById(R.id.textWord);
             textDefinition = itemView.findViewById(R.id.textDefinition);
             btnInfo = itemView.findViewById(R.id.btnInfo);
+            btnSpeaker = itemView.findViewById(R.id.btnSpeaker);
         }
     }
 }

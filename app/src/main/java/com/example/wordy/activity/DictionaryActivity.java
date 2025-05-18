@@ -87,14 +87,14 @@ public class DictionaryActivity extends AppCompatActivity {
             }
         });
 
-        // Search on keyboard action
         editTextSearch.setOnEditorActionListener((v, actionId, event) -> {
             if (actionId == EditorInfo.IME_ACTION_SEARCH ||
+                    actionId == EditorInfo.IME_ACTION_DONE ||
                     (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN)) {
+
                 String word = editTextSearch.getText().toString().trim();
                 if (!word.isEmpty()) {
                     performSearch(word);
-                    // Hide keyboard after search
                     InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(editTextSearch.getWindowToken(), 0);
                 }
@@ -102,6 +102,7 @@ public class DictionaryActivity extends AppCompatActivity {
             }
             return false;
         });
+
     }
 
     private void performSearch(String word) {
