@@ -1,0 +1,48 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tvCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⏱ 10s"
+        android:textSize="25sp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvFirstLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bắt đầu bằng: D"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+    <TextView
+        android:id="@+id/tvUsedWords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Từ đã dùng: "
+        android:textSize="20sp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/navy_blue"/>
+
+    <EditText
+        android:id="@+id/edtWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập từ..."
+        android:textSize="25sp"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gửi từ"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:enabled="false"/>
+</LinearLayout>

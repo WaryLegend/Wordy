@@ -89,7 +89,7 @@ public class DictionaryActivity extends AppCompatActivity {
 
         // Search on keyboard action
         editTextSearch.setOnEditorActionListener((v, actionId, event) -> {
-            if (actionId == EditorInfo.IME_ACTION_SEARCH ||
+            if (actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_ACTION_DONE ||
                     (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN)) {
                 String word = editTextSearch.getText().toString().trim();
                 if (!word.isEmpty()) {

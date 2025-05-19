@@ -58,7 +58,7 @@
                     android:layout_gravity="end"
                     android:backgroundTint="@color/navy_blue"
                     android:contentDescription="Phát âm"
-                    app:icon="@drawable/ic_volume_up_24px"
+                    app:icon="@drawable/ic_speaker_24px"
                     app:iconSize="20dp"/>
             </LinearLayout>
 

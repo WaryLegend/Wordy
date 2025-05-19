@@ -2,6 +2,7 @@ package com.example.wordy.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
 
@@ -36,6 +38,8 @@ public class TopicWordActivity extends AppCompatActivity {
     private TopicWordAdapter topicWordAdapter;
     private Set<String> tempLearnedWords;
     private FirebaseFirestore db;
+    //phát âm
+    private TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +92,14 @@ public class TopicWordActivity extends AppCompatActivity {
         // Initialize adapter
         topicWordAdapter = new TopicWordAdapter(this, wordList, tempLearnedWords);
         recyclerView.setAdapter(topicWordAdapter);
+
+        //Phát âm
+        tts = new TextToSpeech(this, status -> {
+            if (status == TextToSpeech.SUCCESS) {
+                tts.setLanguage(Locale.US); // Chọn giọng tiếng Anh (US)
+            }
+        });
+
     }
 
     private void loadLearnedWords() {
@@ -131,6 +143,9 @@ public class TopicWordActivity extends AppCompatActivity {
         Button optionC = bottomSheetView.findViewById(R.id.optionC);
         optionC.setText("Scramble Game");
         Button optionD = bottomSheetView.findViewById(R.id.optionD);
+        optionD.setText("Listen & Fill");
+        Button optionE = bottomSheetView.findViewById(R.id.optionE);
+        optionE.setText("Pronunciation Game");
         Button cancelButton = bottomSheetView.findViewById(R.id.cancelButton);
 
         // Set click listeners
@@ -159,7 +174,21 @@ public class TopicWordActivity extends AppCompatActivity {
             bottomSheetDialog.dismiss();
         });
         optionD.setOnClickListener(v -> {
-
+            Intent listenFillIntent = new Intent(this, ListenAndFillActivity.class);
+            listenFillIntent.putExtra("topicId", topicId);
+            listenFillIntent.putExtra("topicName", topicName);
+            String wordsJson = new Gson().toJson(wordList);
+            listenFillIntent.putExtra("words", wordsJson);
+            startActivity(listenFillIntent);
+            bottomSheetDialog.dismiss();
+        });
+        optionE.setOnClickListener(v -> {
+            Intent pronunciationIntent = new Intent(this, PronunciationGameActivity.class);
+            pronunciationIntent.putExtra("topicId", topicId);
+            pronunciationIntent.putExtra("topicName", topicName);
+            String wordsJson = new Gson().toJson(wordList);
+            pronunciationIntent.putExtra("words", wordsJson);
+            startActivity(pronunciationIntent);
             bottomSheetDialog.dismiss();
         });
 
@@ -167,6 +196,13 @@ public class TopicWordActivity extends AppCompatActivity {
 
         // Show dialog
         bottomSheetDialog.show();
+    }
+
+    //phát âm
+    public void speak(String text) {
+        if (tts != null) {
+            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
+        }
     }
 
     @Override
@@ -178,7 +214,11 @@ public class TopicWordActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onDestroy() {
+    protected void onDestroy() {
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
         super.onDestroy();
     }
 }

@@ -54,12 +54,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusable="true"
-            android:text="...Comming soon..."
+            android:text="Option D"
             android:textSize="20sp"
-            android:textStyle="bold|italic"
-            android:textColor="@android:color/darker_gray"
-            android:enabled="false"
-            app:strokeColor="@android:color/darker_gray"/>
+            android:textStyle="bold"
+            android:textColor="@color/navy_blue"
+            app:strokeColor="@color/navy_blue"/>
+
+        <Button
+            android:id="@+id/optionE"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:text="Option E"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/navy_blue"/>
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_app_background">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/top_rounded_shape"
+        android:layout_below="@id/header">
+        <TextView
+            android:id="@+id/textWordToPronounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Say this word:"
+            android:textSize="30sp"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/textTargetWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="example"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <!-- Nút nghe từ -->
+        <Button
+            android:id="@+id/btnPlaySound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listen again 🔊"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/btnStartListening"
+            style="?attr/materialIconButtonFilledStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            app:icon="@drawable/ic_mic_24px"
+            app:iconTint="@color/white"
+            app:iconSize="30sp"/>
+
+        <!-- Nút chuyển từ -->
+        <Button
+            android:id="@+id/btnNextWord"
+            style="?attr/materialIconButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Word"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            app:icon="@drawable/ic_forward"
+            app:iconTint="@color/litePurple"
+            app:iconSize="22sp"
+            app:strokeColor="@color/litePurple"/>
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text=""
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>

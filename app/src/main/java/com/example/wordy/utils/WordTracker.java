@@ -1,30 +1,35 @@
 package com.example.wordy.utils;
 
+import android.content.Context;
+import android.util.Log;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 public class WordTracker {
 
-    public static void markWordAsLearned(String userId, String topicName, String word) {
+    // Hàm đánh dấu từ đã học và cập nhật thành tích
+    public static void markWordAsLearned(Context context, String userId, String topicName, String word) {
         if (userId == null || topicName == null || word == null) return;
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         Map<String, Object> data = new HashMap<>();
         long timestamp = System.currentTimeMillis();
-        String readableDate = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
 
         data.put("learnedAt", timestamp);
-        data.put("learnedDate", readableDate);
 
         db.collection("learnedWords")
                 .document(userId)
                 .collection(topicName)
                 .document(word)
-                .set(data);
+                .set(data)
+                .addOnSuccessListener(aVoid -> {
+                    Log.d("WORD_TRACKER", "Đã lưu từ: " + word + " vào Firestore.");
+                    AchievementHelper.checkAndUpdateWordAchievements(context);
+                })
+                .addOnFailureListener(e -> {
+                    Log.e("WORD_TRACKER", "Lỗi khi lưu từ: " + e.getMessage());
+                });
     }
+
 }

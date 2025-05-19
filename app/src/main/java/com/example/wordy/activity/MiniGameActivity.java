@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,8 +25,7 @@ public class MiniGameActivity extends AppCompatActivity {
         // Initialize buttons
         MaterialCardView btnMatchingGame = findViewById(R.id.btnMatchingGame);
         MaterialCardView btnMissingLetterGame = findViewById(R.id.btnMissingLetterGame);
-        MaterialCardView btnTrueOrFalseGame = findViewById(R.id.btnTrueOrFalseGame);
-        btnTrueOrFalseGame.setAlpha(0f);
+        MaterialCardView btnChainGame = findViewById(R.id.btnChainGame);
 
         // Set up click listeners
         btnMatchingGame.setOnClickListener(v -> {
@@ -40,8 +38,9 @@ public class MiniGameActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        btnTrueOrFalseGame.setOnClickListener(v -> {
-//            Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show();
+        btnChainGame.setOnClickListener(v -> {
+            Intent intent = new Intent(this, RoomActivity.class);
+            startActivity(intent);
         });
 
         // Set up back button

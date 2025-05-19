@@ -151,6 +151,7 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
             </LinearLayout>
+            <!-- achievement-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -160,6 +161,14 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
+            <LinearLayout
+                android:id="@+id/achievementsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp" />
+
+            <!--  logout button-->
             <Button
                 android:id="@+id/btnLogout"
                 style="?attr/materialIconButtonOutlinedStyle"
